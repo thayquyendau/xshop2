@@ -6,9 +6,11 @@
         </button>
         <div class="row product-list flex-nowrap overflow-hidden">
             <div class="col-xl-3 col-lg-3 col-md-6">
-                <img style="width: 100%;" src="assets/image/ngoai_ngu1.jpg" alt="">
-                <p class="title-product">Phương pháp học môn Hóa học đơn giản cho người mất gốc</p>
-                <p class="rating"><i>Lê Anh Phong</i></p>
+                <a href="<?= BASE_URL.'/detail' ?>">
+                    <img style="width: 100%;" src="assets/image/ngoai_ngu1.jpg" alt="">
+                    <p class="title-product">Phương pháp học môn Hóa học đơn giản cho người mất gốc</p>
+                    <p class="rating"><i>Lê Anh Phong</i></p>
+                </a>
                 <p class="top-star">
                     <span class="count">5.0</span>
                     <span class="stars">&#9733; &#9733; &#9733; &#9733; &#9733;</span>
