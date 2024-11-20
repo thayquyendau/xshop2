@@ -101,7 +101,15 @@
 </style>
 <div class="col xl-12">
     <div class="banner">
-        <img class="banner-img" src="./assets/image/banner/Frame 427319557.png" alt="">
+        <div class="slider">
+            <div class="slides">
+                <div class="slide"><img class="banner-img" src="assets/image/banner/Frame 75.png" alt=""></div>
+                <div class="slide"><img class="banner-img" src="assets/image/banner/Frame 427319557.png" alt=""></div>
+                <div class="slide"><img class="banner-img" src="assets/image/banner/Frame 74.png" alt=""></div>
+            </div>
+            <button class="prev" onclick="changeSlide(-1)">&#10094;</button>
+            <button class="next" onclick="changeSlide(1)">&#10095;</button>
+        </div>
     </div>
     <div class="gt-list">
         <h1 class="gt-tieude">Giới thiệu về QTPedu</h1>
