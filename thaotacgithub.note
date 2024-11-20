@@ -4,9 +4,15 @@
 - git commit - đẩy file lên
 - git commit -m "Thêm ghi chú" 
 - git log - Xme thời điểm đã lưu
-- git remote add origin https://github.com/thuyhm6/project1.git
+- git remote add origin https://github.com/thayquyendau/xshop2.git
 - git push -u origin master - Cập nhật code lên
 - git push origin master --force Cập nhật mạnh
 
 
 - git pull Kéo code về
+
+git init
+git remote add origin https://github.com/thayquyendau/xshop2
+git fetch
+git checkout main
+git pull origin
