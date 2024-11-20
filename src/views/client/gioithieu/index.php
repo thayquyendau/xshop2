@@ -3,17 +3,6 @@
     flex: 1;
 }
 
-.banner {
-    text-align: center;
-    margin-bottom: 20px;
-}
-
-.banner-img {
-    width: 100%;
-    max-height: 400px;
-    object-fit: cover;
-}
-
 .gt-list {
     margin: 20px;
 }
