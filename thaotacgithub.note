@@ -1,0 +1,12 @@
+- git init  - Khởi tạo respnsitory
+- git status - Trạng thái cảu dự án
+- git add  - thêm file
+- git commit - đẩy file lên
+- git commit -m "Thêm ghi chú" 
+- git log - Xme thời điểm đã lưu
+- git remote add origin https://github.com/thuyhm6/project1.git
+- git push -u origin master - Cập nhật code lên
+- git push origin master --force Cập nhật mạnh
+
+
+- git pull Kéo code về
