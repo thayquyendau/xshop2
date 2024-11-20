@@ -6,7 +6,6 @@
     padding: 20px 0 20px 20px;
 }
 
-/* Bố cục các cột */
 .row {
     display: flex;
     flex-wrap: wrap;
@@ -27,7 +26,6 @@
 }
 
 
-/* Phần thông tin liên hệ */
 .lienhe {
     padding-right: 20px;
     padding-left: 20px;
@@ -46,47 +44,43 @@
     margin-bottom: 15px;
 }
 
-/* Bản đồ iframe */
 .lienhe>iframe {
     margin-top:  40px;
 
 }
 form {
-    max-width: 500px; /* Giới hạn chiều rộng form */
+    max-width: 500px;
     padding: 20px;
     font-family: Arial, sans-serif;
 }
 
-/* Kiểu dáng của mỗi dòng */
 form p {
-    display: inline-block; /* Hiển thị cùng dòng */
-    width: 30%; /* Chiều rộng cho thẻ <p> */
+    display: inline-block;
+    width: 30%;
     font-size: 19px;
     font-weight: bold;
     color: #333;
-    margin: 10px 0; /* Khoảng cách giữa các dòng */
+    margin: 10px 0; 
 }
 
-/* Kiểu dáng cho input */
 form input[type="text"] {
     display: inline-block;
-    width: 65%; /* Input chiếm phần còn lại */
+    width: 65%; 
     padding: 8px;
     font-size: 14px;
     border-radius: 8px ;
-    outline: none; /* Bỏ viền xanh khi focus */
+    outline: none; 
     margin-bottom: 10px;
 }
 
-/* Nút gửi yêu cầu */
 form button {
     display: inline-block;
     padding: 10px 15px;
     font-size: 16px;
-    color: #fff; /* Màu chữ trắng */
-    background: #FF0004; /* Màu đỏ đô */
-    border: none; /* Bỏ viền nút */
-    border-radius: 8px; /* Bo góc nhẹ */
+    color: #fff; 
+    background: #FF0004; 
+    border: none; 
+    border-radius: 8px; 
     cursor: pointer;
     text-align: center;
     font-weight: bold;
