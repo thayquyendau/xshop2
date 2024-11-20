@@ -90,7 +90,7 @@
     max-width: 18%; 
     text-align: center;
     box-sizing: border-box;
-}
+}  
 
 .gioithieu-img {
     max-width: 100%;
