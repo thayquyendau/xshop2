@@ -15,8 +15,8 @@
     
   
 
-    $router->add("GET", "client", "/category", "CategoryController@mobile");
-    $router->add("GET", "client", "/productDetail", "ProductController@productDetail");
+    $router->add("GET", "client", "/danhmuc", "CategoryController@index");
+    $router->add("GET", "client", "/detailCourse", "ProductController@detail");
     $router->add("POST", "client", "/productDetail", "ProductController@productDetail");
     $router->add("GET", "client", "/createComment", "ProductController@createComment");
     $router->add("POST", "client", "/createComment", "ProductController@createComment");
@@ -27,5 +27,9 @@
     $router->add("GET", "client", "/giohang", "GiohangController@index");
     $router->add("GET", "client", "/thanhtoan", "ThanhtoanController@index");
     
+
+    //Danh muc
+    // $router->add("GET", "client", "/danhmuc", "ThanhtoanController@index");
+
     $router->solve("client");
 ?>

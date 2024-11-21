@@ -19,22 +19,22 @@
                     <div class="detalProduct-right-course">
                         <div class="cart-pading">
                             <p class="top-star">
-                                <span><img class="icon" src="assets\image\zoom-svgrepo-com.svg" alt="">
+                                <span><img class="icon" src="assets\image\icon\icon_zoom.svg" alt="">
                                 </span>
                                 <span class="count">Thời lượng: 02 giờ 44 phút</span>
                             </p>
                             <p class="top-star">
-                                <span><img class="icon" src="assets\image\task-svgrepo-com.svg" alt="">
+                                <span><img class="icon" src="assets\image\icon\task-svgrepo-com.svg" alt="">
                                 </span>
                                 <span class="count">Giáo Trình: 28 Bài giảng</span>
                             </p>
                             <p class="top-star">
-                                <span><img class="icon" src="assets\image\icon_time.svg" alt="">
+                                <span><img class="icon" src="assets\image\icon\icon_time.svg" alt="">
                                 </span>
                                 <span class="count">Sở hữu khóa học trọn đời</span>
                             </p>
                             <p class="top-star">
-                                <span><img class="icon" src="assets\image\certificate-svgrepo-com.svg" alt="">
+                                <span><img class="icon" src="assets\image\icon\icon_chung_chi.svg" alt="">
                                 </span>
                                 <span class="count">Cấp chứng nhận hoàn thành</span>
                             </p>
@@ -50,10 +50,12 @@
                                 <button class="btn btn-secondary btn-lg" type="button">THÊM VÀO GIỎ HÀNG</button>
                             </div>
                             <div class="d-grid gap-2 col-3 mx-auto">
-                                <button class="btn btn-light btn-lg"><img src="assets\image\icon_heart.svg" alt="" class="icon"></button>
+                                <button class="btn btn-light btn-lg"><img src="assets\image\icon\icon_heart.svg" alt="" class="icon"></button>
                             </div>
                         </div>
-                        <button class="btn btn-warning btn-lg p-3 fs-3" type="button">MUA NGAY</button>
+                        <a class="d-grid gap-2 text-decoration-none" href="<?= BASE_URL ?>/thanhtoan">
+                            <button class="btn btn-warning btn-lg p-3 fs-3" type="button">ĐĂNG KÝ NGAY</button>
+                        </a>
                     </div>
                     <br>
                 </div>
@@ -68,44 +70,44 @@
                         <div class="detail-course-main-body">
                             <div class="detail-course-main-body-left">
                                 <div class="detail-boder">
-                                    <span><img class="icon" src="assets\image\icon_select.svg" alt="">
+                                    <span><img class="icon" src="assets\image\icon\icon_select.svg" alt="">
                                     </span>
                                     <span class="count">Nắm được lý thuyết và kiến thức nền tảng để có thể thuyết trình tốt</span>
                                 </div>
                                 <div class="detail-boder">
-                                    <span><img class="icon" src="assets\image\icon_select.svg" alt="">
+                                    <span><img class="icon" src="assets\image\icon\icon_select.svg" alt="">
                                     </span>
                                     <span class="count">Trình bày được sức mạnh thuyết phục</span>
                                 </div>
                                 <div class="detail-boder">
-                                    <span><img class="icon" src="assets\image\icon_select.svg" alt="">
+                                    <span><img class="icon" src="assets\image\icon\icon_select.svg" alt="">
                                     </span>
                                     <span class="count">Thiết kế bài thuyết trình chuyên nghiệp</span>
                                 </div>
                                 <div class="detail-boder">
-                                    <span><img class="icon" src="assets\image\icon_select.svg" alt="">
+                                    <span><img class="icon" src="assets\image\icon\icon_select.svg" alt="">
                                     </span>
                                     <span class="count">Tăng sự tự tin và làm chủ của bản thân đối với chính mình, người khác</span>
                                 </div>
                             </div>
                             <div class="detail-course-main-body-right">
                                 <div class="detail-boder">
-                                    <span><img class="icon" src="assets\image\icon_select.svg" alt="">
+                                    <span><img class="icon" src="assets\image\icon\icon_select.svg" alt="">
                                     </span>
                                     <span class="count">Tăng sự tự tin và làm chủ của bản thân đối với chính mình và đối với đối phương</span>
                                 </div>
                                 <div class="detail-boder">
-                                    <span><img class="icon" src="assets\image\icon_select.svg" alt="">
+                                    <span><img class="icon" src="assets\image\icon\icon_select.svg" alt="">
                                     </span>
                                     <span class="count">Biết cách kích hoạt tâm thế người thuyết trình xuất sắc</span>
                                 </div>
                                 <div class="detail-boder">
-                                    <span><img class="icon" src="assets\image\icon_select.svg" alt="">
+                                    <span><img class="icon" src="assets\image\icon\icon_select.svg" alt="">
                                     </span>
                                     <span class="count">Thực hành thành thạo 10 phi ngôn từ</span>
                                 </div>
                                 <div class="detail-boder">
-                                    <span><img class="icon" src="assets\image\icon_select.svg" alt="">
+                                    <span><img class="icon" src="assets\image\icon\icon_select.svg" alt="">
                                     </span>
                                     <span class="count">Ứng dụng các công cụ hỗ trợ hiện đại tạo sự sinh động, cuốn hút cho bài thuyết trình</span>
                                 </div>
@@ -239,29 +241,29 @@
                         <div class="detail-course-main-body">
                             <div class="detail-course-main-body-left">
                                 <div class="rounded-circle overflow-hidden border" style="width: 150px; height: 150px;">
-                                    <img src="assets\image\phan_quoc_viet.jpg" class="w-100 h-100" style="object-fit: cover;" alt="Circular Image">
+                                    <img src="assets\image\detailCourse\phan_quoc_viet.jpg" class="w-100 h-100" style="object-fit: cover;" alt="Circular Image">
                                 </div>
                                 <p class="detail-name"><i>Phan Quốc Việt</i></p>
                             </div>
                             <div class="detail-course-main-body-right">
                                 <div class="category-content-wrapper">
                                     <p class="top-star">
-                                        <span><img class="icon" src="assets\image\icon_half_star.svg" alt="">
+                                        <span><img class="icon" src="assets\image\icon\icon_half_star.svg" alt="">
                                         </span>
                                         <span class="count">4.6 xếp hạng</span>
                                     </p>
                                     <p class="top-star">
-                                        <span><img class="icon" src="assets\image\icon_comment.svg" alt="">
+                                        <span><img class="icon" src="assets\image\icon\icon_comment.svg" alt="">
                                         </span>
                                         <span class="count">72.0 đánh giá</span>
                                     </p>
                                     <p class="top-star">
-                                        <span><img class="icon" src="assets\image\icon_people.svg" alt="">
+                                        <span><img class="icon" src="assets\image\icon\icon_people.svg" alt="">
                                         </span>
                                         <span class="count">1262 học viên</span>
                                     </p>
                                     <p class="top-star">
-                                        <span><img class="icon" src="assets\image\icon_video.svg" alt="">
+                                        <span><img class="icon" src="assets\image\icon\icon_video.svg" alt="">
                                         </span>
                                         <span class="count">2 khóa học</span>
                                     </p>
@@ -287,7 +289,7 @@
             <div class="detail_space">
                 <div class="top-star">
                     <div class="star-big">
-                        <img class="icon" src="assets\image\icon_star_yellow.svg" alt="">
+                        <img class="icon" src="assets\image\icon\icon_star_yellow.svg" alt="">
                     </div>
                     <div class="title">
                         4.6 xếp hạng khóa học - 10 đánh giá
@@ -299,7 +301,7 @@
                             <div class="category-content-main">
                                 <div class="detail-course-main-body-left">
                                     <div class="rounded-circle bg-dark" style="width: 50px; height: 50px; display: flex; justify-content: center; align-items: center;">
-                                        <img src="assets\image\icon_user.svg" alt="User Avatar" class="rounded-circle" style="width: 40px; height: 40px;">
+                                        <img src="assets\image\icon\icon_user.svg" alt="User Avatar" class="rounded-circle" style="width: 40px; height: 40px;">
                                     </div>
                                 </div>
                                 <div class="detail-course-main-body-right">
@@ -317,7 +319,7 @@
                             <div class="category-content-main">
                                 <div class="detail-course-main-body-left">
                                     <div class="rounded-circle bg-dark" style="width: 50px; height: 50px; display: flex; justify-content: center; align-items: center;">
-                                        <img src="assets\image\icon_user.svg" alt="User Avatar" class="rounded-circle" style="width: 40px; height: 40px;">
+                                        <img src="assets\image\icon\icon_user.svg" alt="User Avatar" class="rounded-circle" style="width: 40px; height: 40px;">
                                     </div>
                                 </div>
                                 <div class="detail-course-main-body-right">
@@ -338,7 +340,7 @@
                             <div class="category-content-main">
                                 <div class="detail-course-main-body-left">
                                     <div class="rounded-circle bg-dark" style="width: 50px; height: 50px; display: flex; justify-content: center; align-items: center;">
-                                        <img src="assets\image\icon_user.svg" alt="User Avatar" class="rounded-circle" style="width: 40px; height: 40px;">
+                                        <img src="assets\image\icon\icon_user.svg" alt="User Avatar" class="rounded-circle" style="width: 40px; height: 40px;">
                                     </div>
                                 </div>
                                 <div class="detail-course-main-body-right">
@@ -356,7 +358,7 @@
                             <div class="category-content-main">
                                 <div class="detail-course-main-body-left">
                                     <div class="rounded-circle bg-dark" style="width: 50px; height: 50px; display: flex; justify-content: center; align-items: center;">
-                                        <img src="assets\image\icon_user.svg" alt="User Avatar" class="rounded-circle" style="width: 40px; height: 40px;">
+                                        <img src="assets\image\icon\icon_user.svg" alt="User Avatar" class="rounded-circle" style="width: 40px; height: 40px;">
                                     </div>
                                 </div>
                                 <div class="detail-course-main-body-right">
@@ -377,7 +379,7 @@
                             <div class="category-content-main">
                                 <div class="detail-course-main-body-left">
                                     <div class="rounded-circle bg-dark" style="width: 50px; height: 50px; display: flex; justify-content: center; align-items: center;">
-                                        <img src="assets\image\icon_user.svg" alt="User Avatar" class="rounded-circle" style="width: 40px; height: 40px;">
+                                        <img src="assets\image\icon\icon_user.svg" alt="User Avatar" class="rounded-circle" style="width: 40px; height: 40px;">
                                     </div>
                                 </div>
                                 <div class="detail-course-main-body-right">
@@ -395,7 +397,7 @@
                             <div class="category-content-main">
                                 <div class="detail-course-main-body-left">
                                     <div class="rounded-circle bg-dark" style="width: 50px; height: 50px; display: flex; justify-content: center; align-items: center;">
-                                        <img src="assets\image\icon_user.svg" alt="User Avatar" class="rounded-circle" style="width: 40px; height: 40px;">
+                                        <img src="assets\image\icon\icon_user.svg" alt="User Avatar" class="rounded-circle" style="width: 40px; height: 40px;">
                                     </div>
                                 </div>
                                 <div class="detail-course-main-body-right">
@@ -416,7 +418,7 @@
                             <div class="category-content-main">
                                 <div class="detail-course-main-body-left">
                                     <div class="rounded-circle bg-dark" style="width: 50px; height: 50px; display: flex; justify-content: center; align-items: center;">
-                                        <img src="assets\image\icon_user.svg" alt="User Avatar" class="rounded-circle" style="width: 40px; height: 40px;">
+                                        <img src="assets\image\icon\icon_user.svg" alt="User Avatar" class="rounded-circle" style="width: 40px; height: 40px;">
                                     </div>
                                 </div>
                                 <div class="detail-course-main-body-right">
@@ -434,7 +436,7 @@
                             <div class="category-content-main">
                                 <div class="detail-course-main-body-left">
                                     <div class="rounded-circle bg-dark" style="width: 50px; height: 50px; display: flex; justify-content: center; align-items: center;">
-                                        <img src="assets\image\icon_user.svg" alt="User Avatar" class="rounded-circle" style="width: 40px; height: 40px;">
+                                        <img src="assets\image\icon\icon_user.svg" alt="User Avatar" class="rounded-circle" style="width: 40px; height: 40px;">
                                     </div>
                                 </div>
                                 <div class="detail-course-main-body-right">
