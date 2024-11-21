@@ -143,7 +143,7 @@
                 </div>
             </div>
             <div class="detail_space">
-                <div class="title">Nội dung khóa học</div>
+                <div class="title-category">Nội dung khóa học</div>
                 <div class="detail-course-main">
                     <span class="count">5 phần - 28 bài giảng - 5 buổi</span>
                 </div>
@@ -232,7 +232,7 @@
                 </div>
             </div>
             <div class="detail_space">
-                <div class="title">Giảng viên</div>
+                <div class="title-category">Giảng viên</div>
                 <div class="detail-course-main">
                     <span class="count">Diễn giả - CEO Tâm Việt Group</span>
                 </div>
@@ -291,7 +291,7 @@
                     <div class="star-big">
                         <img class="icon" src="assets\image\icon\icon_star_yellow.svg" alt="">
                     </div>
-                    <div class="title">
+                    <div class="title-category">
                         4.6 xếp hạng khóa học - 10 đánh giá
                     </div>
                 </div>

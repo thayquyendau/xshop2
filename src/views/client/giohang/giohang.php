@@ -1,8 +1,7 @@
 <div class="col xl-12">
-    <!-- Đây là giỏ hàng Quyền mới thêm đoạn này nữa-->
     <div class="detail-bgr">
         <div class="detail-main">
-            <div class="title">Giỏ hàng</div>
+            <div class="title-category">Giỏ hàng</div>
             <div class="detail-course-main-body">
                 <div class="detail-course-main-body-left">
                     <div class="detail-course-main-body">
@@ -18,7 +17,7 @@
                         </div>
                         <div class="category-content-main">
                             <div class="star-big">
-                                <img class="icon" src="assets\image\icon_trash.svg" alt="">
+                                <img class="icon" src="assets\image\icon\icon_trash.svg" alt="">
                             </div>
                             <div class="title-product">
                                 <a href="">XÓA</a>
@@ -34,7 +33,7 @@
                                     </div>
                                     <div class="cart-flex-right">
                                         <div class="category-content-main">
-                                            <div class="category-image"><img src="assets\image\ngoai_ngu2.jpg" alt=""></div>
+                                            <div class="category-image"><img src="assets\image\products\ngoai_ngu2.jpg" alt=""></div>
                                             <div class="category-nd">
                                                 <div class="title-product">Facebook Marketing từ A - Z</div>
                                                 <div class="rating">Giáo viên: <i>Châu Thùy Trang</i></div>
@@ -69,7 +68,7 @@
                                     </div>
                                     <div class="cart-flex-right">
                                         <div class="category-content-main">
-                                            <div class="category-image"><img src="assets\image\ngoai_ngu2.jpg" alt=""></div>
+                                            <div class="category-image"><img src="assets\image\products\ngoai_ngu2.jpg" alt=""></div>
                                             <div class="category-nd">
                                                 <div class="title-product">Facebook Marketing từ A - Z</div>
                                                 <div class="rating">Giáo viên: <i>Châu Thùy Trang</i></div>
@@ -104,7 +103,7 @@
                                     </div>
                                     <div class="cart-flex-right">
                                         <div class="category-content-main">
-                                            <div class="category-image"><img src="assets\image\ngoai_ngu2.jpg" alt=""></div>
+                                            <div class="category-image"><img src="assets\image\products\ngoai_ngu2.jpg" alt=""></div>
                                             <div class="category-nd">
                                                 <div class="title-product">Facebook Marketing từ A - Z</div>
                                                 <div class="rating">Giáo viên: <i>Châu Thùy Trang</i></div>
@@ -139,7 +138,7 @@
                                     </div>
                                     <div class="cart-flex-right">
                                         <div class="category-content-main">
-                                            <div class="category-image"><img src="assets\image\ngoai_ngu2.jpg" alt=""></div>
+                                            <div class="category-image"><img src="assets\image\products\ngoai_ngu2.jpg" alt=""></div>
                                             <div class="category-nd">
                                                 <div class="title-product">Facebook Marketing từ A - Z</div>
                                                 <div class="rating">Giáo viên: <i>Châu Thùy Trang</i></div>
@@ -174,7 +173,7 @@
                                     </div>
                                     <div class="cart-flex-right">
                                         <div class="category-content-main">
-                                            <div class="category-image"><img src="assets\image\ngoai_ngu2.jpg" alt=""></div>
+                                            <div class="category-image"><img src="assets\image\products\ngoai_ngu2.jpg" alt=""></div>
                                             <div class="category-nd">
                                                 <div class="title-product">Facebook Marketing từ A - Z</div>
                                                 <div class="rating">Giáo viên: <i>Châu Thùy Trang</i></div>
