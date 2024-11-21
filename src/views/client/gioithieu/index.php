@@ -8,8 +8,8 @@
 }
 
 .gt-tieude{
-    font-weight: bold;
-    font-size: 50px;
+    font-weight: 600;
+    font-size: 40px;
     text-align: center;
     color: #FF0004;
 }
@@ -161,7 +161,7 @@
             QTPedu không chỉ cam kết mang lại những khóa học chất lượng, được giảng dạy bởi các chuyên gia có kinh nghiệm mà còn đảm bảo mức chi phí hợp lý, phù hợp với nhiều đối tượng học viên. Ngoài ra, các chương trình khuyến mãi, giảm giá thường xuyên được cập nhật để tạo điều kiện cho nhiều người tiếp cận được giáo dục chất lượng mà không bị rào cản về tài chính.
         </p>
     </div>
-</div>
+    </div>
 
     <h1 class="gt-tieude3">TRẢI NGHIỆM PHƯƠNG THỨC HỌC TẬP HIỆN ĐẠI</h1>
     <div class="row giothieu-list">

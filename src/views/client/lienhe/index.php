@@ -1,7 +1,7 @@
 <style>
 .lienhe-title {
     color: #FF0004;
-    font-size: 50px;
+    font-size: 40px;
     font-weight: bold;
     padding: 20px 0 20px 20px;
 }

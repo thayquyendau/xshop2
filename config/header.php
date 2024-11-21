@@ -43,7 +43,7 @@
         </li>
         <li class="menu-item1"><a href="<?= BASE_URL.'/' ?>">Trang chủ</a></li>
         <li class="menu-item1"><a href="<?= BASE_URL.'/gioithieu' ?>">Giới thiệu</a></li>
-        <li class="menu-item1"><a href="">Tin tức</a></li>
+        <li class="menu-item1"><a href="<?= BASE_URL.'/tintuc' ?>">Tin tức</a></li>
         <li class="menu-item1"><a href="<?= BASE_URL.'/lienhe' ?>">Liên hệ</a></li>
     </ul>
 </div>
