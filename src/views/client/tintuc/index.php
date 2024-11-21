@@ -52,7 +52,6 @@
   max-height: 1180px;
 }
 
-
 </style>
 <div class="col xl-12">
     <div class="banner">
