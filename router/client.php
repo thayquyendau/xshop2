@@ -26,6 +26,8 @@
     $router->add("GET", "client", "/gioithieu", "GioithieuController@index");
     $router->add("GET", "client", "/giohang", "GiohangController@index");
     $router->add("GET", "client", "/thanhtoan", "ThanhtoanController@index");
+    $router->add("GET", "client", "/danhmuc", "DanhmucController@index");
+    $router->add("GET", "client", "/detail", "DanhmucController@detail");
     
 
     //Danh muc

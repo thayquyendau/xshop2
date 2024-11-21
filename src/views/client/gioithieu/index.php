@@ -3,53 +3,105 @@
     flex: 1;
 }
 
-.banner {
-    text-align: center;
-    margin-bottom: 20px;
-}
-
-.banner-img {
-    width: 100%;
-    max-height: 400px;
-    object-fit: cover;
-}
-
 .gt-list {
     margin: 20px;
 }
 
-.gt-tieude, .gt-tieude1 {
+.gt-tieude{
+    font-weight: bold;
+    font-size: 50px;
     text-align: center;
-    color: #333;
+    color: #FF0004;
+}
+.gt-tieude1{
+    font-weight: 600;
+    font-size: 22px;
+    color: #000000;
+}
+.gt-tieude3{
+    font-weight: 600;
+    font-size: 30px;
+    text-align: center;
+    color: #000000;
+    padding-top: 15px;
 }
 
 .gt-noidung {
     text-align: justify;
-    font-size: 16px;
+    font-size: 18px;
     line-height: 1.5;
     color: #666;
 }
 
-.row.text-center .gt-menu {
-    background: #f9f9f9;
+.gt-noidung>h4{
+    font-size: 20px;
+    color: #FF0004;
+    font-weight: 600;
+}
+.row.text-center{
     padding: 20px;
     margin: 10px 0;
     border-radius: 8px;
 }
 
-.gioithieu-1 {
-    background-color: #f9f9f9;
-    padding: 10px;
-    border-radius: 8px;
-    text-align: center;
+.gt-menu>h1{
+    font-size: 50px;
+    color: #FF0004;
+    font-weight: 600;
 }
+.gt-menu>p{
+    font-size: 20px;
+    color: #000000;
+    font-weight: 600;
+}
+
+.gioithieu-1 {
+    width: 100%;
+    padding: 10px;
+    text-align: center;
+    padding-top: 15px;
+}
+.gioithieu-1>p {
+    padding-top: 15px;
+    font-size: 15px;
+    font-weight: 600;
+}
+.giothieu-list {
+    display: flex; 
+    flex-wrap: wrap; 
+    justify-content: space-between; 
+    gap: 10px; 
+    margin: 0 auto;
+}
+
+.col-5 {
+    flex: 1;
+    max-width: 18%; 
+    text-align: center;
+    box-sizing: border-box;
+}
+
+.gioithieu-img {
+    max-width: 100%;
+    height: auto; 
+    margin-bottom: 10px; 
+}
+
 </style>
 <div class="col xl-12">
     <div class="banner">
-        <img class="banner-img" src="./assets/image/banner/Frame 427319557.png" alt="">
+        <div class="slider">
+            <div class="slides">
+                <div class="slide"><img class="banner-img" src="assets/image/banner/Frame 75.png" alt=""></div>
+                <div class="slide"><img class="banner-img" src="assets/image/banner/Frame 427319557.png" alt=""></div>
+                <div class="slide"><img class="banner-img" src="assets/image/banner/Frame 74.png" alt=""></div>
+            </div>
+            <button class="prev" onclick="changeSlide(-1)">&#10094;</button>
+            <button class="next" onclick="changeSlide(1)">&#10095;</button>
+        </div>
     </div>
     <div class="gt-list">
-        <h1 class="gt-tieude">GIỚI THIỆU VỀ QTPedu</h1>
+        <h1 class="gt-tieude">Giới thiệu về QTPedu</h1>
         <p class="gt-noidung">
             QTPedu là một nền tảng bán khóa học trực tuyến hiện đại và toàn diện, được thiết kế để mang đến cơ hội học tập cho mọi người, từ sinh viên, nhân viên văn phòng cho đến những người đang muốn phát triển bản thân và nâng cao kỹ năng trong một lĩnh vực cụ thể. Với sứ mệnh góp phần xây dựng một cộng đồng học tập suốt đời, QTPedu không ngừng phát triển và nâng cao chất lượng nội dung nhằm đáp ứng nhu cầu ngày càng tăng về đào tạo trực tuyến trong thời đại công nghệ số.
         </p>
@@ -76,35 +128,8 @@
         </div>
     </div>
 
-    <!-- <div class="gt-list">
-        <h3 class="gt-tieude1">Những đặc điểm nổi bật của QTPedu:</h3>
-        <p class="gt-noidung">
-            <div class="gt-noidung1">1. Đa dạng khóa học: <br></div>
-            <div class="gt-noidung2">QTPedu cung cấp một kho tàng khóa học phong phú và đa dạng...</div>
-            <br><br>
-            <div class="gt-noidung1">2. Trải nghiệm học tập linh hoạt và tiện lợi: <br></div>
-            <div class="gt-noidung2">Tại QTPedu, học viên có thể tự do lựa chọn thời gian và địa điểm...</div>
-            <br><br>
-            <div class="gt-noidung1">3. Tương tác và hỗ trợ tận tâm: <br></div>
-            <div class="gt-noidung2">Ngoài nội dung khóa học, QTPedu còn chú trọng đến trải nghiệm học tập...</div>
-            <br><br>
-            <div class="gt-noidung1">4. Lộ trình học tập rõ ràng và lộ trình phát triển: <br></div>
-            <div class="gt-noidung2">Mỗi khóa học tại QTPedu đều được xây dựng với lộ trình học tập rõ ràng...</div>
-            <br><br>
-            <div class="gt-noidung1">5. Cộng đồng học tập năng động: <br></div>
-            <div class="gt-noidung2">QTPedu còn là nơi kết nối những học viên có cùng sở thích...</div>
-            <br><br>
-            <div class="gt-noidung1">6. Cam kết chất lượng và chi phí hợp lý: <br></div>
-            <div class="gt-noidung2">QTPedu không chỉ cam kết mang lại những khóa học chất lượng...</div>
-        </p>
-        
-        <h3 class="gt-tieude1">Tại sao nên chọn QTPedu?</h3>
-        <p class="gt-noidung">
-            <div class="gt-noidung2">QTPedu hiểu rằng kiến thức và kỹ năng là những yếu tố quan trọng...</div>
-        </p>
-    </div> -->
     <div class="gt-list">
-    <h3 class="gt-tieude">Những đặc điểm nổi bật của QTPedu</h3>
+    <h3 class="gt-tieude1">Những đặc điểm nổi bật của QTPedu</h3>
     <div class="gt-noidung">
         <h4>1. Đa dạng khóa học:</h4>
         <p>
@@ -138,7 +163,7 @@
     </div>
 </div>
 
-    <h1 class="gt-tieude">TRẢI NGHIỆM PHƯƠNG THỨC HỌC TẬP HIỆN ĐẠI</h1>
+    <h1 class="gt-tieude3">TRẢI NGHIỆM PHƯƠNG THỨC HỌC TẬP HIỆN ĐẠI</h1>
     <div class="row giothieu-list">
         <div class="col-5">
             <div class="gioithieu-1">
@@ -171,4 +196,4 @@
             </div>
         </div>
     </div>
-</div>
+</div> 

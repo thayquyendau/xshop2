@@ -17,14 +17,14 @@
     display: inline-block;
     float: right;
     margin-right: 5px;
-    font-size: 24px; /* Kích thước của biểu tượng */
-    color: #000; /* Màu sắc của biểu tượng */
-    text-decoration: none; /* Loại bỏ gạch chân */
+    font-size: 24px; 
+    color: #000;
+    text-decoration: none; 
 
 }
 
 .add-to-cart:hover {
-    color: #f00; /* Màu khi di chuột qua */
+    color: #f00;
 }
 .h3_noidung{
     color: rgb(92, 88, 88);
@@ -63,8 +63,10 @@
                 <p style="font-size: 16px;margin-top:10px;">599.000đ <del style="font-size:12px;">899.000đ</del></p>
            </div>
            <div class="col xl-3 lg-3 md-6" style="margin-bottom: 20px;">
-                <img style="width: 100%;" src="./assets/image/header/Frame 427319549.png" alt="">
-                <p class="title-product">Phương pháp học môn Hóa học đơn giản cho người mất gốc</p>
+                <a href="<?= BASE_URL.'/detail' ?>">
+                    <img style="width: 100%;" src="./assets/image/header/Frame 427319549.png" alt="">
+                    <p class="title-product">Phương pháp học môn Hóa học đơn giản cho người mất gốc</p>
+                </a>
                 <p class="rating"> <i>Lê Anh Phong</i></p>
                 <p>
                     <span class="rating">5.0</span>
