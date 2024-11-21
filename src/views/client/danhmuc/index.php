@@ -1,5 +1,5 @@
 <div class="col xl-12 lg-12 md-12">
-<<<<<<< HEAD
+
     <div class="banner"></div>
     <div class="detail-bgr">
         <h6 class="title">Khóa học Ngoại Ngữ Phổ biến</h6>
@@ -14,7 +14,6 @@
                     <p class="rating"><i>Lê Anh Phong</i></p>
                     <p class="top-star">
                         <span class="count">5.0</span>
-=======
     <h6 class="title">Khóa học Ngoại Ngữ Phổ biến</h6>
     <div class="product-slider d-flex align-items-center">
         <button id="prevButton" class="btn btn-outline-secondary btn-lg rounded p-3 mr-2">
@@ -105,7 +104,6 @@
                 <div class="category-content-wrapper">
                     <div class="category-content">
                         <input type="radio" name="rating">
->>>>>>> 54cbe523299928534502f074444188905e2f4602
                         <span class="stars">&#9733; &#9733; &#9733; &#9733; &#9733;</span>
                         <span class="count">(231)</span>
                     </p>
