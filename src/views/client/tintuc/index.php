@@ -52,6 +52,34 @@
   max-height: 1180px;
 }
 
+.tintuc-content {
+    display: flex;
+    align-items: flex-start; /* Căn trên cùng theo chiều dọc */
+    gap: 20px; /* Khoảng cách giữa chữ và ảnh */
+    margin-bottom: 20px; /* Khoảng cách dưới */
+}
+
+/* Phần văn bản */
+.tintuc-content span {
+  color: #333;
+  margin-bottom: 20px;
+  font-size: 18px;
+  max-height: 0;
+  transition: max-height 0.5s ease-in-out;
+  flex: 1; 
+  transition: max-height 0.5s ease-in-out; 
+}
+
+/* Phần ảnh */
+.tintuc-content img {
+    flex-shrink: 0; 
+    width: 40%; 
+    max-width: 350px; 
+    height:200px; 
+    border-radius: 8px; 
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); 
+}
+
 </style>
 <div class="col xl-12">
     <div class="banner">
@@ -92,9 +120,13 @@
         Với nội dung phong phú và nhiều chi tiết, khóa ôn thi của QTPedu cung cấp tài liệu học tập dễ hiểu, các mẹo ghi nhớ và phương pháp làm bài giúp học sinh đạt kết quả cao trong các môn Lịch sử, Địa lý, Giáo dục Công dân.
         </p>
         <h4>3. Chương Trình Khuyến Mãi "Mở Khóa Tri Thức - Ưu Đãi Đặc Biệt"</h4>
-        <p>
+        <p class="tintuc-content">
+        <span>
         Nhân dịp khai trương, QTPedu gửi đến bạn chương trình ưu đãi đặc biệt: GIẢM 20% cho tất cả các khóa học trong tháng 11. Đây là cơ hội tuyệt vời để bạn có thể học tập và phát triển bản thân với chi phí ưu đãi. Bên cạnh đó, nếu đăng ký theo nhóm từ 3 người trở lên, bạn sẽ nhận thêm quà tặng là khóa học kỹ năng miễn phí trị giá lên đến 500.000 VNĐ! Hạn cuối khuyến mãi: Đến hết ngày 30/11. Nhanh tay tận dụng cơ hội để không bỏ lỡ những khóa học bổ ích.
+        </span>
+        <img class="tintuc-img" src="./assets/image/account/Frame 427319544.png" alt="Khuyến mãi">
         </p>
+        
         <h4>4. Câu Chuyện Thành Công - Học Viên Nổi Bật Của QTPedu</h4>
         <p>
         QTPedu tự hào khi được đồng hành cùng những học viên tài năng. Nhiều người đã thay đổi sự nghiệp nhờ kiến thức từ các khóa học. Một trong số đó là bạn Nguyễn Văn An, sinh viên chuyên ngành Công nghệ Thông tin. Chia sẻ của An: "Nhờ khóa học Lập Trình Web tại QTPedu, mình đã tự tin hơn rất nhiều trong việc xây dựng website từ con số 0. Giờ đây, mình đã tự tạo ra một trang web bán hàng trực tuyến riêng, và dự định sẽ mở rộng thêm chức năng đặt hàng tự động để nâng cao trải nghiệm người dùng."
