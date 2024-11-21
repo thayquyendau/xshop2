@@ -1,67 +1,69 @@
 <div class="col xl-12 lg-12 md-12">
+    <div class="banner"></div>
     <h6 class="title-category">Khóa học Ngoại Ngữ Phổ biến</h6>
     <div class="product-slider d-flex align-items-center">
-        <button id="prevButton" class="btn btn-outline-secondary btn-lg rounded p-3 mr-2">
+        <button id="prevButton" class="btn btn-outline-secondary btn-lg rounded-circle p-4 mr-2">
             <i class="fas fa-chevron-left"></i>
         </button>
         <div class="row product-list flex-nowrap overflow-hidden">
             <div class="col-xl-3 col-lg-3 col-md-6">
-                <img style="width: 100%;" src="assets/image/products/ngoai_ngu1.jpg" alt="">
-                <p class="title-product">Phương pháp học môn Hóa học đơn giản cho người mất gốc</p>
-                <p class="rating"><i>Lê Anh Phong</i></p>
-                <p class="top-star">
+                <a href="<?= BASE_URL ?>/detailCourse"><img style="width: 100%;" src="assets/image/products/ngoai_ngu1.jpg" alt=""></a>
+                <div class="title-product">Phương pháp học môn Hóa học đơn giản cho người mất gốc</div>
+                <div class="rating"><i>Lê Anh Phong</i></div>
+                <div class="top-star">
                     <span class="count">5.0</span>
                     <span class="stars">&#9733; &#9733; &#9733; &#9733; &#9733;</span>
                     <span class="count">(231)</span>
-                </p>
-                <p class="price">599.000đ <del>899.000đ</del></p>
+                </div>
+                <div class="price">599.000đ <del>899.000đ</del></div>
             </div>
             <div class="col-xl-3 col-lg-3 col-md-6">
-                <img style="width: 100%;" src="assets/image/products/ngoai_ngu2.jpg" alt="">
-                <p class="title-product">Phương pháp học môn Hóa học đơn giản cho người mất gốc</p>
-                <p class="rating"><i>Lê Anh Phong</i></p>
-                <p class="top-star">
+                <a href="<?= BASE_URL ?>/detailCourse"><img style="width: 100%;" src="assets/image/products/ngoai_ngu1.jpg" alt=""></a>
+                <div class="title-product">Phương pháp học môn Hóa học đơn giản cho người mất gốc</div>
+                <div class="rating"><i>Lê Anh Phong</i></div>
+                <div class="top-star">
                     <span class="count">5.0</span>
                     <span class="stars">&#9733; &#9733; &#9733; &#9733; &#9733;</span>
                     <span class="count">(231)</span>
-                </p>
-                <p class="price">599.000đ <del>899.000đ</del></p>
+                </div>
+                <div class="price">599.000đ <del>899.000đ</del></div>
             </div>
             <div class="col-xl-3 col-lg-3 col-md-6">
-                <img style="width: 100%;" src="assets/image/products/ngoai_ngu4.jpg" alt="">
-                <p class="title-product">Phương pháp học môn Hóa học đơn giản cho người mất gốc</p>
-                <p class="rating"><i>Lê Anh Phong</i></p>
-                <p class="top-star">
+                <a href="<?= BASE_URL ?>/detailCourse"><img style="width: 100%;" src="assets/image/products/ngoai_ngu1.jpg" alt=""></a>
+                <div class="title-product">Phương pháp học môn Hóa học đơn giản cho người mất gốc</div>
+                <div class="rating"><i>Lê Anh Phong</i></div>
+                <div class="top-star">
                     <span class="count">5.0</span>
                     <span class="stars">&#9733; &#9733; &#9733; &#9733; &#9733;</span>
                     <span class="count">(231)</span>
-                </p>
-                <p class="price">599.000đ <del>899.000đ</del></p>
+                </div>
+                <div class="price">599.000đ <del>899.000đ</del></div>
             </div>
             <div class="col-xl-3 col-lg-3 col-md-6">
-                <img style="width: 100%;" src="assets/image/products/ngoai_ngu4.jpg" alt="">
-                <p class="title-product">Phương pháp học môn Hóa học đơn giản cho người mất gốc</p>
-                <p class="rating"><i>Lê Anh Phong</i></p>
-                <p class="top-star">
+                <a href="<?= BASE_URL ?>/detailCourse"><img style="width: 100%;" src="assets/image/products/ngoai_ngu1.jpg" alt=""></a>
+                <div class="title-product">Phương pháp học môn Hóa học đơn giản cho người mất gốc</div>
+                <div class="rating"><i>Lê Anh Phong</i></div>
+                <div class="top-star">
                     <span class="count">5.0</span>
                     <span class="stars">&#9733; &#9733; &#9733; &#9733; &#9733;</span>
                     <span class="count">(231)</span>
-                </p>
-                <p class="price">599.000đ <del>899.000đ</del></p>
+                </div>
+                <div class="price">599.000đ <del>899.000đ</del></div>
             </div>
             <div class="col-xl-3 col-lg-3 col-md-6">
-                <img style="width: 100%;" src="assets/image/products/ngoai_ngu1.jpg" alt="">
-                <p class="title-product">Phương pháp học môn Hóa học đơn giản cho người mất gốc</p>
-                <p class="rating"><i>Le Quoc Viet</i></p>
-                <p class="top-star">
+                <a href="<?= BASE_URL ?>/detailCourse"><img style="width: 100%;" src="assets/image/products/ngoai_ngu2.jpg" alt=""></a>
+                <div class="title-product">Phương pháp học môn Hóa học đơn giản cho người mất gốc</div>
+                <div class="rating"><i>Lê Anh Phong</i></div>
+                <div class="top-star">
                     <span class="count">5.0</span>
                     <span class="stars">&#9733; &#9733; &#9733; &#9733; &#9733;</span>
                     <span class="count">(231)</span>
-                </p>
-                <p class="price">599.000đ <del>899.000đ</del></p>
+                </div>
+                <div class="price">599.000đ <del>899.000đ</del></div>
             </div>
+
         </div>
-        <button id="nextButton" class="btn btn-outline-secondary btn-lg rounded p-3 mr-2">
+        <button id="nextButton" class="btn btn-outline-secondary btn-lg rounded-circle p-4 mr-2">
             <i class="fas fa-chevron-right"></i>
         </button>
     </div>
@@ -131,134 +133,75 @@
         <div class="category-main">
             <div class="category-top-form">
                 <div class="category-form-space">
-                    <div class="category-content-main">
+                    <div class="step-flex">
                         <div class="category-content-left">
-                            <div class="category-image"><img src="assets\image\products\ngoai_ngu2.jpg" alt=""></div>
+                            <div class="category-image">
+                                <a href="<?= BASE_URL ?>/detailCourse"><img src="assets\image\products\ngoai_ngu2.jpg" alt=""></a>
+                            </div>
                             <div class="category-nd">
-                                <p class="title-product">Facebook Marketing từ A - Z</p>
-                                <p class="rating">Giáo viên: <i>Châu Thùy Trang</i></p>
-                                <p class="top-star">
+                                <div class="title-product">Facebook Marketing từ A - Z</div>
+                                <div class="rating">Giáo viên: <i>Châu Thùy Trang</i></div>
+                                <div class="top-star">
                                     <span class="count">5.0</span>
                                     <span class="stars">&#9733; &#9733; &#9733; &#9733; &#9733;</span>
                                     <span class="count">(231)</span>
-                                </p>
-                                <p><span class="count">74 bài giảng - 07 giờ 07 phút</span></p>
+                                </div>
+                                <div><span class="count">74 bài giảng - 07 giờ 07 phút</span></div>
                             </div>
                         </div>
                         <div class="category-content-right">
-                            <p class="price">599.000đ</p>
-                            <p><del>899.000đ</del></p>
+                            <div class="price">599.000đ</div>
+                            <div><del>899.000đ</del></div>
                         </div>
                     </div>
                 </div>
                 <div class="category-form-space">
-                    <div class="category-content-main">
+                    <div class="step-flex">
                         <div class="category-content-left">
-                            <div class="category-image"><img src="assets\image\products\ngoai_ngu2.jpg" alt=""></div>
+                            <div class="category-image">
+                                <a href="<?= BASE_URL ?>/detailCourse"><img src="assets\image\products\ngoai_ngu2.jpg" alt=""></a>
+                            </div>
                             <div class="category-nd">
-                                <p class="title-product">Facebook Marketing từ A - Z</p>
-                                <p class="rating">Giáo viên: <i>Châu Thùy Trang</i></p>
-                                <p class="top-star">
+                                <div class="title-product">Facebook Marketing từ A - Z</div>
+                                <div class="rating">Giáo viên: <i>Châu Thùy Trang</i></div>
+                                <div class="top-star">
                                     <span class="count">5.0</span>
                                     <span class="stars">&#9733; &#9733; &#9733; &#9733; &#9733;</span>
                                     <span class="count">(231)</span>
-                                </p>
-                                <p><span class="count">74 bài giảng - 07 giờ 07 phút</span></p>
+                                </div>
+                                <div><span class="count">74 bài giảng - 07 giờ 07 phút</span></div>
                             </div>
                         </div>
                         <div class="category-content-right">
-                            <p class="price">599.000đ</p>
-                            <p><del>899.000đ</del></p>
+                            <div class="price">599.000đ</div>
+                            <div><del>899.000đ</del></div>
                         </div>
                     </div>
                 </div>
                 <div class="category-form-space">
-                    <div class="category-content-main">
+                    <div class="step-flex">
                         <div class="category-content-left">
-                            <div class="category-image"><img src="assets\image\products\ngoai_ngu2.jpg" alt=""></div>
+                            <div class="category-image">
+                                <a href="<?= BASE_URL ?>/detailCourse"><img src="assets\image\products\ngoai_ngu2.jpg" alt=""></a>
+                            </div>
                             <div class="category-nd">
-                                <p class="title-product">Facebook Marketing từ A - Z</p>
-                                <p class="rating">Giáo viên: <i>Châu Thùy Trang</i></p>
-                                <p class="top-star">
+                                <div class="title-product">Facebook Marketing từ A - Z</div>
+                                <div class="rating">Giáo viên: <i>Châu Thùy Trang</i></div>
+                                <div class="top-star">
                                     <span class="count">5.0</span>
                                     <span class="stars">&#9733; &#9733; &#9733; &#9733; &#9733;</span>
                                     <span class="count">(231)</span>
-                                </p>
-                                <p><span class="count">74 bài giảng - 07 giờ 07 phút</span></p>
+                                </div>
+                                <div><span class="count">74 bài giảng - 07 giờ 07 phút</span></div>
                             </div>
                         </div>
                         <div class="category-content-right">
-                            <p class="price">599.000đ</p>
-                            <p><del>899.000đ</del></p>
+                            <div class="price">599.000đ</div>
+                            <div><del>899.000đ</del></div>
                         </div>
                     </div>
                 </div>
-                <div class="category-form-space">
-                    <div class="category-content-main">
-                        <div class="category-content-left">
-                            <div class="category-image"><img src="assets\image\products\ngoai_ngu2.jpg" alt=""></div>
-                            <div class="category-nd">
-                                <p class="title-product">Facebook Marketing từ A - Z</p>
-                                <p class="rating">Giáo viên: <i>Châu Thùy Trang</i></p>
-                                <p class="top-star">
-                                    <span class="count">5.0</span>
-                                    <span class="stars">&#9733; &#9733; &#9733; &#9733; &#9733;</span>
-                                    <span class="count">(231)</span>
-                                </p>
-                                <p><span class="count">74 bài giảng - 07 giờ 07 phút</span></p>
-                            </div>
-                        </div>
-                        <div class="category-content-right">
-                            <p class="price">599.000đ</p>
-                            <p><del>899.000đ</del></p>
-                        </div>
-                    </div>
-                </div>
-                <div class="category-form-space">
-                    <div class="category-content-main">
-                        <div class="category-content-left">
-                            <div class="category-image"><img src="assets\image\products\ngoai_ngu2.jpg" alt=""></div>
-                            <div class="category-nd">
-                                <p class="title-product">Facebook Marketing từ A - Z</p>
-                                <p class="rating">Giáo viên: <i>Châu Thùy Trang</i></p>
-                                <p class="top-star">
-                                    <span class="count">5.0</span>
-                                    <span class="stars">&#9733; &#9733; &#9733; &#9733; &#9733;</span>
-                                    <span class="count">(231)</span>
-                                </p>
-                                <p><span class="count">74 bài giảng - 07 giờ 07 phút</span></p>
-                            </div>
-                        </div>
-                        <div class="category-content-right">
-                            <p class="price">599.000đ</p>
-                            <p><del>899.000đ</del></p>
-                        </div>
-                    </div>
-                </div>
-                <div class="category-form-space">
-                    <div class="category-content-main">
-                        <div class="category-content-left">
-                            <div class="category-image"><img src="assets\image\products\ngoai_ngu2.jpg" alt=""></div>
-                            <div class="category-nd">
-                                <p class="title-product">Facebook Marketing từ A - Z</p>
-                                <p class="rating">Giáo viên: <i>Châu Thùy Trang</i></p>
-                                <p class="top-star">
-                                    <span class="count">5.0</span>
-                                    <span class="stars">&#9733; &#9733; &#9733; &#9733; &#9733;</span>
-                                    <span class="count">(231)</span>
-                                </p>
-                                <p><span class="count">74 bài giảng - 07 giờ 07 phút</span></p>
-                            </div>
-                        </div>
-                        <div class="category-content-right">
-                            <p class="price">599.000đ</p>
-                            <p><del>899.000đ</del></p>
-                        </div>
-                    </div>
-                </div>
-
             </div>
-
         </div>
     </div>
 

@@ -151,6 +151,7 @@ html {
 .danhmuc-item {
     padding: 8px 20px;
     white-space: nowrap; 
+    color: #000;
 }
 
 .danhmuc-item a {
@@ -465,6 +466,26 @@ del{
 }
 .product-list {
 }
+.product-slider {
+    position: relative;
+}
+
+#prevButton {
+    position: absolute;
+    top: 30%;
+    left: -20px; /* Căn chỉnh khoảng cách với khung flex-wrap */
+    transform: translateY(-50%);
+    z-index: 10; /* Đảm bảo nút nằm trên các phần tử khác */
+}
+
+#nextButton {
+    position: absolute;
+    top: 30%;
+    right: -20px; /* Căn chỉnh khoảng cách với khung flex-wrap */
+    transform: translateY(-50%);
+    z-index: 10;
+}
+
 .price{
     font-weight: bolder;
     font-size: 18px;
