@@ -34,11 +34,11 @@
                 </svg><span style="margin-left: 5px;">Danh mục</span>
             </a>
             <ul class="danhmuc-list">
-                <li class="danhmuc-item"><a href=""></a>Giáo dục phổ thông</li>
-                <li class="danhmuc-item"><a href=""></a>Công nghệ thông tin</li>
-                <li class="danhmuc-item"><a href=""></a>Kinh doanh - Marketing</li>
-                <li class="danhmuc-item"><a href=""></a>Phát triển cá nhân</li>
-                <li class="danhmuc-item"><a href=""></a>Thiết kế</li>
+                <a href="<?= BASE_URL ?>/danhmuc"><li class="danhmuc-item">Giáo dục phổ thông</li></a>
+                <li class="danhmuc-item"><a href="<?= BASE_URL ?>/danhmuc"></a>Công nghệ thông tin</li>
+                <li class="danhmuc-item"><a href="<?= BASE_URL ?>/danhmuc"></a>Kinh doanh - Marketing</li>
+                <li class="danhmuc-item"><a href="<?= BASE_URL ?>/danhmuc"></a>Phát triển cá nhân</li>
+                <li class="danhmuc-item"><a href="<?= BASE_URL ?>/danhmuc"></a>Thiết kế</li>
             </ul>
         </li>
         <li class="menu-item1"><a href="<?= BASE_URL.'/' ?>">Trang chủ</a></li>
