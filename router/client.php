@@ -23,6 +23,7 @@
 
     
     $router->add("GET", "client", "/lienhe", "LienheController@index");
+    $router->add("GET", "client", "/tintuc", "TintucController@index");
     $router->add("GET", "client", "/gioithieu", "GioithieuController@index");
     $router->add("GET", "client", "/giohang", "GiohangController@index");
     $router->add("GET", "client", "/thanhtoan", "ThanhtoanController@index");
