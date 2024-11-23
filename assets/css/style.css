@@ -714,7 +714,7 @@ del{
     padding-left: 20px;
 }
 .category-nd .title-product{
-    padding-bottom: 20px;
+    padding-bottom: 5px;
 }
 
 .category-content-right {
@@ -850,4 +850,8 @@ form{
 }
 th,td{
     border: 1px solid;
+}
+.detail_pl{
+    padding-left: 5px;
+    font-size: 14px;
 }

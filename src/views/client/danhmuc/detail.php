@@ -3,41 +3,41 @@
         <div class="detail">
             <div class="detailProduct">
                 <div class="detailProduct-left">
-                    <div class="title-detail">Nghệ thuật thuyết trình thuyết phục</div>
+                    <div class="title-detail"><?= $courses['TenKhoaHoc'] ?></div>
                     <br>
-                    <div class="count">Thầy Phan Quốc Việt - Bậc thầy trong thuyết trình sẽ giúp bạn Kích hoạt tâm thế người thuyết trình xuất sắc, chinh phục người đối diện </div>
+                    <div class="count"><?= $detailCourse['MoTa'] ?></div>
                     <br>
                     <p class="top-star">
                         <span class="count">4.5</span>
                         <span class="stars">&#9733; &#9733; &#9733; &#9733; &#9733;</span>
-                        <span class="count">(26 đánh giá )</span>
-                        <span class="count">497 Học viên</span>
+                        <span class="detail_pl">(26 đánh giá )</span>
+                        <span class="detail_pl">497 Học viên</span>
                     </p>
-                    <span class="count">Giảng viên: Phan Quoc Viet</span>
+                    <span class="count">Giảng viên: <?= $courses['GiaoVien'] ?></span>
                 </div>
                 <div class="detailProduct-right">
                     <div class="detalProduct-right-course">
                         <div class="cart-pading">
-                            <p class="top-star">
-                                <span><img class="icon" src="assets\image\icon\icon_zoom.svg" alt="">
-                                </span>
-                                <span class="count">Thời lượng: 02 giờ 44 phút</span>
-                            </p>
-                            <p class="top-star">
-                                <span><img class="icon" src="assets\image\icon\task-svgrepo-com.svg" alt="">
-                                </span>
-                                <span class="count">Giáo Trình: 28 Bài giảng</span>
-                            </p>
-                            <p class="top-star">
-                                <span><img class="icon" src="assets\image\icon\icon_time.svg" alt="">
-                                </span>
-                                <span class="count">Sở hữu khóa học trọn đời</span>
-                            </p>
-                            <p class="top-star">
-                                <span><img class="icon" src="assets\image\icon\icon_chung_chi.svg" alt="">
-                                </span>
-                                <span class="count">Cấp chứng nhận hoàn thành</span>
-                            </p>
+                            <div class="top-star d-flex align-items-start">
+                                <p><img class="icon" src="assets\image\icon\icon_zoom.svg" alt="">
+                                </p>
+                                <p class="detail_pl">Thời lượng: 02 giờ 44 phút</p>
+                            </div>
+                            <div class="top-star d-flex align-items-start">
+                                <p><img class="icon" src="assets\image\icon\task-svgrepo-com.svg" alt="">
+                                </p>
+                                <p class="detail_pl">Giáo Trình: 28 Bài giảng</p>
+                            </div>
+                            <div class="top-star d-flex align-items-start">
+                                <p><img class="icon" src="assets\image\icon\icon_time.svg" alt="">
+                                </p>
+                                <p class="detail_pl">Sở hữu khóa học trọn đời</p>
+                            </div>
+                            <div class="top-star d-flex align-items-start">
+                                <p><img class="icon" src="assets\image\icon\icon_chung_chi.svg" alt="">
+                                </p>
+                                <p class="detail_pl">Cấp chứng nhận hoàn thành</p>
+                            </div>
                         </div>
                         <div class="price">599.000đ
                             <del>899.000đ</del>
@@ -250,22 +250,22 @@
                                     <p class="top-star">
                                         <span><img class="icon" src="assets\image\icon\icon_half_star.svg" alt="">
                                         </span>
-                                        <span class="count">4.6 xếp hạng</span>
+                                        <span class="detail_pl">4.6 xếp hạng</span>
                                     </p>
                                     <p class="top-star">
                                         <span><img class="icon" src="assets\image\icon\icon_comment.svg" alt="">
                                         </span>
-                                        <span class="count">72.0 đánh giá</span>
+                                        <span class="detail_pl">72.0 đánh giá</span>
                                     </p>
                                     <p class="top-star">
                                         <span><img class="icon" src="assets\image\icon\icon_people.svg" alt="">
                                         </span>
-                                        <span class="count">1262 học viên</span>
+                                        <span class="detail_pl">1262 học viên</span>
                                     </p>
                                     <p class="top-star">
                                         <span><img class="icon" src="assets\image\icon\icon_video.svg" alt="">
                                         </span>
-                                        <span class="count">2 khóa học</span>
+                                        <span class="detail_pl">2 khóa học</span>
                                     </p>
                                 </div>
                             </div>
