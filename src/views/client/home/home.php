@@ -39,6 +39,11 @@
     .h3_noidung:hover {
         color: orangered;
     }
+
+    a{
+        color: #000;
+        text-decoration: none;
+    }
 </style>
 <div class="col xl-12 lg-12 md-12">
     <div class="banner">
@@ -68,7 +73,7 @@
                     <p style="font-size: 16px;margin-top:10px;">599.000đ <del style="font-size:12px;">899.000đ</del></p>
                 </div>
                 <div class="col xl-3 lg-3 md-6" style="margin-bottom: 20px;">
-                    <a href="<?= BASE_URL . '/detail' ?>">
+                    <a href="<?= BASE_URL ?>/detailCourse">
                         <img style="width: 100%;" src="./assets/image/header/Frame 427319549.png" alt="">
                         <p class="title-product">Phương pháp học môn Hóa học đơn giản cho người mất gốc</p>
                     </a>
