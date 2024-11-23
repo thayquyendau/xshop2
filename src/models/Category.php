@@ -14,6 +14,6 @@ class Category extends baseModel{
     public function getCategoryById($id)
     {
         $sql = "SELECT * FROM khoahoc WHERE IDCatagory  = ?";
-        return $this->pdoQuery($sql, [$id]);
+        return $this->pdoQueryAll($sql, [$id]);
     }
 }

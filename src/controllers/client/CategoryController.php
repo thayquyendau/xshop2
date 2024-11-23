@@ -19,12 +19,8 @@ class CategoryController
         require_once './config/head.php';
     }
     public function index(){
-        if (isset($_GET['id'])) {
             $id = $_GET['IDCatagory'];
             $courses = $this->modelObject->getCategoryById($id);
             require_once './src/views/client/danhmuc/index.php';
-        } else {
-            echo "Không có tham số 'id' trong URL.";
-        }
     }
 }

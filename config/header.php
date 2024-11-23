@@ -36,7 +36,7 @@
             <ul class="danhmuc-list">
                 <?php foreach ($categories as $category): ?>
                     <li class="danhmuc-item">
-                        <a href="<?= BASE_URL ?>/danhmuc?id=<?= $category['IDCatagory'] ?>">
+                        <a href="<?= BASE_URL ?>/danhmuc?IDCatagory=<?= $category['IDCatagory'] ?>">
                             <?= $category['TenDanhMuc'] ?>
                         </a>
                     </li>

@@ -499,7 +499,6 @@ del{
 }
 .count{
     font-size: 14px;
-    margin-left: 5px;
 }
 .stars {
     color: #f5b301; /* Màu vàng */
@@ -513,6 +512,7 @@ del{
     color: #00000061;
     text-decoration: line-through;
     font-size: 16px;
+    padding-left: 9px;
 }
 /* Chi tiet san pham */
 .detail-bgr{
