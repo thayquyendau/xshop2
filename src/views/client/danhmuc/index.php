@@ -6,62 +6,19 @@
             <i class="fas fa-chevron-left"></i>
         </button>
         <div class="row product-list flex-nowrap overflow-hidden">
-            <div class="col-xl-3 col-lg-3 col-md-6">
+            <?php foreach($courses as $course): ?>
+                <div class="col-xl-3 col-lg-3 col-md-6">
                 <a href="<?= BASE_URL ?>/detailCourse"><img style="width: 100%;" src="assets/image/products/ngoai_ngu1.jpg" alt=""></a>
-                <div class="title-product">Phương pháp học môn Hóa học đơn giản cho người mất gốc</div>
-                <div class="rating"><i>Lê Anh Phong</i></div>
+                <div class="title-product"><?=$course['TenKhoaHoc'] ?></div>
+                <div class="rating"><i><?=$course['GiaoVien'] ?></i></div>
                 <div class="top-star">
                     <span class="count">5.0</span>
                     <span class="stars">&#9733; &#9733; &#9733; &#9733; &#9733;</span>
                     <span class="count">(231)</span>
                 </div>
-                <div class="price">599.000đ <del>899.000đ</del></div>
+                <div class="price"><?=$course['Gia'] ?><del><?=$course['Gia'] ?></del></div>
             </div>
-            <div class="col-xl-3 col-lg-3 col-md-6">
-                <a href="<?= BASE_URL ?>/detailCourse"><img style="width: 100%;" src="assets/image/products/ngoai_ngu1.jpg" alt=""></a>
-                <div class="title-product">Phương pháp học môn Hóa học đơn giản cho người mất gốc</div>
-                <div class="rating"><i>Lê Anh Phong</i></div>
-                <div class="top-star">
-                    <span class="count">5.0</span>
-                    <span class="stars">&#9733; &#9733; &#9733; &#9733; &#9733;</span>
-                    <span class="count">(231)</span>
-                </div>
-                <div class="price">599.000đ <del>899.000đ</del></div>
-            </div>
-            <div class="col-xl-3 col-lg-3 col-md-6">
-                <a href="<?= BASE_URL ?>/detailCourse"><img style="width: 100%;" src="assets/image/products/ngoai_ngu1.jpg" alt=""></a>
-                <div class="title-product">Phương pháp học môn Hóa học đơn giản cho người mất gốc</div>
-                <div class="rating"><i>Lê Anh Phong</i></div>
-                <div class="top-star">
-                    <span class="count">5.0</span>
-                    <span class="stars">&#9733; &#9733; &#9733; &#9733; &#9733;</span>
-                    <span class="count">(231)</span>
-                </div>
-                <div class="price">599.000đ <del>899.000đ</del></div>
-            </div>
-            <div class="col-xl-3 col-lg-3 col-md-6">
-                <a href="<?= BASE_URL ?>/detailCourse"><img style="width: 100%;" src="assets/image/products/ngoai_ngu1.jpg" alt=""></a>
-                <div class="title-product">Phương pháp học môn Hóa học đơn giản cho người mất gốc</div>
-                <div class="rating"><i>Lê Anh Phong</i></div>
-                <div class="top-star">
-                    <span class="count">5.0</span>
-                    <span class="stars">&#9733; &#9733; &#9733; &#9733; &#9733;</span>
-                    <span class="count">(231)</span>
-                </div>
-                <div class="price">599.000đ <del>899.000đ</del></div>
-            </div>
-            <div class="col-xl-3 col-lg-3 col-md-6">
-                <a href="<?= BASE_URL ?>/detailCourse"><img style="width: 100%;" src="assets/image/products/ngoai_ngu2.jpg" alt=""></a>
-                <div class="title-product">Phương pháp học môn Hóa học đơn giản cho người mất gốc</div>
-                <div class="rating"><i>Lê Anh Phong</i></div>
-                <div class="top-star">
-                    <span class="count">5.0</span>
-                    <span class="stars">&#9733; &#9733; &#9733; &#9733; &#9733;</span>
-                    <span class="count">(231)</span>
-                </div>
-                <div class="price">599.000đ <del>899.000đ</del></div>
-            </div>
-
+            <?php endforeach;?>
         </div>
         <button id="nextButton" class="btn btn-outline-secondary btn-lg rounded-circle p-4 mr-2">
             <i class="fas fa-chevron-right"></i>

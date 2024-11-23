@@ -3,7 +3,7 @@
     use models\Product;
     use models\Comment;
     
-    class ProductController {
+    class CourseController {
         public $modelObject;
         public $modelObjects;
         public $base = BASE_URL;

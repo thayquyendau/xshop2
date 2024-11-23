@@ -1,6 +1,7 @@
 <?php 
 namespace models;
-    class Home {
-
+use commons\baseModel;
+    class Home extends baseModel {
+      
     }
 ?>
