@@ -1,11 +1,11 @@
 <div class="col xl-12 lg-12 md-12">
     <div class="banner"></div>
     <h6 class="title-category"><?= $categories['TenDanhMuc'] ?></h6>
-    <div class="product-slider d-flex align-items-center">
+    <div class="product-slider">
         <button id="prevButton" class="btn btn-outline-secondary btn-lg rounded-circle p-4 mr-2">
             <i class="fas fa-chevron-left"></i>
         </button>
-        <div class="row product-list flex-nowrap overflow-hidden">
+        <div class="row product-list-slide flex-nowrap overflow-hidden">
             <?php foreach ($courses as $course): ?>
                 <div class="col-xl-3 col-lg-3 col-md-6">
                     <a href="<?= BASE_URL ?>/detailCourse?IDKhoaHoc=<?= $course['IDKhoaHoc'] ?>">

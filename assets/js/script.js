@@ -37,8 +37,8 @@ document.addEventListener("DOMContentLoaded", () => {
 // JS cua Quyen
 // Slide sản phẩm
 document.addEventListener("DOMContentLoaded", () => {
-  const productList = document.querySelector(".product-list");
-  const productItem = document.querySelector(".product-list .col-xl-3");
+  const productList = document.querySelector(".product-list-slide");
+  const productItem = document.querySelector(".product-list-slide .col-xl-3");
 
   if (!productList || !productItem) {
     console.error("Không tìm thấy danh sách sản phẩm hoặc sản phẩm.");
