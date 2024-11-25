@@ -1,5 +1,6 @@
 <?php
 session_start();
+ob_start();
 require_once './src/commons/functions.php';
 require_once './src/commons/evr.php';
 require_once './src/commons/baseModel.php';
@@ -14,12 +15,13 @@ require_once './config/head.php';
 <body>
     <div class="grid wide">
         <?php
-            require_once './src/models/Category.php';
-            use models\Category;    
-            // Lấy danh mục từ model
-            $modelCategory = new Category();
-            $categories = $modelCategory->getAllCategory();
-            require_once './config/header.php';
+        require_once './src/models/Category.php';
+
+        use models\Category;
+        // Lấy danh mục từ model
+        $modelCategory = new Category();
+        $categories = $modelCategory->getAllCategory();
+        require_once './config/header.php';
         ?>
         <div class="row">
             <?php
@@ -37,3 +39,4 @@ require_once './config/head.php';
 </body>
 
 </html>
+<?php ob_end_flush(); ?>

@@ -541,7 +541,7 @@ del {
 }
 
 a {
-    text-decoration: none;
+    text-decoration: none !important;
 }
 
 del {
@@ -780,7 +780,7 @@ label[for="radio"]::after {
 
 .category-nd {
     padding-left: 20px;
-    padding-bottom: 20px;
+    /* padding-bottom: 20px; */
 }
 .category-nd .title-product {
     padding-bottom: 5px;
@@ -814,7 +814,7 @@ label[for="radio"]::after {
 }
 
 .cart-pading {
-    padding-right: 40px;
+    /* padding-right: 40px; */
 }
 
 .progress-container {

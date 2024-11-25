@@ -5,48 +5,57 @@ namespace controllers\client;
 use models\Cart;
 use models\Category;
 
-class CartController{
+class CartController
+{
     public $cartModel;
     public $courseModel;
-    public $BASE_URL = BASE_URL;
-    public function __construct(){
+    public $baseUrl = BASE_URL;
+    public function __construct(){               
+        //Ngan chan loi
+        ini_set('display_errors', 1);
+        ini_set('display_startup_errors', 1);
+        error_reporting(E_ALL);
         $this->cartModel = new Cart();
         $this->courseModel = new Category();
     }
     // Thêm sản phẩm vào giỏ hàng
     public function index(): void{
-        if($_SERVER['REQUEST_METHOD'] == 'POST') {
-            ini_set('display_errors', 0);
-            ini_set('log_errors', 1);
-            //Ngan chan loi
+        if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+            
+
             $id = $_POST['IDKhoaHoc'];
-            $this->cartModel->addToCartById($_POST, $id);
+            $this->cartModel->addToCartById([],$id);
             $cartItems = $this->cartModel->getCartItems();
-            // header("Location: $this->BASE_URL/giohang");
+            // Loại bỏ các biến ko phải mảng
+            $cartItems = array_filter($cartItems, 'is_array');
+            // debug($cartItems);
             require_once './src/views/client/giohang/giohang.php';
-        } else{
+        } else {
             $cartItems = $this->cartModel->getCartItems();
+            $cartItems = array_filter($cartItems, 'is_array');
             require_once './src/views/client/giohang/giohang.php';
-        }   
+        }
     }
 
     // Xóa một sản phẩm khỏi giỏ hàng
-    public function removeCart()
-    {
-        $id = $_GET['IDKhoaHoc'] ?? null;
+    public function delete(): never{
+        ini_set('display_errors', 1);
+        ini_set('display_startup_errors', 1);
+        $id = $_GET['IDKhoaHoc']?? null;
         if ($id) {
             $this->cartModel->removeFromCart($id);
         }
-        header("Location: " . BASE_URL . "/giohang");
+        header("location: $this->baseUrl/giohang");
         exit;
     }
 
 
     // Xóa toàn bộ giỏ hàng
-    public function clearCart()
-    {
+    public function deleteAll(): never{
+        ini_set('display_errors', 1);
+        ini_set('display_startup_errors', 1);
         $this->cartModel->clearCart();
-        header("Location: " . BASE_URL . "/giohang");
+        header("Location: $this->baseUrl/giohang");
         exit;
     }
 }

@@ -4,74 +4,76 @@
             <div class="title-category">Giỏ hàng</div>
             <div class="detail-course-main-body">
                 <div class="detail-course-main-body-left">
-                    <div class="detail-course-main-body">
+                    <div class="d-flex pb-3 justify-content-between align-items-end">
                         <div class="detail-course-main-body-left">
                             <div class="detail-course-left">
                                 <div class="cart-flex-base-line">
                                     <div class="cart-flex-left">
                                         <input type="checkbox" id="select-all" name="rating" onchange="toggleAllProducts(this)">
                                     </div>
-                                    <div class="title-product">CHỌN TẤT CẢ (4 SẢN PHẨM)</div>
+                                    <div class="title-product">CHỌN TẤT CẢ (<span id="selected-count">0</span> SẢN PHẨM)</div>
                                 </div>
                             </div>
                         </div>
                         <div class="category-content-main">
                             <div class="star-big">
-                                <img class="icon" src="assets\image\icon\icon_trash.svg" alt="">
+                                <a href="<?= BASE_URL ?>/deleteAllCart"><img class="icon" src="assets\image\icon\icon_trash.svg" alt=""></a>
                             </div>
-                            <div class="title-product">
-                                <a href="">XÓA</a>
+                            <div class="price">
+                                <a href="<?= BASE_URL ?>/deleteAllCart">XÓA</a>
                             </div>
                         </div>
                     </div>
                     <!-- Khung cho khóa học đc thêm vào giỏ hàng -->
-                    <?php foreach($cartItems as $item): ?>
+                    <?php foreach ($cartItems as $item): ?>
                         <div class="category-form-space">
-                        <div class="top-star">
-                            <div class="cart-pading">
-                                <div class="category-content-main">
-                                    <div class="cart-flex-left">
-                                        <input type="checkbox" class="product-checkbox" onchange="updateSelectAll()" name="rating">
-                                    </div>
-                                    <div class="cart-flex-right">
-                                        <div class="category-content-main">
-                                            <div class="category-image"><img src="assets\image\products\ngoai_ngu2.jpg" alt=""></div>
-                                            <div class="category-nd">
-                                                <div class="title-product"><?= $item['TenKhoaHoc']?></div>
-                                                <div class="rating">Giáo viên: <i><?= $item['GiaoVien']?></i></div>
-                                                <div class="top-star">
-                                                    <span class="count">5.0</span>
-                                                    <span class="stars">&#9733; &#9733; &#9733; &#9733; &#9733;</span>
-                                                    <span class="count">(231)</span>
+                            <div class="top-star d-flex justify-content-between">
+                                <div class="cart-pading">
+                                    <div class="category-content-main">
+                                        <div class="cart-flex-left">
+                                            <input type="checkbox" class="product-checkbox" onchange="updateSelectAll()" name="rating">
+                                        </div>
+                                        <div class="cart-flex-right">
+                                            <div class="category-content-main">
+                                                <div class="category-image">
+                                                    <img src="<?= $item['HinhAnh'] ?>" alt="">
                                                 </div>
-                                                <span><span class="count">74 bài giảng - 07 giờ 07 phút</span></span>
+                                                <div class="category-nd">
+                                                    <div class="title-product"><?= $item['TenKhoaHoc'] ?></div>
+                                                    <div class="rating">Giáo viên: <i><?= $item['GiaoVien'] ?></i></div>
+                                                    <div class="top-star">
+                                                        <span class="count">5.0</span>
+                                                        <span class="stars">&#9733; &#9733; &#9733; &#9733; &#9733;</span>
+                                                        <span class="count">(231)</span>
+                                                    </div>
+                                                    <span><span class="count">74 bài giảng - 07 giờ 07 phút</span></span>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="top-star">
-                                <div class="cart-trash">
-                                    <a href="">Xóa</a>
-                                </div>
-                                <div class="title-product">
-                                    <p class="price"><span class="price-value"><?= $item['Gia']?></span>đ</p>
-                                    <p><del><?= $item['Gia']?></del></p>
+                                <div class="top-star d-flex justify-content-between">
+                                    <div class="cart-trash">
+                                        <a href="<?= BASE_URL ?>/deleteCart?IDKhoaHoc=<?= $item['IDKhoaHoc'] ?>">Xóa</a>
+                                    </div>
+                                    <div class="title-product">
+                                        <p class="price"><span class="price-value"><?= $item['Gia'] ?></span>đ</p>
+                                        <p><del><?= $item['Gia'] ?>đ</del></p>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    <?php endforeach;?> 
+                    <?php endforeach; ?>
                 </div>
 
                 <div class="detail-course-main-body-right">
-                    <div class="detalProduct-right-course">
+                    <div>
                         <div class="title-product">Thông tin đơn hàng</div>
-                        <div class="detail-course-main-body">
+                        <div class="top-star d-flex justify-content-between align-items-baseline">
                             <div class="cart-pading">
-                                <div class="rating">Tạm tính (<span id="selected-count">0</span> sản phẩm)</div>
+                                <div class="rating">Tạm tính (<span id="selected-count">0</span> sản phẩm):</div>
                             </div>
-                            <p class="price"><span id="total-price">0</span>đ</p>
+                            <div class="price"><span id="total-price">0</span>đ</div>
                         </div>
                     </div>
                     <hr>

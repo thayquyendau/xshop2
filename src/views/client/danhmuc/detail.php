@@ -47,12 +47,9 @@
                         <div class="d-grid gap-2">
                             <div class="d-grid gap d-md-flex justify-content-start">
                                 <div class="d-grid gap-2">
-                                    <form class="form-detail" action="<?= BASE_URL ?>/giohang" method="post">   
-                                        <input type="hidden" name="IDKhoaHoc" value="<?= $courses['IDKhoaHoc'] ?>">
-                                        <input type="hidden" name="TenKhoaHoc" value="<?= $courses['TenKhoaHoc'] ?>">
-                                        <input type="hidden" name="GiaoVien" value="<?= $courses['GiaoVien'] ?>">
-                                        <input type="hidden" name="HinhAnh" value="<?= $courses['HinhAnh'] ?>">   
-                                        <input type="hidden" name="Gia" value="<?= $courses['Gia'] ?>">   
+                                    <form class="form-detail" action="<?= BASE_URL ?>/giohang" method="post">  
+                                    <input type="hidden" name="IDKhoaHoc" value="<?= $courses['IDKhoaHoc'] ?>"> 
+                            
                                         <button class="btn btn-secondary btn-lg" type="submit">THÊM VÀO GIỎ HÀNG</button>
                                     </form>
                                 </div>

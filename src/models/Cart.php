@@ -11,50 +11,35 @@ class Cart extends baseModel {
             session_start(); 
         }
         if (!isset($_SESSION['cart'])) {
-            $_SESSION['cart'] = $_POST; 
+            $_SESSION['cart'] = []; 
         }   
     }
 
-    public function addToCartById($param, $id) {
-        // debug($id);
+    public function addToCartById($param,$id): array {
+        // Truy vấn thông tin khóa học từ CSDL
         $course = $this->pdoQuery("SELECT * FROM khoahoc WHERE IDKhoaHoc = ?", [$id]);
-        // debug($course);
-            
+        // debug($course);      
         if (!isset($_SESSION['cart'][$id])) {
             $_SESSION['cart'][$id] = [
-                'IDKhoaHoc' => $course['IDKhoaHoc'],
-                'TenKhoaHoc' => $course['TenKhoaHoc'],
-                'Gia' => $course['Gia'],
-                'IDCatagory'=> $course['IDCatogory'],
-                'GiaoVien' => $course['GiaoVien'],
-                'HinhAnh' => $course['HinhAnh']
+                'IDKhoaHoc' => $course['IDKhoaHoc'] ?? null,
+                'TenKhoaHoc' => $course['TenKhoaHoc'] ?? '',
+                'Gia' => $course['Gia'] ?? 0,
+                'GiaoVien' => $course['GiaoVien'] ?? '',
+                'HinhAnh' => $course['HinhAnh'] ?? ''
             ];
-            // debug($_SESSION['cart'][$id]);
-            
         }
-    
-        // Trả về toàn bộ giỏ hàng sau khi thêm
         return $_SESSION['cart'];
     }
-    public function getCartItems() {
-        return $_SESSION['cart'] ?? [];
+    
+    public function getCartItems(): mixed {
+        return isset($_SESSION['cart']) && is_array($_SESSION['cart']) ? $_SESSION['cart'] : [];
     }
+    
 
     // Xóa một sản phẩm khỏi giỏ hàng
     public function removeFromCart($id) {
         if (isset($_SESSION['cart'][$id])) {
             unset($_SESSION['cart'][$id]);
-        }
-    }
-
-    // Cập nhật số lượng sản phẩm
-    public function updateCartItem($id, $quantity) {
-        if (isset($_SESSION['cart'][$id])) {
-            if ($quantity > 0) {
-                $_SESSION['cart'][$id]['quantity'] = $quantity;
-            } else {
-                $this->removeFromCart($id); // Xóa sản phẩm nếu số lượng <= 0
-            }
         }
     }
 

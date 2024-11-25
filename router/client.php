@@ -25,9 +25,11 @@
     $router->add("GET", "client", "/detailCourse", "CourseController@detail");
 
    
-    //Thêm giỏ hàng
+    //Giỏ hàng
     $router->add("GET", "client", "/giohang", "CartController@index");
     $router->add("POST", "client", "/giohang", "CartController@index");
+    $router->add("GET", "client", "/deleteCart", "CartController@delete");
+    $router->add("GET", "client", "/deleteAllCart", "CartController@deleteAll");
 
     
     $router->add("GET", "client", "/lienhe", "LienheController@index");
