@@ -1,7 +1,7 @@
 <?php 
     namespace controllers\client;
-    use models\Product;
-    use models\Comment;
+    use models\Course;
+    use models\Category;
     
     class CourseController {
         public $modelObject;
@@ -9,14 +9,15 @@
         public $base = BASE_URL;
         public function __construct()
         {
-        $this->modelObject = new Product();
-        $this->modelObjects = new Comment();
+        $this->modelObject = new Course();
+        $this->modelObjects = new Category();
         }
         public function detail() {
-            // $id = $_GET['id'] ;
-            // $products = $this->modelObject->getProductById($id);
-            // $comments = $this->modelObjects->getAllCommentbyId($id);
-            // debug($products);
+            $id = $_GET['IDKhoaHoc'] ;
+            $detailCourse = $this->modelObject->getDetailCourseById($id);
+            // debug($detailCourse);
+            $courses = $this->modelObjects->getdetailCourseById($id);
+            // debug($courses);
             require_once './src/views/client/danhmuc/detail.php';
         }
 
