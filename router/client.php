@@ -7,9 +7,11 @@
     // $router->add("GET", "client", "/", "CategoryController@index");
     $router->add("GET", "client", "/login", "LoginController@login");
     $router->add("POST", "client", "/login", "LoginController@login");
+    $router->add("GET", "client", "/dangky", "LoginController@dangky");
+    $router->add("POST", "client", "/dangky", "LoginController@dangky");
     $router->add("GET", "client", "/logout", "LoginController@logout");
-    $router->add("GET", "client", "/changeLogin", "LoginController@changeLogin");
-    $router->add("POST", "client", "/changeLogin", "LoginController@changeLogin");
+    $router->add("GET", "client", "/resetpassLogin", "LoginController@resetpassLogin");
+    $router->add("POST", "client", "/resetpassLogin", "LoginController@resetpassLogin");
     $router->add("GET", "client", "/updateAccount", "LoginController@updateAccount");
     $router->add("POST", "client", "/updateAccount", "LoginController@updateAccount");
     
@@ -17,6 +19,7 @@
     //Dieu huong danh muc khoa hoc
     $router->add("GET", "client", "/danhmuc", "CategoryController@getCategory");
     $router->add("GET", "client", "/danhmuc", "CategoryController@index");
+    $router->add("GET", "client", "/home", "CategoryController@index");
 
     //Chi tiet khoa hoc
     $router->add("GET", "client", "/detailCourse", "CourseController@detail");

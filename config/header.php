@@ -16,10 +16,14 @@
                 <i class="material-icons">shopping_cart</i>
             </a>
         </li>
-        <li class="header-item">Đăng nhập</li>
-        <li>
-            <button class="button-dk">Đăng ký</button>
-        </li>
+        <a style="color: black; text-decoration:none" href="<?= BASE_URL . '/login' ?>">
+            <li class="header-item">Đăng nhập</li>
+        </a>
+        <a href="<?= BASE_URL . '/dangky' ?>">
+            <li>
+                <button class="button-dk">Đăng ký</button>
+            </li>
+        </a>
     </ul>
 </div>
 <div class="menu-bar">

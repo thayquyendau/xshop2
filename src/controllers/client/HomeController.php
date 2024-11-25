@@ -11,8 +11,11 @@ use models\Home;
             $this->modelObject = new Home();
 
         }
+
         public function index() {
-            // unset($_SESSION['admin']);
+            // $id = $_GET['IDCatagory'];
+            $homes = $this->modelObject->getAllHome();
+            $homes1 = $this->modelObject->getAllHome1();
             require_once './src/views/client/home/home.php';
         }
     }
