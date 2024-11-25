@@ -24,7 +24,9 @@
                             </div>
                         </div>
                     </div>
-                    <div class="category-form-space">
+                    <!-- Khung cho khóa học đc thêm vào giỏ hàng -->
+                    <?php foreach($cartItems as $item): ?>
+                        <div class="category-form-space">
                         <div class="top-star">
                             <div class="cart-pading">
                                 <div class="category-content-main">
@@ -35,8 +37,8 @@
                                         <div class="category-content-main">
                                             <div class="category-image"><img src="assets\image\products\ngoai_ngu2.jpg" alt=""></div>
                                             <div class="category-nd">
-                                                <div class="title-product">Facebook Marketing từ A - Z</div>
-                                                <div class="rating">Giáo viên: <i>Châu Thùy Trang</i></div>
+                                                <div class="title-product"><?= $item['TenKhoaHoc']?></div>
+                                                <div class="rating">Giáo viên: <i><?= $item['GiaoVien']?></i></div>
                                                 <div class="top-star">
                                                     <span class="count">5.0</span>
                                                     <span class="stars">&#9733; &#9733; &#9733; &#9733; &#9733;</span>
@@ -53,152 +55,13 @@
                                     <a href="">Xóa</a>
                                 </div>
                                 <div class="title-product">
-                                    <p class="price"><span class="price-value">599000</span>đ</p>
-                                    <p><del>899.000đ</del></p>
+                                    <p class="price"><span class="price-value"><?= $item['Gia']?></span>đ</p>
+                                    <p><del><?= $item['Gia']?></del></p>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="category-form-space">
-                        <div class="top-star">
-                            <div class="cart-pading">
-                                <div class="category-content-main">
-                                    <div class="cart-flex-left">
-                                        <input type="checkbox" class="product-checkbox" onchange="updateSelectAll()" name="rating">
-                                    </div>
-                                    <div class="cart-flex-right">
-                                        <div class="category-content-main">
-                                            <div class="category-image"><img src="assets\image\products\ngoai_ngu2.jpg" alt=""></div>
-                                            <div class="category-nd">
-                                                <div class="title-product">Facebook Marketing từ A - Z</div>
-                                                <div class="rating">Giáo viên: <i>Châu Thùy Trang</i></div>
-                                                <div class="top-star">
-                                                    <span class="count">5.0</span>
-                                                    <span class="stars">&#9733; &#9733; &#9733; &#9733; &#9733;</span>
-                                                    <span class="count">(231)</span>
-                                                </div>
-                                                <span><span class="count">74 bài giảng - 07 giờ 07 phút</span></span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="top-star">
-                                <div class="cart-trash">
-                                    <a href="">Xóa</a>
-                                </div>
-                                <div class="title-product">
-                                    <p class="price"><span class="price-value">599000</span>đ</p>
-                                    <p><del>899.000đ</del></p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="category-form-space">
-                        <div class="top-star">
-                            <div class="cart-pading">
-                                <div class="category-content-main">
-                                    <div class="cart-flex-left">
-                                        <input type="checkbox" class="product-checkbox" onchange="updateSelectAll()" name="rating">
-                                    </div>
-                                    <div class="cart-flex-right">
-                                        <div class="category-content-main">
-                                            <div class="category-image"><img src="assets\image\products\ngoai_ngu2.jpg" alt=""></div>
-                                            <div class="category-nd">
-                                                <div class="title-product">Facebook Marketing từ A - Z</div>
-                                                <div class="rating">Giáo viên: <i>Châu Thùy Trang</i></div>
-                                                <div class="top-star">
-                                                    <span class="count">5.0</span>
-                                                    <span class="stars">&#9733; &#9733; &#9733; &#9733; &#9733;</span>
-                                                    <span class="count">(231)</span>
-                                                </div>
-                                                <span><span class="count">74 bài giảng - 07 giờ 07 phút</span></span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="top-star">
-                                <div class="cart-trash">
-                                    <a href="">Xóa</a>
-                                </div>
-                                <div class="title-product">
-                                    <p class="price"><span class="price-value">599000</span>đ</p>
-                                    <p><del>899.000đ</del></p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="category-form-space">
-                        <div class="top-star">
-                            <div class="cart-pading">
-                                <div class="category-content-main">
-                                    <div class="cart-flex-left">
-                                        <input type="checkbox" class="product-checkbox" onchange="updateSelectAll()" name="rating">
-                                    </div>
-                                    <div class="cart-flex-right">
-                                        <div class="category-content-main">
-                                            <div class="category-image"><img src="assets\image\products\ngoai_ngu2.jpg" alt=""></div>
-                                            <div class="category-nd">
-                                                <div class="title-product">Facebook Marketing từ A - Z</div>
-                                                <div class="rating">Giáo viên: <i>Châu Thùy Trang</i></div>
-                                                <div class="top-star">
-                                                    <span class="count">5.0</span>
-                                                    <span class="stars">&#9733; &#9733; &#9733; &#9733; &#9733;</span>
-                                                    <span class="count">(231)</span>
-                                                </div>
-                                                <span><span class="count">74 bài giảng - 07 giờ 07 phút</span></span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="top-star">
-                                <div class="cart-trash">
-                                    <a href="">Xóa</a>
-                                </div>
-                                <div class="title-product">
-                                    <p class="price"><span class="price-value">599000</span>đ</p>
-                                    <p><del>899.000đ</del></p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="category-form-space">
-                        <div class="top-star">
-                            <div class="cart-pading">
-                                <div class="category-content-main">
-                                    <div class="cart-flex-left">
-                                        <input type="checkbox" class="product-checkbox" onchange="updateSelectAll()" name="rating">
-                                    </div>
-                                    <div class="cart-flex-right">
-                                        <div class="category-content-main">
-                                            <div class="category-image"><img src="assets\image\products\ngoai_ngu2.jpg" alt=""></div>
-                                            <div class="category-nd">
-                                                <div class="title-product">Facebook Marketing từ A - Z</div>
-                                                <div class="rating">Giáo viên: <i>Châu Thùy Trang</i></div>
-                                                <div class="top-star">
-                                                    <span class="count">5.0</span>
-                                                    <span class="stars">&#9733; &#9733; &#9733; &#9733; &#9733;</span>
-                                                    <span class="count">(231)</span>
-                                                </div>
-                                                <span><span class="count">74 bài giảng - 07 giờ 07 phút</span></span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="top-star">
-                                <div class="cart-trash">
-                                    <a href="">Xóa</a>
-                                </div>
-                                <div class="title-product">
-                                    <p class="price"><span class="price-value">599000</span>đ</p>
-                                    <p><del>899.000đ</del></p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                    <?php endforeach;?> 
                 </div>
 
                 <div class="detail-course-main-body-right">

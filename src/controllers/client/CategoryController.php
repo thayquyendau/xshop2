@@ -25,4 +25,5 @@ class CategoryController{
             $courses = $this->modelObject->getCourseById($id);
             require_once './src/views/client/danhmuc/index.php';
     }
+    
 }

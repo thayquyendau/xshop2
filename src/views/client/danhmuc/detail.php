@@ -47,7 +47,7 @@
                         <div class="d-grid gap-2">
                             <div class="d-grid gap d-md-flex justify-content-start">
                                 <div class="d-grid gap-2">
-                                    <form class="form-detail" action="<?= BASE_URL ?>/giohang/add" method="post">
+                                    <form class="form-detail" action="<?= BASE_URL ?>/giohang" method="post">   
                                         <input type="hidden" name="IDKhoaHoc" value="<?= $courses['IDKhoaHoc'] ?>">
                                         <input type="hidden" name="TenKhoaHoc" value="<?= $courses['TenKhoaHoc'] ?>">
                                         <input type="hidden" name="GiaoVien" value="<?= $courses['GiaoVien'] ?>">

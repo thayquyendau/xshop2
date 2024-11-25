@@ -26,4 +26,5 @@ class Category extends baseModel{
         $sql = "SELECT * FROM khoahoc WHERE IDKhoaHoc = ?";
         return $this->pdoQuery($sql, [$id]);
     }
+    
 }

@@ -20,15 +20,17 @@
 
     //Chi tiet khoa hoc
     $router->add("GET", "client", "/detailCourse", "CourseController@detail");
-    $router->add("POST", "client", "/productDetail", "ProductController@productDetail");
-    $router->add("GET", "client", "/createComment", "ProductController@createComment");
-    $router->add("POST", "client", "/createComment", "ProductController@createComment");
+
+   
+    //Thêm giỏ hàng
+    $router->add("GET", "client", "/giohang", "CartController@index");
+    $router->add("POST", "client", "/giohang", "CartController@index");
 
     
     $router->add("GET", "client", "/lienhe", "LienheController@index");
     $router->add("GET", "client", "/tintuc", "TintucController@index");
     $router->add("GET", "client", "/gioithieu", "GioithieuController@index");
-    $router->add("GET", "client", "/giohang", "GiohangController@index");
+    
     $router->add("GET", "client", "/thanhtoan", "ThanhtoanController@index");
 
     

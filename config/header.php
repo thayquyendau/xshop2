@@ -34,10 +34,10 @@
                 </svg><span style="margin-left: 5px;">Danh mục</span>
             </a>
             <ul class="danhmuc-list">
-                <?php foreach ($categories as $category): ?>
+                <?php foreach($categories as $category):?>
                     <li class="danhmuc-item">
                         <a href="<?= BASE_URL ?>/danhmuc?IDCatagory=<?= $category['IDCatagory'] ?>">
-                            <?= $category['TenDanhMuc'] ?>
+                            <?= $category['TenDanhMuc']?>
                         </a>
                     </li>
                 <?php endforeach; ?>
