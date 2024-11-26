@@ -18,5 +18,10 @@ use commons\baseModel;
             $sql = "SELECT * FROM khoahoc LIMIT 8 OFFSET 16";
             return $this->pdoQueryAll($sql, []);
         }
+        public function getAllHome3()
+        {
+            $sql = "SELECT * FROM danhmuc LIMIT 8 OFFSET 5";
+            return $this->pdoQueryAll($sql, []);
+        }
     }
 ?>

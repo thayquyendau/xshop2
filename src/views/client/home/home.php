@@ -1,63 +1,3 @@
-<style>
-    .menu {
-        margin-bottom: 20px;
-    }
-
-    del {
-        color: #999;
-        text-decoration: line-through;
-        font-size: 1.5em;
-    }
-
-    .span-sale {
-        color: green;
-        font-weight: bold;
-        font-size: 1.5em;
-        margin-left: 20px;
-    }
-
-    .add-to-cart {
-        display: inline-block;
-        float: right;
-        margin-right: 5px;
-        font-size: 24px;
-        color: #000;
-        text-decoration: none;
-
-    }
-
-    .add-to-cart:hover {
-        color: #f00;
-    }
-
-    .h3_noidung {
-        color: rgb(92, 88, 88);
-        font-size: 1.5em;
-        transition: color 0.3s ease;
-    }
-
-    .h3_noidung:hover {
-        color: orangered;
-    }
-
-    a{
-        color: #000;
-        text-decoration: none;
-    }
-    .row.product-list1 {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    /* gap: 10px;  */
-    width: 1150px; 
-    max-width: 100%;
-    margin: 0 auto; 
-    /* justify-content: center; Căn giữa các cột nếu cần */
-}
-    .col {
-        box-sizing: border-box;
-    }
-
-</style>
 <div class="col xl-12 lg-12 md-12">
     <div class="banner">
         <div class="slider">
@@ -124,33 +64,17 @@
             <h1 class="title1">Chủ đề có thể bạn quan tâm</h1>
             <div class="chudeqqt">
                 <div class="row product-list1">
-                    <div class="col xl-3 lg-3 md-6">
-                        <input class="chu-de-qt" type="button" value="Facebook Marketing">
-                    </div>
-                    <div class="col xl-3 lg-3 md-6">
-                        <input class="chu-de-qt" type="button" value="Dữ liệu">
-                    </div>
-                    <div class="col xl-3 lg-3 md-6">
-                        <input class="chu-de-qt" type="button" value="Bán hàng online">
-                    </div>
-                    <div class="col xl-3 lg-3 md-6">
-                        <input class="chu-de-qt" type="button" value="Phát triển bản thân">
-                    </div>
+                <?php foreach($homes3 as $home3):?>
+                <div class="col xl-3 lg-3 md-6">
+                    <li class="danhmuc-item1">
+                        <a href="<?= BASE_URL ?>/danhmuc?IDCatagory=<?= $home3['IDCatagory'] ?>" class="chu-de-qt-link">
+                            <button class="chu-de-qt">
+                                <?= htmlspecialchars($home3['TenDanhMuc']) ?>
+                            </button>
+                        </a>
+                    </li>
                 </div>
-                <div class="row product-list1" style="margin-top: 30px;">
-                    <div class="col xl-3 lg-3 md-6">
-                        <input class="chu-de-qt" type="button" value="Handmade">
-                    </div>
-                    <div class="col xl-3 lg-3 md-6">
-                        <input class="chu-de-qt" type="button" value="Chăm sóc trẻ">
-                    </div>
-                    <div class="col xl-3 lg-3 md-6">
-                        <input class="chu-de-qt" type="button" value="Zalo Marketing">
-                    </div>
-                    <div class="col xl-3 lg-3 md-6">
-                        <input class="chu-de-qt" type="button" value="Nuôi dạy con">
-                    </div>
-                </div>
+                <?php endforeach; ?>
             </div>
             <h1 class="title1">Giảng viên tiêu biểu</h1>
             <div class="row product-list1">
@@ -201,3 +125,85 @@
         </div>
     </div>
 </div>
+
+<style>
+    .menu {
+        margin-bottom: 20px;
+    }
+
+    del {
+        color: #999;
+        text-decoration: line-through;
+        font-size: 1.5em;
+    }
+
+    .span-sale {
+        color: green;
+        font-weight: bold;
+        font-size: 1.5em;
+        margin-left: 20px;
+    }
+
+    .add-to-cart {
+        display: inline-block;
+        float: right;
+        margin-right: 5px;
+        font-size: 24px;
+        color: #000;
+        text-decoration: none;
+
+    }
+
+    .add-to-cart:hover {
+        color: #f00;
+    }
+
+    .h3_noidung {
+        color: rgb(92, 88, 88);
+        font-size: 1.5em;
+        transition: color 0.3s ease;
+    }
+
+    .h3_noidung:hover {
+        color: orangered;
+    }
+
+    a{
+        color: #000;
+        text-decoration: none;
+    }
+    .row.product-list1 {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    width: 1150px; 
+    max-width: 100%;
+    margin: 0 auto; 
+}
+    .col {
+        box-sizing: border-box;
+    }
+    .danhmuc-item1 {
+    padding-bottom: 20px;
+    list-style-type: none; 
+    width: 100%;
+    text-align: center;
+}
+.chu-de-qt-link {
+    text-decoration: none; 
+    display: inline-block;
+    width: 100%;
+}
+
+.chu-de-qt {
+    border: 2px solid #000;
+    color: #333; 
+    padding: 10px 20px; 
+    border-radius: 10px; 
+    width: 80%;
+    text-align: center;
+}
+
+.chu-de-qt:hover{
+    background-color: #f0f0f0;
+}
+</style>
