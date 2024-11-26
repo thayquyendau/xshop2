@@ -76,7 +76,7 @@
             <div class="row product-list1">
                 <?php foreach ($homes as $home): ?>
                 <div class="col xl-3 lg-3 md-6" style="margin-bottom: 20px;">
-                    <a href="<?= BASE_URL ?>/detailCourse"><img style="width: 100%; height: 175px" src="<?= $home['HinhAnh'] ?>" alt=""></a>
+                    <a href="<?= BASE_URL ?>/detailCourse?IDKhoaHoc=<?= $home['IDKhoaHoc'] ?>"><img style="width: 100%; height: 175px" src="<?= $home['HinhAnh'] ?>" alt=""></a>
                     <p class="title-product"><?= $home['TenKhoaHoc'] ?></p>
                     <p class="rating"> <i><?= $home['GiaoVien'] ?></i></p>
                     <p>
@@ -92,7 +92,8 @@
             <div class="row product-list1">
             <?php foreach ($homes1 as $home1): ?>
                 <div class="col xl-3 lg-3 md-6" style="margin-bottom: 20px;">
-                    <a href="<?= BASE_URL ?>/detailCourse"><img style="width: 100%; height: 175px" src="<?= $home1['HinhAnh'] ?>" alt=""></a>
+                    <a href="<?= BASE_URL ?>/detailCourse?IDKhoaHoc=<?= $home1['IDKhoaHoc'] ?>">
+                    <img style="width: 100%; height: 175px" src="<?= $home1['HinhAnh'] ?>" alt=""></a>
                     <p class="title-product"><?= $home1['TenKhoaHoc'] ?></p>
                     <p class="rating"> <i><?= $home1['GiaoVien'] ?></i></p>
                     <p>
@@ -108,7 +109,7 @@
             <div class="row product-list1">
             <?php foreach ($homes2 as $home2): ?>
                 <div class="col xl-3 lg-3 md-6" style="margin-bottom: 20px;">
-                    <a href="<?= BASE_URL ?>/detailCourse"><img style="width: 100%; height: 175px" src="<?= $home2['HinhAnh'] ?>" alt=""></a>
+                    <a href="<?= BASE_URL ?>/detailCourse?IDKhoaHoc=<?= $home2['IDKhoaHoc'] ?>"><img style="width: 100%; height: 175px" src="<?= $home2['HinhAnh'] ?>" alt=""></a>
                     <p class="title-product"><?= $home2['TenKhoaHoc'] ?></p>
                     <p class="rating"> <i><?= $home2['GiaoVien'] ?></i></p>
                     <p>
