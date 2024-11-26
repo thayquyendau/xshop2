@@ -24,8 +24,8 @@
                 <div class="detail-course-main-body">
                     <div class="bgr-step">
                         <div class="detail-main">
-                            <form id="step1Form" action="#" method="post">
-                                <p class="title-product">Thông tin người mua</p>
+                            <form class="form-pay-left" id="step1Form" action="#" method="post">
+                                <p class="price">Thông tin người mua</p>
                                 <div class="mb-3">
                                     <label for="name" class="rating">Họ tên:</label>
                                     <input type="text" class="rating form-control" id="name" placeholder="Nhập đầy đủ họ tên của bạn" name="name">
@@ -41,30 +41,40 @@
                                     <input type="tel" class="rating form-control" id="phone" placeholder="Số điện thoại của bạn" name="phone">
                                     <small id="phoneError" class="count text-danger" style="display:none;">Vui lòng nhập số điện thoại.</small>
                                 </div>
-                                <button type="button" class="btn btn-danger w-100 btn-lg p-3 fs-3" onclick="nextStep(1, 2)">Gửi</button>
                             </form>
+                            <button type="submit" class="btn btn-danger w-100 btn-lg p-3 fs-3" onclick="nextStep(1, 2)">Gửi</button>
                         </div>
 
                     </div>
 
                     <div class="bgr-step">
                         <div class="detail-main">
-                            <div>
-                                <div class="title-product">Đơn hàng: (<span id="selected-courses">0</span> khóa học)</div>
-                                <hr>
-                                <div id="checkout-items">
-                                    <!-- Các mục đơn hàng sẽ được thêm động qua JavaScript -->
+                            <form class="form-pay-right" action="">
+                                <div>
+                                    <div class="price">Đơn hàng: (<span id="selected-count">0</span> khóa học)</div>
+                                    <hr>
+                                    <?php foreach ($cartItems as $item): ?>
+                                        <div class="top-star d-flex justify-content-between">
+                                            <div class="cart-pading">
+                                                <div class="rating"><?= $item['TenKhoaHoc'] ?></div>
+                                            </div>
+                                            <div>
+                                                <p class="price"><?= $item['Gia'] ?>đ</p>
+                                                <span class="price"><del><?= $item['Gia'] ?>đ</del></span>
+                                            </div>
+                                        </div>
+                                        <hr>
+                                    <?php endforeach; ?>
                                 </div>
-                                <hr>
-                            </div>
-                            <div class="detail-course-main-body">
-                                <div class="cart-pading">
-                                    <div class="price">Tổng cộng</div>
+                                <div class="detail-course-main-body">
+                                    <div class="cart-pading">
+                                        <div class="price">Tổng cộng</div>
+                                    </div>
+                                    <p class="price text-danger">
+                                        <span id="checkout-total-price">0</span>đ
+                                    </p>
                                 </div>
-                                <p class="price text-danger">
-                                    <span id="checkout-total-price">0</span>đ
-                                </p>
-                            </div>
+                            </form>
                         </div>
                     </div>
 
@@ -77,7 +87,7 @@
                 <div class="detail-course-main-body">
                     <div class="bgr-step">
                         <div class="detail-main">
-                            <form id="paymentForm" action="#" method="post">
+                            <form  class="form-pay-left" id="paymentForm" action="#" method="post">
                                 <p class="fw-bold fs-4 mb-4">Hình thức thanh toán</p>
                                 <div class="form-check border border-primary rounded p-3 mb-3 d-flex align-items-center">
                                     <input type="radio" name="payment" id="">
@@ -116,71 +126,35 @@
                                 </div>
                             </form>
                             <small id="paymentError" class="count text-danger" style="display:none;">Vui lòng chọn một phương thức thanh toán.</small>
-                            <button type="submit" class="btn btn-danger w-100 btn-lg p-3 fs-3" onclick="nextStep(2, 3)">TIẾN HÀNH THANH TOÁN</button>
+                            <button type="submit" class="btn btn-danger w-100 btn-lg p-3 fs-3" onclick="nextStep(2, 3)">Tiến hành thanh toán</button>
                         </div>
                     </div>
                     <div class="bgr-step">
                         <div class="detail-main">
-                            <div>
-                                <div class="title-product">Đơn hàng: (<span id="selected-courses">0</span> khóa học)</div>
-                                <hr>
-                                <div class="top-star">
+                            <form class="form-pay-right" action="">
+                                <div>
+                                    <div class="title-product">Đơn hàng: (<span id="selected-courses">0</span> khóa học)</div>
+                                    <hr>
+                                    <?php foreach ($cartItems as $item): ?>
+                                        <div class="top-star d-flex justify-content-between">
+                                            <div class="cart-pading">
+                                                <div class="rating"><?= $item['TenKhoaHoc'] ?></div>
+                                            </div>
+                                            <div>
+                                                <p class="price"><?= $item['Gia'] ?>đ</p>
+                                                <span class="price"><del><?= $item['Gia'] ?>đ</del></span>
+                                            </div>
+                                        </div>
+                                        <hr>
+                                    <?php endforeach; ?>
+                                </div>
+                                <div class="detail-course-main-body">
                                     <div class="cart-pading">
-                                        <div class="rating">Facebook Marketing từ A - Z</div>
+                                        <div class="price">Tổng cộng</div>
                                     </div>
-                                    <div>
-                                        <p class="price"><span class="price-value">599000</span>đ</p>
-                                        <span class="price"><del>899.000đ</del></span>
-                                    </div>
+                                    <p class="price text-danger">8.599.000đ</p>
                                 </div>
-                                <hr>
-                                <div class="top-star">
-                                    <div class="cart-pading">
-                                        <div class="rating">Facebook Marketing từ A - Z</div>
-                                    </div>
-                                    <div>
-                                        <p class="price"><span class="price-value">599000</span>đ</p>
-                                        <span class="price"><del>899.000đ</del></span>
-                                    </div>
-                                </div>
-                                <hr>
-                                <div class="top-star">
-                                    <div class="cart-pading">
-                                        <div class="rating">Facebook Marketing từ A - Z</div>
-                                    </div>
-                                    <div>
-                                        <p class="price"><span class="price-value">599000</span>đ</p>
-                                        <span class="price"><del>899.000đ</del></span>
-                                    </div>
-                                </div>
-                                <hr>
-                                <div class="top-star">
-                                    <div class="cart-pading">
-                                        <div class="rating">Facebook Marketing từ A - Z</div>
-                                    </div>
-                                    <div>
-                                        <p class="price"><span class="price-value">599000</span>đ</p>
-                                        <span class="price"><del>899.000đ</del></span>
-                                    </div>
-                                </div>
-                                <hr>
-                                <div class="top-star">
-                                    <div class="cart-pading">
-                                        <div class="rating">Facebook Marketing từ A - Z</div>
-                                    </div>
-                                    <div>
-                                        <p class="price"><span class="price-value">599000</span>đ</p>
-                                        <span class="price"><del>899.000đ</del></span>
-                                    </div>
-                                </div>
-                                <hr>
-                            </div>
-                            <div class="detail-course-main-body">
-                                <div class="cart-pading">
-                                    <div class="price">Tổng cộng</div>
-                                </div>
-                                <p class="price text-danger">8.599.000đ</p>
-                            </div>
+                            </form>
                         </div>
                     </div>
                 </div>

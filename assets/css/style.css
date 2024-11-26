@@ -893,8 +893,11 @@ label[for="radio"]::after {
     padding-right: 20px;
 }
 
-form {
-    width: 740px;
+.form-pay-left {
+    width: 680px !important;
+}
+.form-pay-right {
+    width: 380px !important;
 }
 
 .mb-3 input {
