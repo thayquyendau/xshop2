@@ -135,7 +135,7 @@ button:hover {
                                     </div>
                                 </div>
 
-                                <button type="button" class="btn btn-primary mt-3" style="background-color: red;font-size: 15px">Đăng Ký</button>
+                                <button type="button" class="btn btn-primary mt-3 buttondk" style="background-color: red;font-size: 15px">Đăng Ký</button>
                             </div>
                         </div>
                     </div>
@@ -167,7 +167,7 @@ input.big-input {
     font-size: 13px;
 }
 
-button {
+.buttondk {
     font-size: 16px;
     padding: 15px 25px;
     border: none;
@@ -176,7 +176,7 @@ button {
     cursor: pointer;
 }
 
-button:hover {
+.buttondk:hover {
     background-color: darkred;
 }
 
