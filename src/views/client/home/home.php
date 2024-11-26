@@ -44,13 +44,15 @@
         color: #000;
         text-decoration: none;
     }
-    .row.product-list {
+    .row.product-list1 {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    gap: 20px; 
+    /* gap: 10px;  */
     width: 1150px; 
+    max-width: 100%;
     margin: 0 auto; 
-    }
+    /* justify-content: center; Căn giữa các cột nếu cần */
+}
     .col {
         box-sizing: border-box;
     }
@@ -70,8 +72,8 @@
     </div>
     <div class="row product-list">
         <div class="list-product">
-            <h1 class="title">Top Bán chạy</h1>
-            <div class="row product-list">
+            <h1 class="title1">Top Bán chạy</h1>
+            <div class="row product-list1">
                 <?php foreach ($homes as $home): ?>
                 <div class="col xl-3 lg-3 md-6" style="margin-bottom: 20px;">
                     <a href="<?= BASE_URL ?>/detailCourse"><img style="width: 100%; height: 175px" src="<?= $home['HinhAnh'] ?>" alt=""></a>
@@ -86,8 +88,8 @@
                 </div>
                 <?php endforeach; ?>
             </div>
-            <h1 class="title">học viên đang theo dõi</h1>
-            <div class="row product-list">
+            <h1 class="title1">học viên đang theo dõi</h1>
+            <div class="row product-list1">
             <?php foreach ($homes1 as $home1): ?>
                 <div class="col xl-3 lg-3 md-6" style="margin-bottom: 20px;">
                     <a href="<?= BASE_URL ?>/detailCourse"><img style="width: 100%; height: 175px" src="<?= $home1['HinhAnh'] ?>" alt=""></a>
@@ -102,8 +104,8 @@
                 </div>
                 <?php endforeach; ?>
             </div>
-            <h1 class="title">Mới ra mắt</h1>
-            <div class="row product-list">
+            <h1 class="title1">Mới ra mắt</h1>
+            <div class="row product-list1">
                 <div class="col xl-3 lg-3 md-6" style="margin-bottom: 20px;">
                     <img style="width: 100%;" src="./assets/image/header/Frame 427319549.png" alt="">
                     <p class="title-product">Phương pháp học môn Hóa học đơn giản cho người mất gốc</p>
@@ -195,9 +197,9 @@
                     <p style="font-size: 16px;margin-top:10px;">599.000đ <del style="font-size:12px;">899.000đ</del></p>
                 </div>
             </div>
-            <h1 class="title">Chủ đề có thể bạn quan tâm</h1>
+            <h1 class="title1">Chủ đề có thể bạn quan tâm</h1>
             <div class="chudeqqt">
-                <div class="row product-list">
+                <div class="row product-list1">
                     <div class="col xl-3 lg-3 md-6">
                         <input class="chu-de-qt" type="button" value="Facebook Marketing">
                     </div>
@@ -211,7 +213,7 @@
                         <input class="chu-de-qt" type="button" value="Phát triển bản thân">
                     </div>
                 </div>
-                <div class="row product-list" style="margin-top: 30px;">
+                <div class="row product-list1" style="margin-top: 30px;">
                     <div class="col xl-3 lg-3 md-6">
                         <input class="chu-de-qt" type="button" value="Handmade">
                     </div>
@@ -226,8 +228,8 @@
                     </div>
                 </div>
             </div>
-            <h1 class="title">Giảng viên tiêu biểu</h1>
-            <div class="row product-list">
+            <h1 class="title1">Giảng viên tiêu biểu</h1>
+            <div class="row product-list1">
                 <div class="col xl-3 lg-3 md-6">
                     <div class="giangvientb-1">
                         <img class="giangvientb-img" src="./assets/image/account/anhphong.jpg" alt="">
@@ -257,7 +259,7 @@
                     </div>
                 </div>
             </div>
-            <div class="row product-list1">
+            <div class="row product-list2">
                 <div class="col xl-6 md-6">
                     <div class="dkgiangvien">
                         <h2>Trở thành giảng viên QTPedu</h2>

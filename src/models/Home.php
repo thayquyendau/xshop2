@@ -10,7 +10,7 @@ use commons\baseModel;
         }
         public function getAllHome1()
         {
-            $sql = "SELECT * FROM top_banchay LIMIT 8";
+            $sql = "SELECT * FROM khoahoc LIMIT 8";
             return $this->pdoQueryAll($sql, []);
         }
     }
