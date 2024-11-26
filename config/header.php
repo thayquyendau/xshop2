@@ -16,14 +16,25 @@
                 <i class="material-icons">shopping_cart</i>
             </a>
         </li>
-        <a style="color: black; text-decoration:none" href="<?= BASE_URL . '/login' ?>">
+        <?php if(isset($_SESSION['UserName']) ): ?>
+            <a style="color: black; text-decoration:none" href="">
+            <li class="header-item"><span>Xin chào <?= $_SESSION['UserName'] ?>!</span></li>
+            </a>
+        <?php endif; ?>
+        <?php if(empty($_SESSION['UserName']) ): ?>
+            <a style="color: black; text-decoration:none" href="<?= BASE_URL . '/login' ?>">
             <li class="header-item">Đăng nhập</li>
-        </a>
-        <a href="<?= BASE_URL . '/dangky' ?>">
-        <li>
-        <button class="button-dk" id="showRegisterModal">Đăng ký</button>
-        </li>
-        </a>
+            </a>
+            <a href="<?= BASE_URL . '/dangky' ?>">
+            <li>
+                <button class="button-dk" id="showRegisterModal">Đăng ký</button>
+            </li>
+            </a>
+        <?php else: ?>
+            <a href="<?= BASE_URL.'/logout' ?>"><li>
+                <button class="button-dk" >Đăng xuất</button>
+            </li></a>
+        <?php endif; ?>
     </ul>
 </div>
 <div class="menu-bar">
@@ -117,6 +128,15 @@ button:hover {
 }
 .login-back{
     border-radius: 10px 0 0 10px;
+}
+
+.forgot-pass{
+    text-decoration: none;
+    margin: 0 10px;
+    font-size: 16px;
+    line-height: 1.5;
+    cursor: pointer;
+    white-space: nowrap;
 }
 </style>
 

@@ -106,96 +106,19 @@
             </div>
             <h1 class="title1">Mới ra mắt</h1>
             <div class="row product-list1">
+            <?php foreach ($homes2 as $home2): ?>
                 <div class="col xl-3 lg-3 md-6" style="margin-bottom: 20px;">
-                    <img style="width: 100%;" src="./assets/image/header/Frame 427319549.png" alt="">
-                    <p class="title-product">Phương pháp học môn Hóa học đơn giản cho người mất gốc</p>
-                    <p class="rating"> <i>Lê Anh Phong</i></p>
+                    <a href="<?= BASE_URL ?>/detailCourse"><img style="width: 100%; height: 175px" src="<?= $home2['HinhAnh'] ?>" alt=""></a>
+                    <p class="title-product"><?= $home2['TenKhoaHoc'] ?></p>
+                    <p class="rating"> <i><?= $home2['GiaoVien'] ?></i></p>
                     <p>
                         <span class="rating">5.0</span>
                         <span class="stars">&#9733; &#9733; &#9733; &#9733; &#9733;</span>
                         <span class="count">(231)</span>
                     </p>
-                    <p style="font-size: 16px;margin-top:10px;">599.000đ <del style="font-size:12px;">899.000đ</del></p>
+                    <p style="font-size: 16px;margin-top:10px;"><?= $home2['Gia'] ?><del style="font-size:12px;"><?= $home2['Gia'] ?></del></p>
                 </div>
-                <div class="col xl-3 lg-3 md-6" style="margin-bottom: 20px;">
-                    <img style="width: 100%;" src="./assets/image/header/Frame 427319549.png" alt="">
-                    <p class="title-product">Phương pháp học môn Hóa học đơn giản cho người mất gốc</p>
-                    <p class="rating"> <i>Lê Anh Phong</i></p>
-                    <p>
-                        <span class="rating">5.0</span>
-                        <span class="stars">&#9733; &#9733; &#9733; &#9733; &#9733;</span>
-                        <span class="count">(231)</span>
-                    </p>
-                    <p style="font-size: 16px;margin-top:10px;">599.000đ <del style="font-size:12px;">899.000đ</del></p>
-                </div>
-                <div class="col xl-3 lg-3 md-6" style="margin-bottom: 20px;">
-                    <img style="width: 100%;" src="./assets/image/header/Frame 427319549.png" alt="">
-                    <p class="title-product">Phương pháp học môn Hóa học đơn giản cho người mất gốc</p>
-                    <p class="rating"> <i>Lê Anh Phong</i></p>
-                    <p>
-                        <span class="rating">5.0</span>
-                        <span class="stars">&#9733; &#9733; &#9733; &#9733; &#9733;</span>
-                        <span class="count">(231)</span>
-                    </p>
-                    <p style="font-size: 16px;margin-top:10px;">599.000đ <del style="font-size:12px;">899.000đ</del></p>
-                </div>
-                <div class="col xl-3 lg-3 md-6" style="margin-bottom: 20px;">
-                    <img style="width: 100%;" src="./assets/image/header/Frame 427319549.png" alt="">
-                    <p class="title-product">Phương pháp học môn Hóa học đơn giản cho người mất gốc</p>
-                    <p class="rating"> <i>Lê Anh Phong</i></p>
-                    <p>
-                        <span class="rating">5.0</span>
-                        <span class="stars">&#9733; &#9733; &#9733; &#9733; &#9733;</span>
-                        <span class="count">(231)</span>
-                    </p>
-                    <p style="font-size: 16px;margin-top:10px;">599.000đ <del style="font-size:12px;">899.000đ</del></p>
-                </div>
-            </div>
-            <div class="row product-list">
-                <div class="col xl-3 lg-3 md-6" style="margin-bottom: 20px;">
-                    <img style="width: 100%;" src="./assets/image/header/Frame 427319549.png" alt="">
-                    <p class="title-product">Phương pháp học môn Hóa học đơn giản cho người mất gốc</p>
-                    <p class="rating"> <i>Lê Anh Phong</i></p>
-                    <p>
-                        <span class="rating">5.0</span>
-                        <span class="stars">&#9733; &#9733; &#9733; &#9733; &#9733;</span>
-                        <span class="count">(231)</span>
-                    </p>
-                    <p style="font-size: 16px;margin-top:10px;">599.000đ <del style="font-size:12px;">899.000đ</del></p>
-                </div>
-                <div class="col xl-3 lg-3 md-6" style="margin-bottom: 20px;">
-                    <img style="width: 100%;" src="./assets/image/header/Frame 427319549.png" alt="">
-                    <p class="title-product">Phương pháp học môn Hóa học đơn giản cho người mất gốc</p>
-                    <p class="rating"> <i>Lê Anh Phong</i></p>
-                    <p>
-                        <span class="rating">5.0</span>
-                        <span class="stars">&#9733; &#9733; &#9733; &#9733; &#9733;</span>
-                        <span class="count">(231)</span>
-                    </p>
-                    <p style="font-size: 16px;margin-top:10px;">599.000đ <del style="font-size:12px;">899.000đ</del></p>
-                </div>
-                <div class="col xl-3 lg-3 md-6" style="margin-bottom: 20px;">
-                    <img style="width: 100%;" src="./assets/image/header/Frame 427319549.png" alt="">
-                    <p class="title-product">Phương pháp học môn Hóa học đơn giản cho người mất gốc</p>
-                    <p class="rating"> <i>Lê Anh Phong</i></p>
-                    <p>
-                        <span class="rating">5.0</span>
-                        <span class="stars">&#9733; &#9733; &#9733; &#9733; &#9733;</span>
-                        <span class="count">(231)</span>
-                    </p>
-                    <p style="font-size: 16px;margin-top:10px;">599.000đ <del style="font-size:12px;">899.000đ</del></p>
-                </div>
-                <div class="col xl-3 lg-3 md-6" style="margin-bottom: 20px;">
-                    <img style="width: 100%;" src="./assets/image/header/Frame 427319549.png" alt="">
-                    <p class="title-product">Phương pháp học môn Hóa học đơn giản cho người mất gốc</p>
-                    <p class="rating"> <i>Lê Anh Phong</i></p>
-                    <p>
-                        <span class="rating">5.0</span>
-                        <span class="stars">&#9733; &#9733; &#9733; &#9733; &#9733;</span>
-                        <span class="count">(231)</span>
-                    </p>
-                    <p style="font-size: 16px;margin-top:10px;">599.000đ <del style="font-size:12px;">899.000đ</del></p>
-                </div>
+                <?php endforeach; ?>
             </div>
             <h1 class="title1">Chủ đề có thể bạn quan tâm</h1>
             <div class="chudeqqt">

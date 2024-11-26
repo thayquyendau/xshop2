@@ -8,23 +8,30 @@
                         <img style="width: 75%;" src="./asset/img/logo1.png" alt="">
                         <p class="col-9 d-flex justify-content-center align-items-center p-0" style="color:red; font-size: 22px;">Welcome Back !!</p>
                         <p class="col-9 d-flex justify-content-center align-items-center" style="color: black; font-size: 15px;">Nhập thông tin đăng nhập</p> 
-                        <div class="col-9 form-floating rounded-5">
-                        <h2">Tên đăng nhập</h2>
-                        <input type="email" class="form-control" id="floatingPassword" placeholder="Nhập tên hoặc email">
-                        </div>
-                        <div style="margin-top: 10px;" class="col-9 form-floating rounded-5">
-                        <h2">Mật khẩu</h2>
-                        <input type="password" class="form-control" id="floatingPassword" placeholder="Nhập mật khẩu">
-                        </div>
-                        <p class="col-9 d-flex mt-2" style="color: black; font-size: 13px;">Quên mật khẩu?</p>
-                        <button type="button" class="col-6 btn btn-primary" style="background-color: red;">Đăng nhập</button>
+                        <form action="" method="post" style="padding-left: 50px;"> 
+                            <div class="col-9 form-floating rounded-5">
+                            <h2">Tên đăng nhập</h2>
+                            <input type="username" class="form-control" id="floatingPassword" placeholder="Tên đăng nhập" name="UserName">
+                            </div>
+                            <div style="margin-top: 10px;" class="col-9 form-floating rounded-5">
+                            <h2">Mật khẩu</h2>
+                            <input type="password" class="form-control" id="floatingPassword" placeholder="Nhập mật khẩu" name="Password">
+                            </div>
+                            <p class="col-9 d-flex mt-2" style="color: black; font-size: 13px;">Quên mật khẩu?</p>
+                            <?php 
+                            if (isset($loginFailMess)) {
+                            echo "<p>$loginFailMess</p>";
+                            }
+                            ?>
+                        <button class="col-6 btn btn-primary" style="background-color: red;">Đăng nhập</button>
+                        </form>
                     </div>
                 </div>
                 <div class="col-6 d-flex justify-content-center align-items-center login-back rounded-start-5">
                     <div class="row d-flex justify-content-center align-items-">
                         <img style="width: 75%;" src="./asset/img/logo_mau.png" alt="">
                         <p class="col-9 d-flex justify-content-center align-items-center m-0 p-0" style="color:white; font-size: 20px;">Online School</p>
-                        <p class="col-9 d-flex justify-content-center align-items-center " style="color:white; font-size: 15px; ">Bạn chưa có tài khoản? <a href="<?= BASE_URL . '/dangky' ?>">Đăng ký ngay</a></p>
+                        <p class="col-9 d-flex justify-content-center align-items-center " style="color:white; font-size: 15px; ">Bạn chưa có tài khoản?<a style="color: #ffffff; padding-left: 5px;" href="<?= BASE_URL . '/dangky' ?>">Đăng ký ngay</a></p>
                         <button type="button" class="col-6 btn btn-primary" style="background-color: red; border: 1px solid white">
                             <a href="<?= BASE_URL . '/dangky' ?>">Đăng ký</a>
                         </button>
