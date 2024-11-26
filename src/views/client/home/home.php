@@ -75,6 +75,7 @@
                     </li>
                 </div>
                 <?php endforeach; ?>
+                </div>
             </div>
             <h1 class="title1">Giảng viên tiêu biểu</h1>
             <div class="row product-list1">
