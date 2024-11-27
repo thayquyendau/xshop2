@@ -9,14 +9,17 @@
             <input type="text" placeholder="Tìm khóa học, giảng viên">
             <button type="submit">&#128269;</button>
         </li>
-        <li class="header-item">Giáo viên</li>
+        <?php if(isset($_SESSION['UserName']) ): ?>
+        <a href="<?= BASE_URL . '/admin' ?>">
+            <li class="header-item">Quản trị</li>
+        </a>
         <li class="header-item">Học viên</li>
         <li class="header-item">
             <a href="<?= BASE_URL . '/giohang' ?>" class="add-to-cart" title="Thêm vào giỏ hàng">
                 <i class="material-icons">shopping_cart</i>
             </a>
         </li>
-        <?php if(isset($_SESSION['UserName']) ): ?>
+        
             <a style="color: black; text-decoration:none" href="">
             <li class="header-item"><span>Xin chào <?= $_SESSION['UserName'] ?>!</span></li>
             </a>
