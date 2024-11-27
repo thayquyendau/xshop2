@@ -48,35 +48,36 @@
 
                     <div class="bgr-step">
                         <div class="detail-main">
-                            <form class="form-pay-right" action="">
-                                <div>
-                                    <div class="price">Đơn hàng: (<span id="selected-count">0</span> khóa học)</div>
-                                    <hr>
-                                    <?php foreach ($cartItems as $item): ?>
-                                        <div class="top-star d-flex justify-content-between">
-                                            <div class="cart-pading">
-                                                <div class="rating"><?= $item['TenKhoaHoc'] ?></div>
-                                            </div>
-                                            <div>
-                                                <p class="price"><?= $item['Gia'] ?>đ</p>
-                                                <span class="price"><del><?= $item['Gia'] ?>đ</del></span>
-                                            </div>
+                        <form class="form-pay-right" action="">
+                            <div class="payment-summary">
+                                <div class="price">Đơn hàng: (<span class="selected-count-pay"><?= count($cartItems) ?></span> khóa học)</div>
+                                <hr>
+                                <?php foreach ($cartItems as $item): ?>
+                                    <div class="check-counts-pay top-star d-flex justify-content-between">
+                                        <div class="cart-pading">
+                                            <div class="rating"><?= $item['TenKhoaHoc'] ?></div>
                                         </div>
-                                        <hr>
-                                    <?php endforeach; ?>
-                                </div>
-                                <div class="detail-course-main-body">
-                                    <div class="cart-pading">
-                                        <div class="price">Tổng cộng</div>
+                                        <div>
+                                            <p class="price"><?= number_format($item['Gia'], 0, ',', '.') ?>đ</p>
+                                            <span class="price"><del><?= number_format($item['Gia'], 0, ',', '.') ?>đ</del></span>
+                                        </div>
                                     </div>
-                                    <p class="price text-danger">
-                                        <span id="checkout-total-price">0</span>đ
-                                    </p>
+                                    <hr>
+                                <?php endforeach; ?>
+                            </div>
+                            <!-- Tổng cộng -->
+                            <div class="total-summary detail-course-main-body">
+                                <div class="cart-pading">
+                                    <div class="price">Tổng cộng</div>
                                 </div>
-                            </form>
+                                <p class="price text-danger">
+                                    <span class="total-allprice"><?= number_format(array_sum(array_column($cartItems, 'Gia')), 0, ',', '.') ?></span>đ
+                                </p>
+                            </div>
+                        </form>
+
                         </div>
                     </div>
-
                 </div>
             </div>
         </div>
@@ -130,30 +131,34 @@
                     </div>
                     <div class="bgr-step">
                         <div class="detail-main">
-                            <form class="form-pay-right" action="">
-                                <div>
-                                    <div class="title-product">Đơn hàng: (<span id="selected-courses">0</span> khóa học)</div>
-                                    <hr>
-                                    <?php foreach ($cartItems as $item): ?>
-                                        <div class="top-star d-flex justify-content-between">
-                                            <div class="cart-pading">
-                                                <div class="rating"><?= $item['TenKhoaHoc'] ?></div>
-                                            </div>
-                                            <div>
-                                                <p class="price"><?= $item['Gia'] ?>đ</p>
-                                                <span class="price"><del><?= $item['Gia'] ?>đ</del></span>
-                                            </div>
+                        <form class="form-pay-right" action="">
+                            <div class="payment-summary">
+                                <div class="price">Đơn hàng: (<span class="selected-count-pay"><?= count($cartItems) ?></span> khóa học)</div>
+                                <hr>
+                                <?php foreach ($cartItems as $item): ?>
+                                    <div class="check-counts-pay top-star d-flex justify-content-between">
+                                        <div class="cart-pading">
+                                            <div class="rating"><?= $item['TenKhoaHoc'] ?></div>
                                         </div>
-                                        <hr>
-                                    <?php endforeach; ?>
-                                </div>
-                                <div class="detail-course-main-body">
-                                    <div class="cart-pading">
-                                        <div class="price">Tổng cộng</div>
+                                        <div>
+                                            <p class="price"><?= number_format($item['Gia'], 0, ',', '.') ?>đ</p>
+                                            <span class="price"><del><?= number_format($item['Gia'], 0, ',', '.') ?>đ</del></span>
+                                        </div>
                                     </div>
-                                    <p class="price text-danger">8.599.000đ</p>
+                                    <hr>
+                                <?php endforeach; ?>
+                            </div>
+                            <!-- Tổng cộng -->
+                            <div class="total-summary detail-course-main-body">
+                                <div class="cart-pading">
+                                    <div class="price">Tổng cộng</div>
                                 </div>
-                            </form>
+                                <p class="price text-danger">
+                                    <span class="total-allprice"><?= number_format(array_sum(array_column($cartItems, 'Gia')), 0, ',', '.') ?></span>đ
+                                </p>
+                            </div>
+                        </form>
+
                         </div>
                     </div>
                 </div>
@@ -191,12 +196,16 @@
                                         </tr>
                                         <tr>
                                             <th class="price">Số tiền</th>
-                                            <td class="rating">699,000₫</td>
+                                            <td class="rating">
+                                                <p class="price text-danger">
+                                                    <span class="total-allprice"><?= number_format(array_sum(array_column($cartItems, 'Gia')), 0, ',', '.') ?></span>đ
+                                                </p>
+                                            </td>
                                         </tr>
                                     </tbody>
                                 </table>
 
-                                <button class="btn btn-danger btn-lg p-3 fs-3">Xác nhận đã chuyển khoản</button>
+                                <a href="<?= BASE_URL ?>/"><button class="btn btn-danger btn-lg p-3 fs-3">Xác nhận đã chuyển khoản</button></a>
                             </div>
                         </div>
                     </div>

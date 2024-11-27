@@ -31,9 +31,7 @@
                 <th scope="col"></th>
             </tr>
         </thead>
-       <?php 
-           debug($users);
-       ?>
+     
         <?php foreach($users as $user): ?>
           
          <tbody>

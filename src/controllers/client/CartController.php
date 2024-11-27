@@ -26,7 +26,7 @@ class CartController
             $cartItems = $this->cartModel->getCartItems();
             // Loại bỏ các biến ko phải mảng
             $cartItems = array_filter($cartItems, 'is_array');
-            debug($cartItems);
+            // debug($cartItems);
             require_once './src/views/client/giohang/giohang.php';
         } else {
             $cartItems = $this->cartModel->getCartItems();

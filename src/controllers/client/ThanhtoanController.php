@@ -15,21 +15,22 @@ class ThanhtoanController {
         $this->cartModel = new Cart();
     }
 
-    public function index() {
-            if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-                debug($_POST);
-                $id = $_POST['IDKhoaHoc'];
-                $cartItems = $this->cartModel->getCartItemsByID([],$id);
-                $cartItems = $this->cartModel->getCartItems();
-                // debug($cartItems);
-                $cartItems = array_filter($cartItems, 'is_array');
-                require_once './src/views/client/thanhtoan/thanhtoan.php';
-            } else {
-                $cartItems = $this->cartModel->getCartItems();
-                // debug($cartItems);
-                $cartItems = array_filter($cartItems, 'is_array');
-                require_once './src/views/client/thanhtoan/thanhtoan.php';
-            }
+    public function index(): void{
+        
+            $id = $_POST['IDKhoaHoc'];
+            
+            $cartItems= $this->cartModel->getthanhtoanbyId($id);
+            require_once './src/views/client/thanhtoan/thanhtoan.php';
+            // Loại bỏ các biến ko phải mảng
+            // $cartItems = array_filter($cartItems, 'is_array');
+            // debug($cartItems);
+           
+        // } else {
+        //     $cartItems = $this->cartModel->getCartItems();
+        //     // debug($cartItems);
+        //     $cartItems = array_filter($cartItems, 'is_array');
+        //     require_once './src/views/client/thanhtoan/thanhtoan.php';
+        
     }
 }
 
