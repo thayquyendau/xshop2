@@ -37,6 +37,7 @@
     $router->add("GET", "client", "/gioithieu", "GioithieuController@index");
     
     $router->add("GET", "client", "/thanhtoan", "ThanhtoanController@index");
+    $router->add("POST", "client", "/thanhtoan", "ThanhtoanController@index");
 
     
 

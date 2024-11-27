@@ -214,6 +214,7 @@ function nextStep(currentStep, nextStep) {
   }
 }
 
+//Lấy tất cả checkbox giỏ hàng
 function toggleAllProducts(selectAllCheckbox) {
   const checkboxes = document.querySelectorAll(".product-checkbox");
   checkboxes.forEach((checkbox) => {
