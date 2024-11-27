@@ -16,6 +16,7 @@
             <div class="row product-list1">
                 <?php foreach ($homes as $home): ?>
                 <div class="col xl-3 lg-3 md-6" style="margin-bottom: 20px;">
+                 
                     <a href="<?= BASE_URL ?>/detailCourse?IDKhoaHoc=<?= $home['IDKhoaHoc'] ?>"><img style="width: 100%; height: 175px" src="<?= $home['HinhAnh'] ?>" alt=""></a>
                     <p class="title-product"><?= $home['TenKhoaHoc'] ?></p>
                     <p class="rating"> <i><?= $home['GiaoVien'] ?></i></p>
