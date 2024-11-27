@@ -25,7 +25,7 @@
             <a style="color: black; text-decoration:none" href="<?= BASE_URL . '/login' ?>">
             <li class="header-item">Đăng nhập</li>
             </a>
-            <a href="<?= BASE_URL . '/dangky' ?>">
+            <a href="<?= BASE_URL . '/register' ?>">
             <li>
                 <button class="button-dk" id="showRegisterModal">Đăng ký</button>
             </li>

@@ -31,9 +31,9 @@
                     <div class="row d-flex justify-content-center align-items-">
                         <img style="width: 75%;" src="./asset/img/logo_mau.png" alt="">
                         <p class="col-9 d-flex justify-content-center align-items-center m-0 p-0" style="color:white; font-size: 20px;">Online School</p>
-                        <p class="col-9 d-flex justify-content-center align-items-center " style="color:white; font-size: 15px; ">Bạn chưa có tài khoản?<a style="color: #ffffff; padding-left: 5px;" href="<?= BASE_URL . '/dangky' ?>">Đăng ký ngay</a></p>
+                        <p class="col-9 d-flex justify-content-center align-items-center " style="color:white; font-size: 15px; ">Bạn chưa có tài khoản?<a style="color: #ffffff; padding-left: 5px;" href="<?= BASE_URL . '/register' ?>">Đăng ký ngay</a></p>
                         <button type="button" class="col-6 btn btn-primary" style="background-color: red; border: 1px solid white">
-                            <a href="<?= BASE_URL . '/dangky' ?>">Đăng ký</a>
+                            <a href="<?= BASE_URL . '/register' ?>">Đăng ký</a>
                         </button>
                     </div>
                 </div>

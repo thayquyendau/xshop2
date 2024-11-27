@@ -7,8 +7,8 @@
     // $router->add("GET", "client", "/", "CategoryController@index");
     $router->add("GET", "client", "/login", "LoginController@login");
     $router->add("POST", "client", "/login", "LoginController@login");
-    $router->add("GET", "client", "/dangky", "LoginController@dangky");
-    $router->add("POST", "client", "/dangky", "LoginController@dangky");
+    $router->add("GET", "client", "/register", "LoginController@register");
+    $router->add("POST", "client", "/register", "LoginController@register");
     $router->add("GET", "client", "/logout", "LoginController@logout");
     $router->add("GET", "client", "/resetpassLogin", "LoginController@resetpassLogin");
     $router->add("POST", "client", "/resetpassLogin", "LoginController@resetpassLogin");

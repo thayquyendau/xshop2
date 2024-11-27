@@ -16,35 +16,41 @@
                         <img style="width: 75%;" src="./asset/img/logo1.png" alt="">
                         <p class="col-9 d-flex justify-content-center align-items-center p-0" style="color:red; font-size: 20px;">Welcome Back !!</p>
                         <p class="col-9 d-flex justify-content-center align-items-center " style="color: black; font-size: 15px;">Nhập thông tin đăng ký</p>
+                        <form class="dk-form" action="" method="post" enctype="multipart/form-data">
                         <div class="col-12">
                         <div class="row">
                             <div class="col-6 m-0">
-                                <h2 class="input-title">Tên</h2>
-                                <input type="text" class="form-control" id="firstName" placeholder="Nhập tên">
-                            </div>
-                            <div class="col-6 m-0">
-                                <h2 class="input-title">Họ</h2>
-                                <input type="text" class="form-control" id="lastName" placeholder="Nhập họ">
+                                <h2 class="input-title">Họ và tên</h2>
+                                <input type="text" class="form-control" name="HoVaTen" placeholder="Họ và tên">
                             </div>
                             <div class="col-6 m-0">
                                 <h2 class="input-title">Tên đăng nhập</h2>
-                                <input type="text" class="form-control" id="username" placeholder="Nhập tên đăng nhập">
+                                <input type="text" class="form-control" name="UserName" placeholder="Tên đăng nhập">
                             </div>
                             <div class="col-6 m-0">
                                 <h2 class="input-title">Mật khẩu</h2>
-                                <input type="password" class="form-control" id="password" placeholder="Nhập mật khẩu">
+                                <input type="password" class="form-control" name="Password" placeholder="Mật khẩu">
                             </div>
                             <div class="col-6 m-0">
                                 <h2 class="input-title">Email</h2>
-                                <input type="email" class="form-control" id="email" placeholder="Nhập email">
+                                <input type="email" class="form-control" name="Email" placeholder="Email">
                             </div>
                             <div class="col-6 m-0">
                                 <h2 class="input-title">Số điện thoại</h2>
-                                <input type="tel" class="form-control" id="phone" placeholder="Nhập số điện thoại">
+                                <input type="tel" class="form-control" name="Phone" placeholder="Số điện thoại">
+                            </div>
+                            <div class="col-6 m-0">
+                                <h2 class="input-title">Ảnh đại diện</h2>
+                                <input type="file" class="form-control" name="image" placeholder="Ảnh đại diện">
                             </div>
                         </div>
-
-                        <button type="button" class="btn btn-primary mt-3 buttondk" style="background-color: red;font-size: 15px">Đăng Ký</button>
+                        <?php 
+                            if (isset($registerFailMess)) {
+                                echo "<p>$registerFailMess</p>";
+                            }
+                        ?>
+                        <button class="btn btn-primary mt-3 buttondk" style="background-color: red;font-size: 15px">Đăng Ký</button>
+                        </form>
                     </div>
 
                     </div>
