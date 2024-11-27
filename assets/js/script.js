@@ -79,7 +79,7 @@ document.getElementById("filterButton").addEventListener("click", function () {
   ToggleCheckbox.checked = !ToggleCheckbox.checked;
 });
 
-//Các bước thanh toán
+// Set active step and show corresponding content
 function setActiveStep(step) {
   document.querySelectorAll(".step").forEach((stepElem) => {
     stepElem.classList.remove("active");
@@ -100,6 +100,22 @@ function setActiveStep(step) {
   document.getElementById(`step${step}Content`).classList.add("active");
 }
 
+// Next step logic
+function nextStep(currentStep, nextStep) {
+  let isValid = false;
+  
+  if (currentStep === 1) {
+    isValid = validateStep1();
+  } else if (currentStep === 2) {
+    isValid = validateStep2();
+  }
+
+  if (isValid) {
+    setActiveStep(nextStep);
+  }
+}
+
+// Step 1 validation
 function validateStep1() {
   let isValid = true;
 
@@ -113,36 +129,36 @@ function validateStep1() {
     nameError.style.display = "none";
   }
 
-  // Validate Email
-  const email = document.getElementById("email").value.trim();
-  const emailError = document.getElementById("emailError");
-  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/; // Định dạng ký tự hợp lệ của email
-  if (!emailRegex.test(email)) {
-    emailError.style.display = "block";
-    isValid = false;
-  } else {
-    emailError.style.display = "none";
-  }
+  // // Validate Email
+  // const email = document.getElementById("email").value.trim();
+  // const emailError = document.getElementById("emailError");
+  // const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  // if (!emailRegex.test(email)) {
+  //   emailError.style.display = "block";
+  //   isValid = false;
+  // } else {
+  //   emailError.style.display = "none";
+  // }
 
-  // Validate Số điện thoại
-  const phone = document.getElementById("phone").value.trim();
-  const phoneError = document.getElementById("phoneError");
-  if (phone === "") {
-    phoneError.style.display = "block";
-    isValid = false;
-  } else {
-    phoneError.style.display = "none";
-  }
+  // // Validate Số điện thoại
+  // const phone = document.getElementById("phone").value.trim();
+  // const phoneError = document.getElementById("phoneError");
+  // if (phone === "") {
+  //   phoneError.style.display = "block";
+  //   isValid = false;
+  // } else {
+  //   phoneError.style.display = "none";
+  // }
 
   return isValid;
 }
 
+// Step 2 validation
 function validateStep2() {
   const paymentMethods = document.getElementsByName("payment");
   const paymentError = document.getElementById("paymentError");
   let isChecked = false;
 
-  // Kiểm tra xem có radio button nào được chọn không
   for (const method of paymentMethods) {
     if (method.checked) {
       isChecked = true;
@@ -150,7 +166,6 @@ function validateStep2() {
     }
   }
 
-  // Nếu không có phương thức thanh toán được chọn, hiển thị lỗi
   if (!isChecked) {
     paymentError.style.display = "block";
     return false;
@@ -159,6 +174,7 @@ function validateStep2() {
     return true;
   }
 }
+
 
 document.addEventListener("DOMContentLoaded", function () {
   // Lấy tất cả các khung chứa radio button
@@ -216,6 +232,7 @@ function updateSelectAll() {
 function updateTotal() {
   const checkboxes = document.querySelectorAll(".product-checkbox:checked");
   const selectedCount = document.getElementById("selected-count");
+  const selectedCounts = document.getElementById("selected-counts");
   const totalPrice = document.getElementById("total-price");
   const totalAllPrice = document.getElementById("total-allprice");
 
@@ -228,6 +245,7 @@ function updateTotal() {
   });
 
   selectedCount.textContent = checkboxes.length;
+  selectedCounts.textContent = checkboxes.length;
   totalPrice.textContent = total.toLocaleString("vi-VN");
   totalAllPrice.textContent = total.toLocaleString("vi-VN");
 }
@@ -278,55 +296,3 @@ function updateCheckout() {
   totalPriceElement.textContent = total.toLocaleString("vi-VN");
   selectedCoursesElement.textContent = selectedCount;
 }
-
-
-// biểu đồ
-
-
-const data = {
-  labels: ['aaa', 'hsuinh', 'Yellow', 'Green', 'Blue'],
-  datasets: [
-      {
-          label: 'Dataset 1',
-          data: [20, 10, 30, 25, 15], // Dữ liệu mẫu cho biểu đồ
-          backgroundColor: [
-              'rgba(255, 99, 132, 0.2)',
-              'rgba(255, 159, 64, 0.2)',
-              'rgba(255, 205, 86, 0.2)',
-              'rgba(75, 192, 192, 0.2)',
-              'rgba(54, 162, 235, 0.2)'
-          ],
-          borderColor: [
-              'rgba(255, 99, 132, 1)',
-              'rgba(255, 159, 64, 1)',
-              'rgba(255, 205, 86, 1)',
-              'rgba(75, 192, 192, 1)',
-              'rgba(54, 162, 235, 1)'
-          ],
-          borderWidth: 1
-      }
-  ]
-};
-
-// Cấu hình biểu đồ
-const config = {
-  type: 'bar',
-  data: data,
-  options: {
-      responsive: true,
-      plugins: {
-          legend: {
-              position: 'botton',
-          },
-          title: {
-              display: false,
-              text: 'Hê lô'
-          }
-      }
-  },
-};
-
-// Khởi tạo biểu đồ
-const ctx = document.getElementById('myChart').getContext('2d');
-const myChart = new Chart(ctx, config);
-

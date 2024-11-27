@@ -11,7 +11,7 @@
                                     <div class="cart-flex-left">
                                         <input type="checkbox" id="select-all" name="rating" onchange="toggleAllProducts(this)">
                                     </div>
-                                    <div class="title-product">CHỌN TẤT CẢ (<span id="selected-count">0</span> SẢN PHẨM)</div>
+                                    <div class="price">CHỌN TẤT CẢ (<span id="selected-count">0</span> SẢN PHẨM)</div>
                                 </div>
                             </div>
                         </div>
@@ -39,7 +39,7 @@
                                                     <img src="<?= $item['HinhAnh'] ?>" alt="">
                                                 </div>
                                                 <div class="category-nd">
-                                                    <div class="title-product"><?= $item['TenKhoaHoc'] ?></div>
+                                                    <div class="price"><?= $item['TenKhoaHoc'] ?></div>
                                                     <div class="rating">Giáo viên: <i><?= $item['GiaoVien'] ?></i></div>
                                                     <div class="top-star">
                                                         <span class="count">5.0</span>
@@ -68,10 +68,10 @@
 
                 <div class="detail-course-main-body-right">
                     <div>
-                        <div class="title-product">Thông tin đơn hàng</div>
+                        <div class="price">Thông tin đơn hàng</div>
                         <div class="top-star d-flex justify-content-between align-items-baseline">
                             <div class="cart-pading">
-                                <div class="rating">Tạm tính (<span id="selected-count">0</span> sản phẩm):</div>
+                                <div class="rating">Tạm tính (<span id="selected-counts">0</span> sản phẩm):</div>
                             </div>
                             <div class="price"><span id="total-price">0</span>đ</div>
                         </div>
