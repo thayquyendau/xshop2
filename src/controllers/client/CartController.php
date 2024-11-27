@@ -21,8 +21,6 @@ class CartController
     // Thêm sản phẩm vào giỏ hàng
     public function index(): void{
         if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-            
-
             $id = $_POST['IDKhoaHoc'];
             $this->cartModel->addToCartById([],$id);
             $cartItems = $this->cartModel->getCartItems();
