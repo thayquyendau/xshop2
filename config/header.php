@@ -31,9 +31,11 @@
             </li>
             </a>
         <?php else: ?>
-            <a href="<?= BASE_URL.'/logout' ?>"><li>
-                <button class="button-dk" >Đăng xuất</button>
-            </li></a>
+            <a href="<?= BASE_URL.'/logout' ?>" class="logout-link">
+                <li  class="header-item">
+                    <i class="fa fa-sign-out"></i> Đăng xuất
+                </li>
+            </a>
         <?php endif; ?>
     </ul>
 </div>
