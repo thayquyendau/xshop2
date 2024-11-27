@@ -2,7 +2,8 @@
     autoLoad('./src/controllers/client/');
     autoLoad('./src/models/');
 
-    $router->add("GET", "client", "/", "HomeController@index");
+    $router->add("GET", "client", "/", "HomeController@indexHandle");
+    $router->add("GET", "client", "/indexHandle", "HomeController@index");
     $router->add("GET", "client", "/index.php", "HomeController@index");
     // $router->add("GET", "client", "/", "CategoryController@index");
     $router->add("GET", "client", "/login", "LoginController@login");

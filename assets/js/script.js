@@ -250,3 +250,49 @@ function updateTotal() {
   totalAllPrice.textContent = total.toLocaleString("vi-VN");
 }
 
+function updateCheckout() {
+  const productCheckboxes = document.querySelectorAll(".product-checkbox");
+  const checkoutItems = document.getElementById("checkout-items");
+  const totalPriceElement = document.getElementById("checkout-total-price");
+  const selectedCoursesElement = document.getElementById("selected-courses");
+
+  let total = 0;
+  let selectedCount = 0;
+  let itemsHTML = "";
+
+  productCheckboxes.forEach((checkbox) => {
+    if (checkbox.checked) {
+      const parentElement = checkbox.closest(".category-form-space");
+      const priceValue =
+        parentElement.querySelector(".price-value").textContent;
+      const productTitle =
+        parentElement.querySelector(".title-product").textContent;
+
+      total += parseInt(priceValue);
+      selectedCount++;
+
+      // Thêm khóa học vào bước thanh toán
+      itemsHTML += `
+                <div class="top-star">
+                    <div class="cart-pading">
+                        <div class="rating">${productTitle}</div>
+                    </div>
+                    <div>
+                        <p class="price"><span>${parseInt(
+                          priceValue
+                        ).toLocaleString("vi-VN")}</span>đ</p>
+                        <span class="price"><del>899.000đ</del></span>
+                    </div>
+                </div>
+                <hr>
+            `;
+    }
+  });
+
+  // Cập nhật danh sách khóa học trong bước thanh toán
+  checkoutItems.innerHTML = itemsHTML;
+
+  // Cập nhật tổng số tiền và số lượng khóa học
+  totalPriceElement.textContent = total.toLocaleString("vi-VN");
+  selectedCoursesElement.textContent = selectedCount;
+}
