@@ -8,7 +8,7 @@
                 <div class="row box m-2 rounded-3">
                     <div class="col-4 align-content-center p-0">
                         <div class="box-1">
-                            <img width="70%" src="./asset/img/user-svgrepo-com.svg">
+                            <img width="70%" src="./assets/image/img/user-svgrepo-com.svg">
                         </div>
                     </div>
                     <div class="col-8 align-content-center">
@@ -19,7 +19,7 @@
                 <div class="row box m-2 rounded-3">
                     <div class="col-4 align-content-center p-0">
                         <div class="box-1">
-                            <img width="70%" src="./asset/img/user-svgrepo-com.svg">
+                            <img width="70%" src="./assets/image/img/user-svgrepo-com.svg">
                         </div>
                     </div>
                     <div class="col-8 align-content-center">
@@ -30,7 +30,7 @@
                 <div class="row box m-2 rounded-3">
                     <div class="col-4 align-content-center p-0">
                         <div class="box-1">
-                            <img width="70%" src="./asset/img/user-svgrepo-com.svg">
+                            <img width="70%" src="./assets/image/img/user-svgrepo-com.svg">
                         </div>
                     </div>
                     <div class="col-8 align-content-center">
@@ -46,7 +46,7 @@
                         <div class="row m-4 border border-danger rounded-2">
                             <div class="col-4 align-content-center p-0">
                                 <div class="box-1">
-                                    <img width="70%" src="./asset/img/teacher-svgrepo-com.svg">
+                                    <img width="70%" src="./assets/image/img/teacher-svgrepo-com.svg">
                                 </div>
                             </div>
                                             

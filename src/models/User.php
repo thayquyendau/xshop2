@@ -16,7 +16,7 @@ class User extends baseModel
         $sql = "SELECT * FROM user WHERE UserName LIKE '%$id%'";
         $stmt = $this->conn->prepare($sql);
         $stmt->execute();  
-        return $stmt->fetchAll();
+        return $stmt->fetch();
     }
 
 
