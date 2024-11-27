@@ -32,7 +32,7 @@
             </a>
         <?php else: ?>
             <a href="<?= BASE_URL.'/logout' ?>" class="logout-link">
-                <li  class="header-item">
+                <li  class="header-item" style="color: #000;">
                     <i class="fa fa-sign-out"></i> Đăng xuất
                 </li>
             </a>
