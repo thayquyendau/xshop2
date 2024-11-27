@@ -15,7 +15,6 @@
         <a href="<?= BASE_URL . '/admin' ?>">
             <li class="header-item">Quản trị</li>
         </a>
-        <li class="header-item">Học viên</li>
         <li class="header-item">
             <a href="<?= BASE_URL . '/giohang' ?>" class="add-to-cart" title="Thêm vào giỏ hàng">
                 <i class="material-icons">shopping_cart</i>
@@ -36,9 +35,11 @@
             </li>
             </a>
         <?php else: ?>
-            <a href="<?= BASE_URL.'/logout' ?>"><li>
-                <button class="button-dk" >Đăng xuất</button>
-            </li></a>
+            <a href="<?= BASE_URL.'/logout' ?>" class="logout-link">
+                <li  class="header-item" style="color: #000;">
+                    <i class="fa fa-sign-out"></i> Đăng xuất
+                </li>
+            </a>
         <?php endif; ?>
     </ul>
 </div>

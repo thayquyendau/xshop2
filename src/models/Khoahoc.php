@@ -19,7 +19,7 @@ class Khoahoc extends baseModel
                     danhmuc.TenDanhMuc,
                     user.UserID,
                     user.HoVaTen
-                    chitietkh.MoTa
+                    -- chitietkh.MoTa
                 FROM 
                     khoahoc
                 JOIN 
