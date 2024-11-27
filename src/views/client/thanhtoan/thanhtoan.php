@@ -44,7 +44,6 @@
                             </form>
                             <button type="submit" class="btn btn-danger w-100 btn-lg p-3 fs-3" onclick="nextStep(1, 2)">Gửi</button>
                         </div>
-
                     </div>
 
                     <div class="bgr-step">

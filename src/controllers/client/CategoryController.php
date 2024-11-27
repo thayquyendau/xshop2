@@ -18,7 +18,7 @@ class CategoryController{
         require_once './config/head.php';
     }
     public function index(){
-    
+
             $id = $_GET['IDCatagory'];
             $categories = $this->modelObject->getCategoryById($id);
             // debug($categories); 
