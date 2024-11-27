@@ -14,14 +14,14 @@ class CategoryController{
     }
 
     public function getCategory(){
-        $categories = $this->modelObject->getAllCategory();
+        $categories = $this->modelObject->getAllCategory5();
         require_once './config/head.php';
     }
     public function index(){
-
+    
             $id = $_GET['IDCatagory'];
-            $categories = $this->modelObject->getCategoryById($id);
-            // debug($categories); 
+            $categories = $this->modelObject->getCategoryById5($id);
+           
             $courses = $this->modelObject->getCourseById($id);
             require_once './src/views/client/danhmuc/index.php';
     }

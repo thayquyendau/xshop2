@@ -9,14 +9,18 @@
             <input type="text" placeholder="Tìm khóa học, giảng viên">
             <button type="submit">&#128269;</button>
         </li>
-        <li class="header-item">Giáo viên</li>
-        <li class="header-item">Học viên</li>
+        <?php if(isset($_SESSION['UserName']) ): ?>
+
+        
+        <a href="<?= BASE_URL . '/admin' ?>">
+            <li class="header-item">Quản trị</li>
+        </a>
         <li class="header-item">
             <a href="<?= BASE_URL . '/giohang' ?>" class="add-to-cart" title="Thêm vào giỏ hàng">
                 <i class="material-icons">shopping_cart</i>
             </a>
         </li>
-        <?php if(isset($_SESSION['UserName']) ): ?>
+        
             <a style="color: black; text-decoration:none" href="">
             <li class="header-item"><span>Xin chào <?= $_SESSION['UserName'] ?>!</span></li>
             </a>
@@ -25,7 +29,7 @@
             <a style="color: black; text-decoration:none" href="<?= BASE_URL . '/login' ?>">
             <li class="header-item">Đăng nhập</li>
             </a>
-            <a href="<?= BASE_URL . '/dangky' ?>">
+            <a href="<?= BASE_URL . '/register' ?>">
             <li>
                 <button class="button-dk" id="showRegisterModal">Đăng ký</button>
             </li>

@@ -9,10 +9,10 @@ use commons\baseModel;
             return parent::pdoQuery($sql, $data);
             
         }
-        // public function createUser($data) {
-        //     $sql = "INSERT INTO USERS (USER_ID, PASSWORD, USER_NAME, EMAIL, IMAGE) VALUES (:user_id, :password, :user_name, :email, :image)";
-        //     return parent::pdoUpdate($sql, $data);
-        // }
+        public function createUser($data) {
+            $sql = "INSERT INTO user (UserName, Password, HoVaTen, image, Email, Address, Phone, LoaiTK) VALUES (:UserName, :Password, :HoVaTen, :image, :Email, :Address, :Phone, :LoaiTK)";
+            return parent::pdoUpdate($sql, $data);
+        }
         // public function checkOldPassword($data) {
         //     $sql = "SELECT * FROM USERS WHERE USER_ID = :user_id AND PASSWORD = :password";
         //     return parent::pdoQuery($sql, $data);
