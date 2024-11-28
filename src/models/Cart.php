@@ -30,33 +30,15 @@ class Cart extends baseModel {
         }
         return $_SESSION['cart'];
     }
-    // public function getthanhtoanbyId($id){
-    //     foreach($param as $parms) {
-
-    //     }
-    //     debug($sql);
-    //     $sql = "SELECT * FROM khoahoc WHERE IDKhoaHoc = $id";
-    //     debug($sql);
-    //     return $this->pdoQueryAll($sql, [$id]);
-    // }
 
     public function getthanhtoanbyId($ids) {
         // Kiểm tra xem $ids có phải là một mảng không
         if (!is_array($ids) || empty($ids)) {
             return []; // Trả về rỗng nếu $ids không hợp lệ
         }
-    
         // Tạo chuỗi điều kiện IN trong SQL
         $placeholders = implode(',', array_fill(0, count($ids), '?'));
-    
-        // Truy vấn SQL
         $sql = "SELECT * FROM khoahoc WHERE IDKhoaHoc IN ($placeholders)";
-        
-        // Debug SQL và mảng giá trị
-        // debug($sql);
-        // debug($ids);
-    
-        // Thực hiện truy vấn với các giá trị từ mảng
         return $this->pdoQueryAll($sql, $ids);
     }
     
