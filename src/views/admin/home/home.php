@@ -1,6 +1,6 @@
 <div class="row m-0 main-body">
     <div class="col-6 justify-content-center">
-            <canvas id="myChart" style="width:100%; max-width:700px"></canvas>
+        <canvas id="myChart" style="width:100%; max-width:700px"></canvas>
     </div>
     <div class="col-6">
         <div class="row m-0 align-items-center">
