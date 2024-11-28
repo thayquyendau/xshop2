@@ -30,8 +30,38 @@ class Cart extends baseModel {
         }
         return $_SESSION['cart'];
     }
+    // public function getthanhtoanbyId($id){
+    //     foreach($param as $parms) {
+
+    //     }
+    //     debug($sql);
+    //     $sql = "SELECT * FROM khoahoc WHERE IDKhoaHoc = $id";
+    //     debug($sql);
+    //     return $this->pdoQueryAll($sql, [$id]);
+    // }
+
+    public function getthanhtoanbyId($ids) {
+        // Kiểm tra xem $ids có phải là một mảng không
+        if (!is_array($ids) || empty($ids)) {
+            return []; // Trả về rỗng nếu $ids không hợp lệ
+        }
     
-    public function getCartItems(): mixed {
+        // Tạo chuỗi điều kiện IN trong SQL
+        $placeholders = implode(',', array_fill(0, count($ids), '?'));
+    
+        // Truy vấn SQL
+        $sql = "SELECT * FROM khoahoc WHERE IDKhoaHoc IN ($placeholders)";
+        
+        // Debug SQL và mảng giá trị
+        // debug($sql);
+        // debug($ids);
+    
+        // Thực hiện truy vấn với các giá trị từ mảng
+        return $this->pdoQueryAll($sql, $ids);
+    }
+    
+    
+    public function getCartItems(): array{
         return isset($_SESSION['cart']) && is_array($_SESSION['cart']) ? $_SESSION['cart'] : [];
     }
     public function getCartItemsByID($param,$id){
@@ -48,7 +78,6 @@ class Cart extends baseModel {
         return $_SESSION['cart'];
     }
     
-
     // Xóa một sản phẩm khỏi giỏ hàng
     public function removeFromCart($id) {
         if (isset($_SESSION['cart'][$id])) {

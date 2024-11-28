@@ -232,6 +232,10 @@ function updateSelectAll() {
 
 function updateTotal() {
   const checkboxes = document.querySelectorAll(".product-checkbox:checked");
+
+  // const checkCount = document.querySelectorAll("#check-counts-pay");
+  // const selectedCountPay = document.querySelector("selected-count-pay");
+
   const selectedCount = document.getElementById("selected-count");
   const selectedCounts = document.getElementById("selected-counts");
   const totalPrice = document.getElementById("total-price");
@@ -246,54 +250,34 @@ function updateTotal() {
   });
 
   selectedCount.textContent = checkboxes.length;
+  // selectedCountPay.textContent = checkCount.length;
+  
   selectedCounts.textContent = checkboxes.length;
   totalPrice.textContent = total.toLocaleString("vi-VN");
   totalAllPrice.textContent = total.toLocaleString("vi-VN");
 }
 
-function updateCheckout() {
-  const productCheckboxes = document.querySelectorAll(".product-checkbox");
-  const checkoutItems = document.getElementById("checkout-items");
-  const totalPriceElement = document.getElementById("checkout-total-price");
-  const selectedCoursesElement = document.getElementById("selected-courses");
-
+//Thanh Toan 
+function updateSummary() {
+  const selectedCountPay = document.querySelector(".selected-count-pay");
+  const totalAllPrice = document.querySelector(".total-allprice");
+  const cartItems = document.querySelectorAll(".check-counts-pay");
+  // Lặp tinhh tong
   let total = 0;
-  let selectedCount = 0;
-  let itemsHTML = "";
-
-  productCheckboxes.forEach((checkbox) => {
-    if (checkbox.checked) {
-      const parentElement = checkbox.closest(".category-form-space");
-      const priceValue =
-        parentElement.querySelector(".price-value").textContent;
-      const productTitle =
-        parentElement.querySelector(".title-product").textContent;
-
-      total += parseInt(priceValue);
-      selectedCount++;
-
-      // Thêm khóa học vào bước thanh toán
-      itemsHTML += `
-                <div class="top-star">
-                    <div class="cart-pading">
-                        <div class="rating">${productTitle}</div>
-                    </div>
-                    <div>
-                        <p class="price"><span>${parseInt(
-                          priceValue
-                        ).toLocaleString("vi-VN")}</span>đ</p>
-                        <span class="price"><del>899.000đ</del></span>
-                    </div>
-                </div>
-                <hr>
-            `;
-    }
+  cartItems.forEach(item => {
+      const priceText = item.querySelector(".price");
+      const price = parseInt(priceText.textContent.replace("đ", "").replace(",", "").trim());
+      total += price;
   });
-
-  // Cập nhật danh sách khóa học trong bước thanh toán
-  checkoutItems.innerHTML = itemsHTML;
-
-  // Cập nhật tổng số tiền và số lượng khóa học
-  totalPriceElement.textContent = total.toLocaleString("vi-VN");
-  selectedCoursesElement.textContent = selectedCount;
+  //Count
+  selectedCountPay.textContent = cartItems.length;
+  // Tong
+  totalAllPrice.textContent = total.toLocaleString("vi-VN") + "đ";
 }
+updateSummary();
+
+
+
+
+
+
