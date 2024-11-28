@@ -188,7 +188,7 @@
                                         </tr>
                                         <tr>
                                             <th class="price">Ngân hàng</th>
-                                            <td class="rating">BIDV - chi nhánh Cầu Giấy</td>
+                                            <td class="rating">BIDV - chi nhánh Thanh Hóa</td>
                                         </tr>
                                         <tr>
                                             <th class="price">Nội dung</th>
@@ -215,3 +215,41 @@
 
     </div>
 </div>
+
+<script>
+  // Hàm khởi tạo đếm ngược
+  function startCountdown(durationInSeconds, displayElement) {
+    let remainingTime = durationInSeconds;
+
+    // Hàm cập nhật hiển thị thời gian
+    function updateTimer() {
+      // Tính số phút và giây
+      const minutes = Math.floor(remainingTime / 60);
+      const seconds = remainingTime % 60;
+
+      // Hiển thị thời gian ở định dạng mm:ss
+      displayElement.textContent = 
+        `${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
+
+      // Giảm thời gian còn lại
+      if (remainingTime > 0) {
+        remainingTime--;
+      } else {
+        clearInterval(timerInterval); // Dừng đếm khi hết thời gian
+        displayElement.textContent = "Đã hết thời gian, vui lòng thanh toán lại!"; // Thông báo hết giờ
+      }
+    }
+
+    // Cập nhật mỗi giây
+    const timerInterval = setInterval(updateTimer, 1000);
+
+    // Gọi lần đầu để hiển thị ngay lập tức
+    updateTimer();
+  }
+
+  // Tìm phần tử hiển thị
+  const timerElement = document.querySelector('.step-timer');
+
+  // Bắt đầu đếm ngược 15 phút (15 * 60 giây)
+  startCountdown(15 * 60, timerElement);
+</script>
