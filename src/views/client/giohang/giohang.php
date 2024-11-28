@@ -2,9 +2,9 @@
     <div class="detail-bgr">
         <div class="detail-main">
             <div class="title-category">Giỏ hàng</div>
-            <form action="<?= BASE_URL ?>/thanhtoan" method="post">
+            <form class="" action="<?= BASE_URL ?>/thanhtoan" method="post">
                 <div class="detail-course-main-body">
-                    <div class="detail-course-main-body-left">
+                    <div class="form-pay-left">
                         <div class="d-flex pb-3 justify-content-between align-items-end">
                             <div class="detail-course-main-body-left">
                                 <div class="detail-course-left">
@@ -67,9 +67,9 @@
                             </div>
                         <?php endforeach; ?>
                     </div>
-                    <!-- Tinh tong tien   -->
 
-                    <div class="detail-course-main-body-right">
+                    <!-- Tinh tong tien   -->
+                    <div class="form-pay-right">
                         <div>
                             <div class="price">Thông tin đơn hàng</div>
                             <div class="top-star d-flex justify-content-between align-items-baseline">
@@ -88,8 +88,14 @@
                         </div>
                         <div class="d-grid gap-2 col-auto mx-auto">
                             <a class="d-grid gap-2 text-decoration-none" href="<?= BASE_URL ?>/thanhtoan">
-                                <button class="btn btn-danger btn-lg p-3 fs-3" type="submit">THANH TOÁN</button>
+                                <button class="btn btn-danger btn-lg p-3 fs-3  " type="submit">
+                                    THANH TOÁN
+                                </button>
                             </a>
+
+                            <div id="error-message" class="rating text-danger" style="display: <?= isset($_GET['error']) ? 'block' : 'none'; ?>;">
+                                Vui lòng chọn ít nhất một sản phẩm!
+                            </div>
                         </div>
                         <br>
                     </div>
