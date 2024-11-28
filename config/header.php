@@ -10,7 +10,6 @@
             <button type="submit">&#128269;</button>
         </li>
         <?php if(isset($_SESSION['UserName']) ): ?>
-
         
         <a href="<?= BASE_URL . '/admin' ?>">
             <li class="header-item">Quản trị</li>

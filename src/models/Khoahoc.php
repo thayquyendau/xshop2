@@ -11,29 +11,21 @@ class Khoahoc extends baseModel
         $sql = "SELECT * FROM khoahoc";
 
         $sql2 = "SELECT 
+                    chitietkh.IDChiTietKH,
+                    chitietkh.MoTa,
                     khoahoc.IDKhoaHoc,
                     khoahoc.TenKhoaHoc,
                     khoahoc.Gia,
+                    khoahoc.GiaoVien,
                     khoahoc.HinhAnh,
                     danhmuc.IDCatagory,
-                    danhmuc.TenDanhMuc,
-                    user.UserID,
-                    user.HoVaTen
-                    -- chitietkh.MoTa
+                    danhmuc.TenDanhMuc
                 FROM 
-                    khoahoc
-                JOIN 
-                    danhmuc 
-                ON 
-                    khoahoc.IDCatagory = danhmuc.IDCatagory
-                JOIN 
-                    user 
-                ON 
-                    khoahoc.GiaoVien = user.UserID
-                JOIN
                     chitietkh
-                ON
-                    khoahoc.IDKhoaHoc = chitietkh.IDKhoaHoc
+                JOIN 
+                    khoahoc ON chitietkh.IDKhoaHoc = khoahoc.IDKhoaHoc
+                JOIN 
+                    danhmuc ON khoahoc.IDCatagory = danhmuc.IDCatagory;
                 ";
         return $this->pdoQueryAll($sql2, []);
     }
@@ -73,7 +65,22 @@ class Khoahoc extends baseModel
     public function getProductById($id)
     {
         $sql = "SELECT * FROM khoahoc WHERE IDKhoahoc = ?";
-        return $this->pdoQuery($sql, [$id]);
+
+        $sql2 = "SELECT 
+                    chitietkh.IDChiTietKH,
+                    chitietkh.MoTa,
+                    khoahoc.IDKhoaHoc,
+                    khoahoc.TenKhoaHoc,
+                    khoahoc.Gia,
+                    khoahoc.GiaoVien,
+                    khoahoc.HinhAnh
+                FROM 
+                    chitietkh
+                JOIN 
+                    khoahoc ON chitietkh.IDKhoaHoc = khoahoc.IDKhoaHoc
+                WHERE khoahoc.IDKhoahoc = ?
+    ";
+        return $this->pdoQuery($sql2, [$id]);
     }
 
     public function deleteProduct($id)
@@ -90,9 +97,15 @@ class Khoahoc extends baseModel
                 $columns[] = "$key = :$key";
             }
         }
-        $sql = "UPDATE khoahoc SET " . implode(", ", $columns) . " WHERE IDKhoahoc = $id";
-
+        $sql = "UPDATE khoahoc SET " . implode(", ", $columns) . " WHERE IDKhoahoc = $id     
+        ";
          parent::pdoUpdate($sql, $param);
+    }
+
+    public function updateChitietKH($mota, $id){
+        $sql = "UPDATE chitietkh SET MoTa = '$mota'  WHERE IDKhoahoc = $id ";
+        $stmt = $this->conn->prepare($sql);
+        $stmt->execute();
 }
 
 }

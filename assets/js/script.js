@@ -277,7 +277,28 @@ function updateSummary() {
 updateSummary();
 
 
+//pop-up
+ // Lấy modal và nút mở modal
+ var modal = document.getElementById("myModal");
+ var btn = document.getElementById("openModalBtn");
+ var span = document.getElementsByClassName("close")[0];
 
+ // Mở modal khi nhấn nút
+ btn.onclick = function() {
+     modal.style.display = "block";
+ }
+
+ // Đóng modal khi nhấn vào dấu "x"
+ span.onclick = function() {
+     modal.style.display = "none";
+ }
+
+ // Đóng modal khi nhấn ra ngoài cửa sổ modal
+ window.onclick = function(event) {
+     if (event.target == modal) {
+         modal.style.display = "none";
+     }
+ }
 
 
 

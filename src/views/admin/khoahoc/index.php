@@ -1,5 +1,5 @@
 
-<div class="main-body" style=" overflow: auto; ">
+<div class="main-body" style=" overflow: auto;">
     <table class="table table-hover border-danger-subtle mt-3">
         <thead>
             <tr>
@@ -21,7 +21,7 @@
                 <td><?= $Khoahoc['TenKhoaHoc'] ?></td>
                 <td><?= $Khoahoc['MoTa'] ?></td>
                 <td><?= $Khoahoc['Gia'] ?></td>
-                <td><?= $Khoahoc['HoVaTen'] ?></td>
+                <td><?= $Khoahoc['GiaoVien'] ?></td>
                 <td><?= $Khoahoc['TenDanhMuc'] ?></td>
                 <td><img src="<?= $Khoahoc['HinhAnh']?>" alt=""></td>
                 <td><a href="<?= BASE_URL ?>/admin/Khoahoc/update?id=<?= $Khoahoc['IDKhoaHoc'] ?>"><button type="button" class="btn btn-primary me-2 ">Sửa</button></a></td>

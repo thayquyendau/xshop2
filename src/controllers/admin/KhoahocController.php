@@ -61,7 +61,7 @@ class KhoahocController
                 if(isset($_FILES) && $_FILES['HinhAnh']['size'] > 0){
                     $fileExtension = strtolower(pathinfo($_FILES['HinhAnh']['name'], PATHINFO_EXTENSION));
                     if (in_array($fileExtension,['jpg', 'png', 'jfif'])) {
-                        $dir = "asset/img";
+                        $dir = "assets/image/img";
                         $tmp_name = $_FILES['HinhAnh']['tmp_name'];
                         $file_name = $_FILES['HinhAnh']['name'];
                         $_POST['HinhAnh'] = "$dir/$file_name";
@@ -73,7 +73,11 @@ class KhoahocController
                         return;    
                     } 
                 }
+                $mota = $_POST['MoTa'];
+                unset($_POST['MoTa']);
+                // debug($_POST);
                 $this->modelObject->updateKhoahoc($_POST,$id);
+                $this->modelObject->updateChitietKH($mota,$id);
                 header("location: $this->base/admin/Khoahoc");
             } else {
                 $Khoahocs = $this -> modelObject -> getProductById($id);

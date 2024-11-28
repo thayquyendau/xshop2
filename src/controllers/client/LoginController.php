@@ -27,6 +27,7 @@
                     $_SESSION['UserName'] = $accountInfo['UserName'];
                     $_SESSION['image'] = $accountInfo['image'];
                     $_SESSION['LoaiTK'] = $accountInfo['LoaiTK'];
+                    $_SESSION['HoVaTen'] = $accountInfo['HoVaTen'];
                     header("location: $this->baseUrl/");
                 }
             }
