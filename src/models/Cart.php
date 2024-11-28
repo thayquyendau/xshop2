@@ -34,7 +34,7 @@ class Cart extends baseModel {
     public function getCartItems(): mixed {
         return isset($_SESSION['cart']) && is_array($_SESSION['cart']) ? $_SESSION['cart'] : [];
     }
-    public function getCartItemsByID($param,$id): array|mixed{
+    public function getCartItemsByID($param,$id){
         // debug($param);  
         $course = $this->pdoQueryAll("SELECT * FROM khoahoc WHERE IDKhoaHoc = ?", [$id]);
         debug($course);       
