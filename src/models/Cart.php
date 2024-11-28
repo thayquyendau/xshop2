@@ -64,9 +64,20 @@ class Cart extends baseModel {
     public function getCartItems(): array{
         return isset($_SESSION['cart']) && is_array($_SESSION['cart']) ? $_SESSION['cart'] : [];
     }
+    public function getCartItemsByID($param,$id){
+        // debug($param);  
+        $course = $this->pdoQueryAll("SELECT * FROM khoahoc WHERE IDKhoaHoc = ?", [$id]);
+        debug($course);       
+        if (!isset($_SESSION['cart'][$id])) {
+            $_SESSION['cart'][$id] = [
+                'IDKhoaHoc' => $course['IDKhoaHoc'] ?? null,
+                'TenKhoaHoc' => $course['TenKhoaHoc'] ?? '',
+                'Gia' => $course['Gia'] ?? 0
+            ];
+        }
+        return $_SESSION['cart'];
+    }
     
-    
-
     // Xóa một sản phẩm khỏi giỏ hàng
     public function removeFromCart($id) {
         if (isset($_SESSION['cart'][$id])) {
