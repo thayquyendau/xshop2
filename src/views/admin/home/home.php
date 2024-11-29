@@ -4,14 +4,11 @@
 ?>
 <div class="row m-0 main-body">  
     <div class="col-6 justify-content-center">
-<<<<<<< HEAD
             <canvas id="myChart" style="width:100%; max-width:700px"></canvas>
             <div class="row">
                         <p>hêl</p>
             </div> 
-=======
         <canvas id="myChart" style="width:100%; max-width:700px"></canvas>
->>>>>>> ee03db315fa730521289ea9116f7b76cae79a35c
     </div>
     <div class="col-6">
         <div class="row m-0 align-items-center">
