@@ -16,21 +16,20 @@ class ThanhtoanController {
     }
 
     public function index(): void{
-        
-            $id = $_POST['IDKhoaHoc'];
+        if (isset($_POST['IDKhoaHoc']) && is_array($_POST['IDKhoaHoc']) && count($_POST['IDKhoaHoc']) > 0) {
+            // Lấy danh sách ID sản phẩm đã chọn
+            $idList = $_POST['IDKhoaHoc'];
             
-            $cartItems= $this->cartModel->getthanhtoanbyId($id);
+            // Gọi hàm trong model để lấy thông tin sản phẩm dựa trên ID
+            $cartItems = $this->cartModel->getthanhtoanbyId($idList);
+    
+            // Tải trang thanh toán
             require_once './src/views/client/thanhtoan/thanhtoan.php';
-            // Loại bỏ các biến ko phải mảng
-            // $cartItems = array_filter($cartItems, 'is_array');
-            // debug($cartItems);
-           
-        // } else {
-        //     $cartItems = $this->cartModel->getCartItems();
-        //     // debug($cartItems);
-        //     $cartItems = array_filter($cartItems, 'is_array');
-        //     require_once './src/views/client/thanhtoan/thanhtoan.php';
-        
+        } else {
+            header("Location: " . BASE_URL . "/giohang?error=1");   
+            exit();
+        }
+            
     }
 }
 

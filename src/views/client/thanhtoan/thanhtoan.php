@@ -91,37 +91,37 @@
                                 <p class="fw-bold fs-4 mb-4">Hình thức thanh toán</p>
                                 <div class="form-check border border-primary rounded p-3 mb-3 d-flex align-items-center">
                                     <input type="radio" name="payment" id="">
-                                    <label for="bank" class="count form-check-label flex-grow-1">Chuyển khoản ngân hàng</label>
+                                    <label for="bank" class="count ms-3 form-check-label flex-grow-1">Chuyển khoản ngân hàng</label>
                                     <img src="assets\image\logo\logo_bankStranfer.png" alt="Bank Transfer" class="ms-3" width="40">
                                 </div>
 
                                 <div class="form-check border border-primary rounded p-3 mb-3 d-flex align-items-center">
                                     <input type="radio" name="payment" id="">
-                                    <label for="momo" class="count form-check-label flex-grow-1">Ví điện tử MoMo</label>
+                                    <label for="momo" class="count ms-3 form-check-label flex-grow-1">Ví điện tử MoMo</label>
                                     <img src="assets\image\logo\logo_momo.png" alt="MoMo" class="ms-3" width="40">
                                 </div>
 
                                 <div class="form-check border border-primary rounded p-3 mb-3 d-flex align-items-center">
                                     <input type="radio" name="payment" id="">
-                                    <label for="napas" class="count form-check-label flex-grow-1">Thẻ ATM / Internet Banking</label>
+                                    <label for="napas" class="count ms-3 form-check-label flex-grow-1">Thẻ ATM / Internet Banking</label>
                                     <img src="assets\image\logo\logo_napas.png" alt="Napas" class="ms-3" width="40">
                                 </div>
 
                                 <div class="form-check border border-primary rounded p-3 mb-3 d-flex align-items-center">
                                     <input type="radio" name="payment" id="">
-                                    <label for="visa" class="count form-check-label flex-grow-1">Thẻ quốc tế VISA / Master</label>
+                                    <label for="visa" class="count ms-3 form-check-label flex-grow-1">Thẻ quốc tế VISA / Master</label>
                                     <img src="assets\image\logo\logo_visa.png" alt="Visa" class="ms-3" width="40">
                                 </div>
 
                                 <div class="form-check border border-primary rounded p-3 mb-3 d-flex align-items-center">
                                     <input type="radio" name="payment" id="">
-                                    <label for="shopeepay" class="count form-check-label flex-grow-1">Ví điện tử ShopeePay</label>
+                                    <label for="shopeepay" class="count ms-3 form-check-label flex-grow-1">Ví điện tử ShopeePay</label>
                                     <img src="assets\image\logo\log_shoppe.png" alt="ShopeePay" class="ms-3" width="40">
                                 </div>
 
                                 <div class="form-check border border-primary rounded p-3 mb-3 d-flex align-items-center">
                                     <input type="radio" name="payment" id="">
-                                    <label for="zalopay" class="count form-check-label flex-grow-1">Ví điện tử ZaloPay</label>
+                                    <label for="zalopay" class="count ms-3 form-check-label flex-grow-1">Ví điện tử ZaloPay</label>
                                     <img src="assets\image\logo\logo_zalo.png" alt="ZaloPay" class="ms-3" width="40">
                                 </div>
                             </form>
@@ -188,7 +188,7 @@
                                         </tr>
                                         <tr>
                                             <th class="price">Ngân hàng</th>
-                                            <td class="rating">BIDV - chi nhánh Cầu Giấy</td>
+                                            <td class="rating">BIDV - chi nhánh Thanh Hóa</td>
                                         </tr>
                                         <tr>
                                             <th class="price">Nội dung</th>
@@ -215,3 +215,41 @@
 
     </div>
 </div>
+
+<script>
+  // Hàm khởi tạo đếm ngược
+  function startCountdown(durationInSeconds, displayElement) {
+    let remainingTime = durationInSeconds;
+
+    // Hàm cập nhật hiển thị thời gian
+    function updateTimer() {
+      // Tính số phút và giây
+      const minutes = Math.floor(remainingTime / 60);
+      const seconds = remainingTime % 60;
+
+      // Hiển thị thời gian ở định dạng mm:ss
+      displayElement.textContent = 
+        `${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
+
+      // Giảm thời gian còn lại
+      if (remainingTime > 0) {
+        remainingTime--;
+      } else {
+        clearInterval(timerInterval); // Dừng đếm khi hết thời gian
+        displayElement.textContent = "Đã hết thời gian, vui lòng thanh toán lại!"; // Thông báo hết giờ
+      }
+    }
+
+    // Cập nhật mỗi giây
+    const timerInterval = setInterval(updateTimer, 1000);
+
+    // Gọi lần đầu để hiển thị ngay lập tức
+    updateTimer();
+  }
+
+  // Tìm phần tử hiển thị
+  const timerElement = document.querySelector('.step-timer');
+
+  // Bắt đầu đếm ngược 15 phút (15 * 60 giây)
+  startCountdown(15 * 60, timerElement);
+</script>

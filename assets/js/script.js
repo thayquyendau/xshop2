@@ -130,25 +130,26 @@ function validateStep1() {
   }
 
   // // Validate Email
-  // const email = document.getElementById("email").value.trim();
-  // const emailError = document.getElementById("emailError");
-  // const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-  // if (!emailRegex.test(email)) {
-  //   emailError.style.display = "block";
-  //   isValid = false;
-  // } else {
-  //   emailError.style.display = "none";
-  // }
+  const email = document.getElementById("email").value.trim();
+  const emailError = document.getElementById("emailError");
+  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  if (!emailRegex.test(email)) {
+    emailError.style.display = "block";
+    isValid = false;
+  } else {
+    emailError.style.display = "none";
+  }
 
-  // // Validate Số điện thoại
-  // const phone = document.getElementById("phone").value.trim();
-  // const phoneError = document.getElementById("phoneError");
-  // if (phone === "") {
-  //   phoneError.style.display = "block";
-  //   isValid = false;
-  // } else {
-  //   phoneError.style.display = "none";
-  // }
+  
+// Validate Số điện thoại
+  const phone = document.getElementById("phone").value.trim();
+  const phoneError = document.getElementById("phoneError");
+  if (phone === "") {
+    phoneError.style.display = "block";
+    isValid = false;
+  } else {
+    phoneError.style.display = "none";
+  }
 
   return isValid;
 }
@@ -214,7 +215,6 @@ function nextStep(currentStep, nextStep) {
   }
 }
 
-//Lấy tất cả checkbox giỏ hàng
 function toggleAllProducts(selectAllCheckbox) {
   const checkboxes = document.querySelectorAll(".product-checkbox");
   checkboxes.forEach((checkbox) => {
@@ -232,14 +232,11 @@ function updateSelectAll() {
 
 function updateTotal() {
   const checkboxes = document.querySelectorAll(".product-checkbox:checked");
-
-  // const checkCount = document.querySelectorAll("#check-counts-pay");
-  // const selectedCountPay = document.querySelector("selected-count-pay");
-
   const selectedCount = document.getElementById("selected-count");
   const selectedCounts = document.getElementById("selected-counts");
   const totalPrice = document.getElementById("total-price");
   const totalAllPrice = document.getElementById("total-allprice");
+  const errorMessage = document.getElementById("error-message");
 
   let total = 0;
   checkboxes.forEach((cb) => {
@@ -250,12 +247,27 @@ function updateTotal() {
   });
 
   selectedCount.textContent = checkboxes.length;
-  // selectedCountPay.textContent = checkCount.length;
-  
   selectedCounts.textContent = checkboxes.length;
   totalPrice.textContent = total.toLocaleString("vi-VN");
   totalAllPrice.textContent = total.toLocaleString("vi-VN");
+
+  // Ẩn thông báo lỗi nếu có sản phẩm được chọn
+  errorMessage.style.display = checkboxes.length > 0 ? "none" : "block";
 }
+
+// Kiểm tra trước khi submit form
+const checkboxes = document.querySelectorAll(".product-checkbox:checked");
+  const errorMessage = document.getElementById("error-message");
+
+document.querySelector("form").addEventListener("submit", (e) => {
+  if (checkboxes.length === 0) {
+    e.preventDefault(); // Ngăn form gửi đi
+    errorMessage.style.display = "block"; // Hiển thị thông báo lỗi
+  } else {
+    errorMessage.style.display = "none"; // Ẩn thông báo lỗi nếu có sản phẩm được chọn
+  }
+});
+
 
 //Thanh Toan 
 function updateSummary() {
