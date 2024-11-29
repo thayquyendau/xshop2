@@ -24,8 +24,12 @@
                 <td><?= $Khoahoc['GiaoVien'] ?></td>
                 <td><?= $Khoahoc['TenDanhMuc'] ?></td>
                 <td><img src="<?= $Khoahoc['HinhAnh']?>" alt=""></td>
+                <?php 
+                    if($_SESSION['LoaiTK']==1):
+                ?>
                 <td><a href="<?= BASE_URL ?>/admin/Khoahoc/update?id=<?= $Khoahoc['IDKhoaHoc'] ?>"><button type="button" class="btn btn-primary me-2 ">Sửa</button></a></td>
                 <td><a href="<?= BASE_URL ?>/admin/Khoahoc/delete?id=<?= $Khoahoc['IDKhoaHoc'] ?>"><button type="button" class="btn btn-primary me-2 ">Xóa</button></a></td>
+                <?php endif;?>
             </tr>
         </tbody>
         <?php 

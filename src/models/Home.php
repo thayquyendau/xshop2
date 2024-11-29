@@ -56,15 +56,11 @@ use commons\baseModel;
 
     public function MaxTC()
     {
-        $sql = "SELECT 
-                    u.UserID, 
-                    u.HoVaTen, 
-                    COUNT(k.IDKhoaHoc) AS SoKhoaHoc
-                FROM `user` u
-                JOIN `khoahoc` k ON u.UserID = k.GiaoVien
-                WHERE u.LoaiTK = 2
-                GROUP BY u.UserID, u.HoVaTen
-                ORDER BY SoKhoaHoc DESC
+        $sql = "SELECT GiaoVien, COUNT(GiaoVien) AS count
+                    FROM khoahoc
+                    GROUP BY GiaoVien
+                    ORDER BY count DESC
+                    LIMIT 3;
                 ";
         return $this->pdoQueryAll($sql, []);
     }
@@ -86,6 +82,13 @@ use commons\baseModel;
     {
         $sql = "SELECT * FROM user ";
         return $this->pdoQueryAll($sql, []);
-    }
+    }   
+
+        public function thongkeUser() {
+            $sql = "SELECT LoaiTK, COUNT(*) AS thongke
+                    FROM user
+                    GROUP BY LoaiTK;";
+            return $this ->pdoQueryAll($sql,[]);
+        }
     }
 ?>

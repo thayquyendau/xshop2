@@ -30,8 +30,12 @@
                 <th scope="row"><?= $Danhmuc['IDCatagory'] ?></th>
                 <td><?= $Danhmuc['TenDanhMuc'] ?></td>
                 <td><a href=""><button type="button" class="btn btn-primary me-2 ">Chi tiết</button></a></td>
+                <?php 
+                    if($_SESSION['LoaiTK']==1):
+                ?>
                 <td><a href="<?= BASE_URL ?>/admin/danhmuc/update?id=<?= $Danhmuc['IDCatagory'] ?>"><button type="button" class="btn btn-primary me-2 ">Sửa</button></a></td>
                 <td><a href="<?= BASE_URL ?>/admin/danhmuc/delete?id=<?= $Danhmuc['IDCatagory'] ?>"><button type="button" class="btn btn-primary me-2 ">Xóa</button></a></td>
+                <?php endif;?>
             </tr>
         </tbody>
         <?php 

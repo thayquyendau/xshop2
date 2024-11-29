@@ -1124,4 +1124,10 @@ td {
  .butun-1{
     background-color: blue;
  }
- 
+
+ .clock {
+    text-align: center;
+    font-size: 40px;
+    color: #333;
+    font-weight: bold;
+}

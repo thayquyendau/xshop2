@@ -20,6 +20,7 @@
         }
         public function adminHandle(){
             // $_SESSION['admin'] = 1;
+            $thongke = $this -> modelObject-> thongkeUser();
             $tong = $this->modelObject->getSum();
             $tongTC = $this->modelObject->getSumTC();
             $tongST = $this->modelObject->getSumST();

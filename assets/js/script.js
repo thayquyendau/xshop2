@@ -277,28 +277,35 @@ function updateSummary() {
 updateSummary();
 
 
-//pop-up
- // Lấy modal và nút mở modal
- var modal = document.getElementById("myModal");
- var btn = document.getElementById("openModalBtn");
- var span = document.getElementsByClassName("close")[0];
+//đồng hồ đếm ngày giờ
 
- // Mở modal khi nhấn nút
- btn.onclick = function() {
-     modal.style.display = "block";
- }
+function updateClock() {
+  var currentTime = new Date();
+  var hours = currentTime.getHours();
+  var minutes = currentTime.getMinutes();
+  var seconds = currentTime.getSeconds();
+  var ampm = hours >= 12 ? 'PM' : 'AM';
 
- // Đóng modal khi nhấn vào dấu "x"
- span.onclick = function() {
-     modal.style.display = "none";
- }
+  // Chuyển sang định dạng 12 giờ
+  hours = hours % 12;
+  hours = hours ? hours : 12; // nếu giờ là 0 thì thay thế bằng 12
 
- // Đóng modal khi nhấn ra ngoài cửa sổ modal
- window.onclick = function(event) {
-     if (event.target == modal) {
-         modal.style.display = "none";
-     }
- }
+  // Đảm bảo phút và giây có 2 chữ số
+  minutes = (minutes < 10 ? "0" : "") + minutes;
+  seconds = (seconds < 10 ? "0" : "") + seconds;
 
+  // Cập nhật giờ và phút
+  document.getElementById('time').textContent = hours + ":" + minutes + " " + ampm;
+
+  // Cập nhật ngày tháng
+  var options = { year: 'numeric', month: 'short', day: 'numeric' };
+  document.getElementById('date').textContent = currentTime.toLocaleDateString('en-US', options);
+}
+
+// Cập nhật mỗi giây
+setInterval(updateClock, 1000);
+
+// Gọi hàm ngay khi trang tải
+updateClock();
 
 
