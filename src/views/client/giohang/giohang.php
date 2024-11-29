@@ -32,7 +32,6 @@
                                     <div class="cart-pading">
                                         <div class="category-content-main">
                                             <div class="cart-flex-left">
-
                                                 <input type="checkbox" class="product-checkbox" onchange="updateSelectAll()" name="IDKhoaHoc[]" value="<?= $item['IDKhoaHoc'] ?>">
                                             </div>
                                             <div class="cart-flex-right">
@@ -92,9 +91,8 @@
                                     THANH TOÁN
                                 </button>
                             </a>
-
-                            <div id="error-message" class="rating text-danger" style="display: <?= isset($_GET['error']) ? 'block' : 'none'; ?>;">
-                                Vui lòng chọn ít nhất một sản phẩm!
+                            <div class="rating text-danger">
+                                <?= isset($error_message) ? htmlspecialchars($error_message, ENT_QUOTES, 'UTF-8') : ''; ?>
                             </div>
                         </div>
                         <br>

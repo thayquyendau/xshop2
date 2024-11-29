@@ -251,6 +251,7 @@ function updateTotal() {
   totalPrice.textContent = total.toLocaleString("vi-VN");
   totalAllPrice.textContent = total.toLocaleString("vi-VN");
 
+ 
   // Ẩn thông báo lỗi nếu có sản phẩm được chọn
   errorMessage.style.display = checkboxes.length > 0 ? "none" : "block";
 }
