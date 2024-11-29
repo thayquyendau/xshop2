@@ -6,13 +6,13 @@
             </a>
         </li>
         <li class="search-container">
-            <input type="text" placeholder="Tìm khóa học, giảng viên">
+            <input type="text" placeholder="Tìm kiếm khóa học">
             <button type="submit">&#128269;</button>
         </li>
         <?php if(isset($_SESSION['UserName']) ): ?>
         
         <a href="<?= BASE_URL . '/admin' ?>">
-            <li class="header-item">Quản trị</li>
+            <li class="header-item" style="color: #000">Quản trị</li>
         </a>
         <li class="header-item">
             <a href="<?= BASE_URL . '/giohang' ?>" class="add-to-cart" title="Thêm vào giỏ hàng">

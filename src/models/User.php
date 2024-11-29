@@ -1,7 +1,7 @@
 <?php 
     namespace models;
     use commons\baseModel;
-
+    use PDO;
 class User extends baseModel
 {
     
@@ -11,12 +11,13 @@ class User extends baseModel
         return $this->pdoQueryAll($sql, []);
     }
 
-    public function searchAllUser($id)
-    {   
-        $sql = "SELECT * FROM user WHERE UserName LIKE '%$id%'";
+    public function searchAllUser($name)
+    {
+        $sql = "SELECT * FROM user WHERE HoVaTen LIKE :name or UserName like :name or LoaiTK like :name";
         $stmt = $this->conn->prepare($sql);
-        $stmt->execute();  
-        return $stmt->fetch();
+        $stmt->bindValue(':name', "%$name%", PDO::PARAM_STR);
+        $stmt->execute();
+        return $stmt->fetchAll(PDO::FETCH_ASSOC); 
     }
 
 

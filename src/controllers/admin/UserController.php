@@ -13,16 +13,16 @@ class UserController
     $this->modelObject = new User();
     }
     public function index()
-        {  
-        //$_SESSION['admin'] = 1;
-        if($_SERVER['REQUEST_METHOD'] =='POST') {
-            $users = $this->modelObject->searchAllUser($_POST['name']); 
-            header("location: $this->base/admin/user");
-        }else{
+    {
+        if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+            $name = $_POST['name'] ?? ''; 
+            $users = $this->modelObject->searchAllUser($name); 
+        } else {
             $users = $this->modelObject->getAllUser();
-            require_once './src/views/admin/user/user.php';
         }
-        }
+        require_once './src/views/admin/user/user.php';
+    }
+    
 
     public function indexRole()
         {
