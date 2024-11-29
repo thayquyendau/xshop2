@@ -5,9 +5,9 @@
 <div class="row m-0 main-body">  
     <div class="col-6 justify-content-center">
             <canvas id="myChart" style="width:100%; max-width:700px"></canvas>
-            <div class="row">
+            <!-- <div class="row">
                         <p>hêl</p>
-            </div> 
+            </div>  -->
         <!-- <canvas id="myChart" style="width:100%; max-width:700px"></canvas> -->
         <canvas id="myChart" style="width:100%; max-width:700px"></canvas>
     </div>
