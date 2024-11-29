@@ -90,37 +90,37 @@
                             <form  class="form-pay-left" id="paymentForm" action="#" method="post">
                                 <p class="fw-bold fs-4 mb-4">Hình thức thanh toán</p>
                                 <div class="form-check border border-primary rounded p-3 mb-3 d-flex align-items-center">
-                                    <input type="radio" name="payment" id="">
+                                    <input type="radio" name="payment" class="check-radio">
                                     <label for="bank" class="count ms-3 form-check-label flex-grow-1">Chuyển khoản ngân hàng</label>
                                     <img src="assets\image\logo\logo_bankStranfer.png" alt="Bank Transfer" class="ms-3" width="40">
                                 </div>
 
                                 <div class="form-check border border-primary rounded p-3 mb-3 d-flex align-items-center">
-                                    <input type="radio" name="payment" id="">
+                                    <input type="radio" name="payment" class="check-radio">
                                     <label for="momo" class="count ms-3 form-check-label flex-grow-1">Ví điện tử MoMo</label>
                                     <img src="assets\image\logo\logo_momo.png" alt="MoMo" class="ms-3" width="40">
                                 </div>
 
                                 <div class="form-check border border-primary rounded p-3 mb-3 d-flex align-items-center">
-                                    <input type="radio" name="payment" id="">
+                                    <input type="radio" name="payment" class="check-radio">
                                     <label for="napas" class="count ms-3 form-check-label flex-grow-1">Thẻ ATM / Internet Banking</label>
                                     <img src="assets\image\logo\logo_napas.png" alt="Napas" class="ms-3" width="40">
                                 </div>
 
                                 <div class="form-check border border-primary rounded p-3 mb-3 d-flex align-items-center">
-                                    <input type="radio" name="payment" id="">
+                                    <input type="radio" name="payment" class="check-radio">
                                     <label for="visa" class="count ms-3 form-check-label flex-grow-1">Thẻ quốc tế VISA / Master</label>
                                     <img src="assets\image\logo\logo_visa.png" alt="Visa" class="ms-3" width="40">
                                 </div>
 
                                 <div class="form-check border border-primary rounded p-3 mb-3 d-flex align-items-center">
-                                    <input type="radio" name="payment" id="">
+                                    <input type="radio" name="payment" class="check-radio">
                                     <label for="shopeepay" class="count ms-3 form-check-label flex-grow-1">Ví điện tử ShopeePay</label>
                                     <img src="assets\image\logo\log_shoppe.png" alt="ShopeePay" class="ms-3" width="40">
                                 </div>
 
                                 <div class="form-check border border-primary rounded p-3 mb-3 d-flex align-items-center">
-                                    <input type="radio" name="payment" id="">
+                                    <input type="radio" name="payment" class="check-radio">
                                     <label for="zalopay" class="count ms-3 form-check-label flex-grow-1">Ví điện tử ZaloPay</label>
                                     <img src="assets\image\logo\logo_zalo.png" alt="ZaloPay" class="ms-3" width="40">
                                 </div>
@@ -184,7 +184,10 @@
                                         </tr>
                                         <tr>
                                             <th class="price">Số tài khoản</th>
-                                            <td class="rating">******************** <i class="fas fa-qrcode" id="qr-icon"></i></td>
+                                            <td class="rating ">
+                                                <span class="count">0988133043</span> 
+                                                <i class="fas fa-qrcode" id="qr-icon"></i>
+                                            </td>
                                         </tr>
                                         <!-- Div chứa hình ảnh QR -->
                                         <div id="qr-modal">

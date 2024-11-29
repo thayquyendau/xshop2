@@ -56,7 +56,7 @@
                                     <button class="btn btn-light btn-lg"><img src="assets\image\icon\icon_heart.svg" alt="" class="icon"></button>
                                 </div>
                             </div>
-                            <a class="d-grid gap-2 text-decoration-none" href="<?= BASE_URL ?>/thanhtoan">
+                            <a class="d-grid gap-2 text-decoration-none" href="<?= BASE_URL ?>/thanhtoan?IDKhoaHoc=<?= $courses['IDKhoaHoc'] ?>">
                                 <button class="btn btn-warning btn-lg p-3 fs-3" type="button">ĐĂNG KÝ NGAY</button>
                             </a>
                         </div>

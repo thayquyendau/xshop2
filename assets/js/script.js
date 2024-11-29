@@ -251,6 +251,7 @@ function updateTotal() {
   totalPrice.textContent = total.toLocaleString("vi-VN");
   totalAllPrice.textContent = total.toLocaleString("vi-VN");
 
+ 
   // Ẩn thông báo lỗi nếu có sản phẩm được chọn
   errorMessage.style.display = checkboxes.length > 0 ? "none" : "block";
 }
@@ -319,5 +320,15 @@ setInterval(updateClock, 1000);
 
 // Gọi hàm ngay khi trang tải
 updateClock();
+
+
+
+// Chọn tất cả các phần tử `.form-check`
+document.querySelectorAll('.form-check').forEach(function(checkForm) {
+  checkForm.addEventListener('click', function() {
+      checkForm.querySelector('.check-radio').checked = true;
+  });
+});
+
 
 

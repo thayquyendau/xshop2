@@ -24,6 +24,7 @@
 
     //Chi tiet khoa hoc
     $router->add("GET", "client", "/detailCourse", "CourseController@detail");
+    $router->add("GET", "client", "/thanhtoan", "CourseController@dangky");
 
    
     //Giỏ hàng
