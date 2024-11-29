@@ -911,6 +911,12 @@ label[for="radio"]::after {
 .form-pay-right {
     width: 380px !important;
 }
+/* .form-cart-left {
+    width: 800px !important;
+} */
+.form-cart-right {
+    width: 280px !important;
+}
 
 .mb-3 input {
     padding: 20px 0;

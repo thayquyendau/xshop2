@@ -4,7 +4,7 @@
             <div class="title-category">Giỏ hàng</div>
             <form class="" action="<?= BASE_URL ?>/thanhtoan" method="post">
                 <div class="detail-course-main-body">
-                    <div class="form-pay-left">
+                    <div class="form-cart-left">
                         <div class="d-flex pb-3 justify-content-between align-items-end">
                             <div class="detail-course-main-body-left">
                                 <div class="detail-course-left">
@@ -58,8 +58,8 @@
                                         <div class="cart-trash">
                                             <a href="<?= BASE_URL ?>/deleteCart?IDKhoaHoc=<?= $item['IDKhoaHoc'] ?>">Xóa</a>
                                         </div>
-                                        <div class="title-product">
-                                            <p class="price"><span class="price-value"><?= $item['Gia'] ?></span>đ</p>
+                                        <div>
+                                            <p class="price"><span class="price-value"><?= $item['Gia'] ?>đ</span></p>
                                             <p><del><?= $item['Gia'] ?>đ</del></p>
                                         </div>
                                     </div>
@@ -69,7 +69,7 @@
                     </div>
 
                     <!-- Tinh tong tien   -->
-                    <div class="form-pay-right">
+                    <div class="form-cart-right">
                         <div>
                             <div class="price">Thông tin đơn hàng</div>
                             <div class="top-star d-flex justify-content-between align-items-baseline">

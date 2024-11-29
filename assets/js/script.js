@@ -321,3 +321,13 @@ setInterval(updateClock, 1000);
 updateClock();
 
 
+
+// Chọn tất cả các phần tử `.form-check`
+document.querySelectorAll('.form-check').forEach(function(checkForm) {
+  checkForm.addEventListener('click', function() {
+      checkForm.querySelector('.check-radio').checked = true;
+  });
+});
+
+
+
