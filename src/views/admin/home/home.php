@@ -9,6 +9,7 @@
                         <p>hêl</p>
             </div> 
         <!-- <canvas id="myChart" style="width:100%; max-width:700px"></canvas> -->
+        <canvas id="myChart" style="width:100%; max-width:700px"></canvas>
     </div>
     <div class="col-6">
         <div class="row m-0 align-items-center">
