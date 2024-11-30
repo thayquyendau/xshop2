@@ -6,9 +6,11 @@
             </a>
         </li>
         <li class="search-container">
-            <input type="text" placeholder="Tìm kiếm khóa học">
+                <input name="send" type="text" placeholder="Tìm kiếm khóa học">
+            
             <button type="submit">&#128269;</button>
         </li>
+       
         <?php if(isset($_SESSION['UserName']) ): ?>
         
         <a href="<?= BASE_URL . '/admin' ?>">

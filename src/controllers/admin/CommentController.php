@@ -14,19 +14,21 @@ class CommentController
     }
     public function index()
         {
-        //$_SESSION['admin'] = 1;
+            $_SESSION['admin_ift'] = '1';
         $comments = $this->modelObject->getAllComment();
         require_once './src/views/admin/comment/index.php';
         }
    
 
     public function delete(){
+        $_SESSION['admin_ift'] = '1';
         $id = $_GET['id'];
         $this->modelObject->deleteComment($id);
         header("location: $this->base/admin/comment");
         }
 
     public function create(){
+        $_SESSION['admin_ift'] = '1';
         if ($_SERVER['REQUEST_METHOD'] =='POST') {       
             $this->modelObject->createComment($_POST);
             header("location: $this->base/admin/comment");
@@ -37,6 +39,7 @@ class CommentController
 
     public function update()
         {
+            $_SESSION['admin_ift'] = '1';
             if ($_SERVER['REQUEST_METHOD'] =='POST') {       
                 $this->modelObject->updateComment($_POST);
                 header("location: $this->base/admin/comment");

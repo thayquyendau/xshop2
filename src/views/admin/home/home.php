@@ -3,13 +3,8 @@
 ?>
 <div class="row m-0 main-body">  
     <div class="col-6 justify-content-center">
-
             <canvas id="myChart" style="width:100%; max-width:700px"></canvas>
-            <!-- <div class="row">
-                        <p>hêl</p>
-            </div>  -->
-      
-
+            <canvas id="myChart1" style="width:100%; max-width:500px; margin-top:20px; "></canvas>
     </div>
     <div class="col-6">
         <div class="row m-0 align-items-center">
@@ -89,7 +84,7 @@
    const chartData = {
        labels: labels,
        datasets: [{
-           label: 'Thống kê số tài khoản',
+           label:[''],
            data: sales,
            backgroundColor: ['rgba(75, 192, 192, 0.2)','rgba(252, 74, 43, 0.2)','rgba(43, 102, 262, 0.2)'],
            borderColor: ['rgba(75, 192, 192, 1)','rgba(252, 74, 43, 1)','rgba(43, 102, 262, 1)'],
@@ -108,11 +103,26 @@
            }
        }
    };
+   const config2 = {
+       type: 'pie', // Loại biểu đồ (cột)
+       data: chartData,
+       options: {
+           scales: {
+               y: {
+                   beginAtZero: true
+               }
+           }
+       }
+   };
 
    // Vẽ biểu đồ
    const myChart = new Chart(
        document.getElementById('myChart'),
        config
+   );
+   const myChart2 = new Chart(
+       document.getElementById('myChart1'),
+       config2
    );
 </script>
 

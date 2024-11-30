@@ -31,17 +31,12 @@
         }
 
         public function updateMK(){
-            $id = $_SESSION['UserID'];
-           
+                $id = $_SESSION['UserID'];
                 $pass = $_POST['Password'];
                 $this -> modelObject-> updateMK($pass, $id);
                 $this -> modelObject-> updateUser($_POST, $id);
                 $_SESSION['HoVaTen'] = $_POST['HoVaTen'];
                 header("location: $this->baseUrl/adminHandle");
-
-           
-               
-           
         }
     }
 ?>
