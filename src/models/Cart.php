@@ -31,15 +31,14 @@ class Cart extends baseModel {
         return $_SESSION['cart'];
     }
 
-    public function getthanhtoanbyId($ids) {
-        // Kiểm tra xem $ids có phải là một mảng không
-        if (!is_array($ids) || empty($ids)) {
-            return []; // Trả về rỗng nếu $ids không hợp lệ
+    public function getthanhtoanbyId($id) {
+        if (!is_array($id) || empty($id)) {
+            return []; // Trả về rỗng nếu $id không hợp lệ
         }
-        // Tạo chuỗi điều kiện IN trong SQL
-        $placeholders = implode(',', array_fill(0, count($ids), '?'));
+        $placeholders = implode(',', array_fill(0, count($id), '?'));
         $sql = "SELECT * FROM khoahoc WHERE IDKhoaHoc IN ($placeholders)";
-        return $this->pdoQueryAll($sql, $ids);
+        // debug($sql); 
+        return $this->pdoQueryAll($sql, $id);
     }
     
     

@@ -2,15 +2,19 @@
     namespace controllers\client;
     use models\Course;
     use models\Category;
+    use models\Cart;
     
     class CourseController {
         public $modelObject;
         public $modelObjects;
+        public $modelCart;
         public $base = BASE_URL;
         public function __construct()
         {
         $this->modelObject = new Course();
         $this->modelObjects = new Category();
+        $this->modelCart = new Cart();
+
         }
         public function detail() {
             $id = $_GET['IDKhoaHoc'] ;
@@ -21,18 +25,12 @@
             require_once './src/views/client/danhmuc/detail.php';
         }
 
-        //xu li comment
-        // public function create(){
-        //     if ($_SERVER['REQUEST_METHOD'] =='POST') {
-        //         // debug($_POST);
-        //         $id = $_POST['ma_san_pham'];     
-        //         $_POST['user']= $_SESSION['id'];  
-        //         $this->modelObjects->createComment($_POST);
-        //         header("location: $this->base/productDetail?id=$id");
-        //         } else {
-        //         require_once './src/views/client/products/detail.php';
-        //         }
-        //     }
-
+        public function dangky(){
+            $id = $_GET['IDKhoaHoc'];
+            // debug($id);
+            $cartItems = $this->modelObject->getCoursePaybyId($id);
+            // debug( $cartItems);
+            require_once './src/views/client/thanhtoan/thanhtoan.php';
+        }
     }
 ?>

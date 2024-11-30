@@ -5,6 +5,10 @@
     <div class="col-6 justify-content-center">
 
             <canvas id="myChart" style="width:100%; max-width:700px"></canvas>
+            <!-- <div class="row">
+                        <p>hêl</p>
+            </div>  -->
+      
 
     </div>
     <div class="col-6">

@@ -7,7 +7,7 @@ use commons\baseModel;
 class Category extends baseModel{
     public function getAllCategory5()
     {
-        $sql = "SELECT * FROM danhmuc LIMIT 5";
+        $sql = "SELECT * FROM danhmuc LIMIT 5 OFFSET 0";
         return $this->pdoQueryAll($sql, []);
     }
 
