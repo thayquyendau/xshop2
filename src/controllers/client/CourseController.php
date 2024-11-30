@@ -26,11 +26,19 @@
         }
 
         public function dangky(){
-            $id = $_GET['IDKhoaHoc'];
+            if (!empty($_POST['IDKhoaHoc']) && !is_array($_POST['IDKhoaHoc'])) {
+                $selectedCourses[] = $_POST['IDKhoaHoc'];
+            }
+            if (empty($selectedCourses)) {
+                $error_message = "Vui lòng chọn ít nhất một khóa học để thanh toán.";
+            } else {
+                $id = $_POST['IDKhoaHoc'];
             // debug($id);
             $cartItems = $this->modelObject->getCoursePaybyId($id);
             // debug( $cartItems);
             require_once './src/views/client/thanhtoan/thanhtoan.php';
+            }
+            
         }
     }
 ?>

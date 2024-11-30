@@ -5,6 +5,7 @@ use models\Cart;
 
 class ThanhtoanController {
     public $cartModel;
+    public $baseUrl = BASE_URL;
 
     public function __construct() {
         // Ngăn chặn lỗi hiển thị
@@ -15,16 +16,32 @@ class ThanhtoanController {
         $this->cartModel = new Cart();
     }
 
-    public function index(): void {
-        if (!empty($_POST['IDKhoaHoc']) && is_array($_POST['IDKhoaHoc']) && count($_POST['IDKhoaHoc']) > 0) {
-            $idList = $_POST['IDKhoaHoc'];
-            $cartItems = $this->cartModel->getthanhtoanbyId($idList);
-            require_once './src/views/client/thanhtoan/thanhtoan.php';
-        } else {
-            $error_message = "Vui lòng chọn ít nhất một khóa học!";
-            $cartItems = $this->cartModel->getCartItems(); // Lấy lại giỏ hàng
-            require_once './src/views/client/giohang/giohang.php';
+    public function index(){
+        if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+            $selectedCourses = [];
+            // Nếu có dữ liệu từ giỏ hàng
+            if (!empty($_POST['IDKhoaHoc']) && is_array($_POST['IDKhoaHoc'])) {
+                $selectedCourses = $_POST['IDKhoaHoc'];
+            }
+            // Nếu có dữ liệu từ chi tiết khóa học
+            if (!empty($_POST['IDKhoaHoc']) && !is_array($_POST['IDKhoaHoc'])) {
+                $selectedCourses[] = $_POST['IDKhoaHoc'];
+            }
+        
+            // Kiểm tra nếu không có khóa học nào được chọn
+            if (empty($selectedCourses)) {
+                $error_message = "Vui lòng chọn ít nhất một khóa học để thanh toán.";
+                $cartItems = $this->cartModel->getCartItems();  
+                // header("location: $this->baseUrl/giohang ");
+                require_once './src/views/client/giohang/giohang.php';  
+            } else {
+                $id = $_POST['IDKhoaHoc'];
+                // debug($id);
+                $cartItems = $this->cartModel->getthanhtoanbyId($id);
+                require_once './src/views/client/thanhtoan/thanhtoan.php';
+            }
         }
+        
     }
 }
 

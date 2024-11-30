@@ -33,7 +33,7 @@ class Cart extends baseModel {
 
     public function getthanhtoanbyId($id) {
         if (!is_array($id) || empty($id)) {
-            return []; // Trả về rỗng nếu $id không hợp lệ
+            return []; 
         }
         $placeholders = implode(',', array_fill(0, count($id), '?'));
         $sql = "SELECT * FROM khoahoc WHERE IDKhoaHoc IN ($placeholders)";
