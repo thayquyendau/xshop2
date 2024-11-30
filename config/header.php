@@ -10,7 +10,6 @@
             
             <button type="submit">&#128269;</button>
         </li>
-       
         <?php if(isset($_SESSION['UserName']) ): ?>
         
         <a href="<?= BASE_URL . '/admin' ?>">
@@ -21,12 +20,17 @@
                 <i class="material-icons">shopping_cart</i>
             </a>
         </li>
-        
             <a style="color: black; text-decoration:none" href="">
             <li class="header-item"><span>Xin chào <?= $_SESSION['UserName'] ?>!</span></li>
             </a>
         <?php endif; ?>
         <?php if(empty($_SESSION['UserName']) ): ?>
+            
+            <a href="<?= BASE_URL . '/giohang' ?>" class="add-to-cart" title="Thêm vào giỏ hàng">
+            <li class="header-item">    
+                <i class="material-icons">shopping_cart</i> Giỏ hàng
+            </li>
+            </a>
             <a style="color: black; text-decoration:none" href="<?= BASE_URL . '/login' ?>">
             <li class="header-item">Đăng nhập</li>
             </a>
@@ -144,6 +148,15 @@ button:hover {
     line-height: 1.5;
     cursor: pointer;
     white-space: nowrap;
+}
+
+.header-item {
+    display: inline-flex;
+    align-items: center;
+}
+
+.header-item i {
+    margin-right: 8px;
 }
 </style>
 
