@@ -20,12 +20,28 @@
         }
         public function adminHandle(){
             // $_SESSION['admin'] = 1;
+            $id = $_SESSION['UserID'];
             $thongke = $this -> modelObject-> thongkeUser();
             $tong = $this->modelObject->getSum();
             $tongTC = $this->modelObject->getSumTC();
             $tongST = $this->modelObject->getSumST();
             $max = $this->modelObject->MaxTC();
+            $user = $this -> modelObject->getUserById($id);
             require_once './src/views/admin/home/home.php';
+        }
+
+        public function updateMK(){
+            $id = $_SESSION['UserID'];
+           
+                $pass = $_POST['Password'];
+                $this -> modelObject-> updateMK($pass, $id);
+                $this -> modelObject-> updateUser($_POST, $id);
+                $_SESSION['HoVaTen'] = $_POST['HoVaTen'];
+                header("location: $this->baseUrl/adminHandle");
+
+           
+               
+           
         }
     }
 ?>

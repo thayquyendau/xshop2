@@ -90,5 +90,33 @@ use commons\baseModel;
                     GROUP BY LoaiTK;";
             return $this ->pdoQueryAll($sql,[]);
         }
+
+        public function getUserById($id)
+        {
+            $sql = "SELECT * FROM user  WHERE UserID = ?";
+            return $this->pdoQuery($sql, [$id]);
+        }
+
+        public function updateMK($param, $id)
+        {
+            
+            $sql = "UPDATE `user` SET Password = $param WHERE UserID = $id";
+            parent::pdoUpdate($sql, []);
+           
+        }
+
+        public function updateUser($param, $id)
+        {
+            $columns = [];
+            foreach($param as $key => $value) {
+                if ($key != 'UserID') {
+                    $columns[] = "$key = :$key";
+                }
+            }
+            $sql = "UPDATE `user` SET " . implode(", ", $columns) . " WHERE UserID = $id";
+            // debug($sql);
+            parent::pdoUpdate($sql, $param);
+           
+        }
     }
 ?>

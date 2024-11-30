@@ -1112,6 +1112,7 @@ td {
     height: 370px;
     background-color: aliceblue;
     border-radius: 10px;
+    
  }
 
  .box-gv-2{
@@ -1130,4 +1131,53 @@ td {
     font-size: 40px;
     color: #333;
     font-weight: bold;
+}
+
+/* css trang ca nhan */
+.account-management {
+    margin: 20px auto;
+    padding: 20px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+.form-control {
+    border-radius: 6px;
+}
+.service-info {
+    
+    text-align: center;
+    background: #fff;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+.service-info img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+.service-info .btn {
+    margin-top: 10px;
+}
+.info-box {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+    text-align: center;
+}
+.info-box div {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    margin: 0 5px;
+    background: #f8f9fa;
+}
+.info-box div:first-child {
+    margin-left: 0;
+}
+.info-box div:last-child {
+    margin-right: 0;
 }
