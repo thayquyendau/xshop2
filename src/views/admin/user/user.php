@@ -90,9 +90,9 @@
                 <td><?= $user['Phone'] ?></td>
                 <td><?= $user['LoaiTK'] ?></td>
                 <td> 
-                        <button id="viewBtn-<?= $user['UserID'] ?>" class="btn">Xem</button>
-                        <!-- Modal với id duy nhất -->
-                        <div id="myModal-<?= $user['UserID'] ?>" class="modal">
+                    <button id="viewBtn-<?= $user['UserID'] ?>" class="btn">Xem</button>
+                     <!-- Modal với id duy nhất -->
+                     <div id="myModal-<?= $user['UserID'] ?>" class="modal">
                             <span class="close">&times;</span>
                             <img class="modal-content" id="imgInModal-<?= $user['UserID'] ?>" src="<?=BASE_URL?>/<?= $user['image'] ?>" alt="Ảnh mẫu">
                         </div>
