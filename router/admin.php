@@ -46,6 +46,5 @@
     $router->add("GET", "admin", "/admin/comment/delete", "CommentController@delete");
 
 
-
     $router->solve("admin");
 ?>
