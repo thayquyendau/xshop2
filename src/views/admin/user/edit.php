@@ -1,4 +1,5 @@
 <div class="main-body p-3">
+    
     <h3 class="mb-5">Sửa thông tin tài khoản</h3>
  
     <form class="row g-3" action="" method = "post" enctype="multipart/form-data">
@@ -9,7 +10,7 @@
         </div>
         <div class="col-md-6">
             <label for="input" class="form-label">Password</label>
-            <input type="password" class="form-control" id="Password" name="Password" >
+            <input type="password" class="form-control" id="Password" name="Password" value="<?= $users['UserName'] ?>"  >
         </div>
         <div class="col-md-6">
             <label for="input" class="form-label">Họ và Tên</label>

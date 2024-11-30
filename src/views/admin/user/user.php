@@ -1,3 +1,49 @@
+<style>
+        /* Ẩn modal mặc định */
+        .modal {
+            display: none; /* Modal sẽ ẩn ban đầu */
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0, 0, 0, 0.8); /* Màu nền đen mờ */
+        }
+
+        /* Nội dung của modal */
+        .modal-content {
+            margin: 15% auto;
+            display: block;
+            width: 80%;
+            max-width: 700px;
+        }
+
+        /* Nút đóng */
+        .close {
+            position: absolute;
+            top: 10px;
+            right: 25px;
+            color: white;
+            font-size: 35px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .close:hover,
+        .close:focus {
+            color: #bbb;
+        }
+
+        /* Nút "Xem" */
+        
+        .btn:hover {
+            background-color: #0056b3;
+        }
+    </style>
+
+
 <div class=" row m-0 main-button">
     <div class=" col-4 btn-group me-2 h-50" role="group" aria-label="First group">
         <button type="button" class="btn btn-primary me-2 "><a style="color: white; text-decoration: none;" href="<?= BASE_URL ?>/admin/user/role?id=2">Giáo viên</a></button>
@@ -43,14 +89,21 @@
                 <td><?= $user['Email'] ?></td>
                 <td><?= $user['Phone'] ?></td>
                 <td><?= $user['LoaiTK'] ?></td>
-                <td><img src="<?= $user['image']?>" alt=""></td>
+                <td> 
+                        <button id="viewBtn-<?= $user['UserID'] ?>" class="btn">Xem</button>
+                        <!-- Modal với id duy nhất -->
+                        <div id="myModal-<?= $user['UserID'] ?>" class="modal">
+                            <span class="close">&times;</span>
+                            <img class="modal-content" id="imgInModal-<?= $user['UserID'] ?>" src="<?=BASE_URL?>/<?= $user['image'] ?>" alt="Ảnh mẫu">
+                        </div>
+                </td>
                 <td><a href="<?= BASE_URL ?>/admin/user/update?id=<?= $user['UserID'] ?>"><button type="button" class="btn btn-primary me-2 ">Sửa</button></a></td>
                 <td><a href="<?= BASE_URL ?>/admin/user/delete?id=<?= $user['UserID'] ?>"><button type="button" class="btn btn-primary me-2 ">Xóa</button></a></td>
             </tr>
         </tbody>
+       
         <?php 
             endforeach;
         ?>
     </table>
-</div>   
- 
+</div>    

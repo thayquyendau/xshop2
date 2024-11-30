@@ -26,7 +26,8 @@ class UserController
 
     public function indexRole()
         {
-        //$_SESSION['admin'] = 1;
+            // debug($_SESSION);
+        $_SESSION['admin_ift'] = '1';
         $id = $_GET['id'];
         $users = $this->modelObject->getUserByRole($id);
         require_once './src/views/admin/user/user.php';
@@ -35,6 +36,7 @@ class UserController
    
 
     public function delete(){
+        $_SESSION['admin_ift'] = '1';
         $id = $_GET['id'];
         $this->modelObject->deleteUser($id);
         header("location: $this->base/admin/user");
@@ -42,6 +44,7 @@ class UserController
 
     public function create()
         {
+            $_SESSION['admin_ift'] = '1';
         if ($_SERVER['REQUEST_METHOD'] =='POST') {       
             if(isset($_FILES) && $_FILES['image']['size'] > 0){
                 $fileExtension = strtolower(pathinfo($_FILES['image']['name'], PATHINFO_EXTENSION));
@@ -67,11 +70,12 @@ class UserController
 
     public function update()
         {
+            $_SESSION['admin_ift'] = '1';
             if ($_SERVER['REQUEST_METHOD'] =='POST') {       
                 if(isset($_FILES) && $_FILES['image']['size'] > 0){
                     $fileExtension = strtolower(pathinfo($_FILES['image']['name'], PATHINFO_EXTENSION));
                     if (in_array($fileExtension,['jpg', 'png', 'gif'])) {
-                    $dir = "asset/img";
+                    $dir = "./img";
                     $tmp_name = $_FILES['image']['tmp_name'];
                     $file_name = $_FILES['image']['name'];
                     $_POST['image'] = "$dir/$file_name";

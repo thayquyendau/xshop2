@@ -23,7 +23,6 @@
                             $modelCategory = new Category();
                             $categories = $modelCategory->getAllCategory();
                             require_once './config/header.php';
-                            
                         ?>
                         <div class="row">
                             <?php
@@ -48,7 +47,7 @@
                         require_once './router/index.php';
                     ?>        
                     </div>
-        <?php endif;?>
+                <?php endif;?>
 
     </div>
                 <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.1.3/js/bootstrap.bundle.min.js"></script>

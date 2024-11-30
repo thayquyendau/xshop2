@@ -48,7 +48,7 @@ class Cart extends baseModel {
     public function getCartItemsByID($param,$id){
         // debug($param);  
         $course = $this->pdoQueryAll("SELECT * FROM khoahoc WHERE IDKhoaHoc = ?", [$id]);
-        debug($course);       
+        // debug($course);       
         if (!isset($_SESSION['cart'][$id])) {
             $_SESSION['cart'][$id] = [
                 'IDKhoaHoc' => $course['IDKhoaHoc'] ?? null,

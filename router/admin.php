@@ -9,7 +9,7 @@
     $router->add("GET", "admin", "/admin", "AdminController@admin");
     $router->add("GET", "admin", "/admin/", "AdminController@admin");
     $router->add("GET", "admin", "/adminHandle", "AdminController@adminHandle");
-    
+    $router->add("POST", "admin", "/adminHandle", "AdminController@updateMK");    
     //khóa học
     $router->add("GET", "admin", "/admin/Khoahoc", "KhoahocController@index");
     $router->add("GET", "admin", "/admin/Khoahoc/create", "KhoahocController@create");
