@@ -14,7 +14,7 @@ class CommentController
     }
     public function index()
         {
-            $_SESSION['admin_ift'] = '1';
+            // $_SESSION['admin_ift'] = '1';
         $comments = $this->modelObject->getAllComment();
         require_once './src/views/admin/comment/index.php';
         }

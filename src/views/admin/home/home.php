@@ -62,10 +62,7 @@
                     <?php endforeach?>
                 </div>
             </div>
-        </div>  
-        <div class="row">
-                        <p>hêl</p>
-            </div>                      
+        </div>                       
     </div>
 </div>
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
@@ -103,26 +100,12 @@
            }
        }
    };
-   const config2 = {
-       type: 'pie', // Loại biểu đồ (cột)
-       data: chartData,
-       options: {
-           scales: {
-               y: {
-                   beginAtZero: true
-               }
-           }
-       }
-   };
+ 
 
    // Vẽ biểu đồ
    const myChart = new Chart(
        document.getElementById('myChart'),
        config
-   );
-   const myChart2 = new Chart(
-       document.getElementById('myChart1'),
-       config2
    );
 </script>
 

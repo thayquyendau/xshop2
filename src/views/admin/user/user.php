@@ -54,7 +54,7 @@
     </div>
     
     <form action="" method="post" class="col-2 input-group h-50 w-auto">
-        <button class="btn btn-outline-danger "><img width="50%" src="./asset/img/search-svgrepo-com.svg" alt="">Tìm kiếm
+        <button class="btn btn-outline-danger "><img width="50%" src="./assets/img/search-svgrepo-com.svg" alt="">Tìm kiếm
         </button>
         <input type="text" class="form-control is-invalid " aria-label="Example text with button addon" aria-describedby="button-addon1" name="name">
     </form>
@@ -90,11 +90,11 @@
                 <td><?= $user['Phone'] ?></td>
                 <td><?= $user['LoaiTK'] ?></td>
                 <td> 
-                    <button id="viewBtn-<?= $user['UserID'] ?>" class="btn">Xem</button>
-                     <!-- Modal với id duy nhất -->
+                    <button id="viewBtn-<?= $user['UserID'] ?>" class="btn"  data-image="<?= BASE_URL . $user['image'] ?>">Xem</button>
+                 
                      <div id="myModal-<?= $user['UserID'] ?>" class="modal">
                             <span class="close">&times;</span>
-                            <img class="modal-content" id="imgInModal-<?= $user['UserID'] ?>" src="<?=BASE_URL?>/<?= $user['image'] ?>" alt="Ảnh mẫu">
+                            <img class="modal-content" id="imgInModal-<?= $user['UserID'] ?>" src="<?= $user['image'] ?>" alt="Ảnh mẫu">
                         </div>
                 </td>
                 <td><a href="<?= BASE_URL ?>/admin/user/update?id=<?= $user['UserID'] ?>"><button type="button" class="btn btn-primary me-2 ">Sửa</button></a></td>
@@ -107,3 +107,23 @@
         ?>
     </table>
 </div>    
+<script>
+                // Lấy tất cả các nút "Xem"
+     document.querySelectorAll('button[id^="viewBtn-"]').forEach(button => {
+    button.addEventListener('click', function () {
+        const userId = this.id.split('-')[1]; // Lấy ID của người dùng
+        const modal = document.getElementById(`myModal-${userId}`); // Modal tương ứng
+        const img = modal.querySelector('img'); // Ảnh trong modal
+        const imageSrc = this.getAttribute('data-image'); // Lấy đường dẫn ảnh từ data-attribute
+
+        img.src = imageSrc; // Cập nhật đường dẫn ảnh
+        modal.style.display = 'block'; // Hiển thị modal
+
+        // Đóng modal
+        modal.querySelector('.close').addEventListener('click', function () {
+            modal.style.display = 'none';
+        });
+    });
+});
+
+    </script>

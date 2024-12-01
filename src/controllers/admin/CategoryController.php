@@ -13,14 +13,14 @@ class CategoryController
     }
     public function index()
         {
-        $_SESSION['admin_ift'] = '1';
+        // $_SESSION['admin_ift'] = '1';
         $Danhmucs = $this->modelObject->getAllCategory();
         require_once './src/views/admin/danhmuc/index.php';
         }
    
 
     public function delete(){
-        $_SESSION['admin_ift'] = '1';
+        // $_SESSION['admin_ift'] = '1';
         $id = $_GET['id'];
         $this->modelObject->deleteCategory($id);
         header("location: $this->base/admin/category");
@@ -28,7 +28,7 @@ class CategoryController
 
     public function create()
         {
-            $_SESSION['admin_ift'] = '1';
+            // $_SESSION['admin_ift'] = '1';
             if($_SERVER['REQUEST_METHOD'] =='POST'){
             $this->modelObject->createCategory($_POST);
             header("location: $this->base/admin/category");
@@ -38,7 +38,7 @@ class CategoryController
         }
 
     public function update(){
-        $_SESSION['admin_ift'] = '1';
+        // $_SESSION['admin_ift'] = '1';
         $id = $_GET['id'];
             if($_SERVER['REQUEST_METHOD'] =='POST'){
             $this->modelObject->updateCategory($_POST, $id);

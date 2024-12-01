@@ -16,7 +16,7 @@ class KhoahocController
     }
     public function index()
         {
-            $_SESSION['admin_ift'] = '1';
+            // $_SESSION['admin_ift'] = '1';
         $Khoahocs = $this->modelObject->getAllKhoahoc();
         $danhmucs =$this->modelObject->getAllDanhmuc();
         $users = $this -> modelObject -> getAllUser();
@@ -25,7 +25,7 @@ class KhoahocController
         }
 
     public function delete(){
-        $_SESSION['admin_ift'] = '1';
+        // $_SESSION['admin_ift'] = '1';
         $id = $_GET['id'];
         $this->modelObject->deleteProduct($id);
         header("location: $this->base/admin/Khoahoc");
@@ -57,7 +57,7 @@ class KhoahocController
     // }
 
     public function update(){
-        $_SESSION['admin_ift'] = '1';
+        // $_SESSION['admin_ift'] = '1';
         $id = $_GET['id'];
             if($_SERVER['REQUEST_METHOD'] =='POST'){
                 if(isset($_FILES) && $_FILES['HinhAnh']['size'] > 0){
