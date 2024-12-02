@@ -107,7 +107,7 @@ button {
 }
 
 button:hover {
-    background-color: darkred;
+    /* background-color: darkred; */
 }
 
 .modal-container {

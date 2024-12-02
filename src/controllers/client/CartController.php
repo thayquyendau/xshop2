@@ -27,8 +27,9 @@ class CartController
             // Loại bỏ các biến ko phải mảng
             $cartItems = array_filter($cartItems, 'is_array');
             // debug($cartItems);
-            require_once './src/views/client/giohang/giohang.php';
+            header("location: $this->baseUrl/detailCourse?IDKhoaHoc={$id}");
         } else {
+            // Ấn vào giỏ hàng
             $cartItems = $this->cartModel->getCartItems();
             // debug($cartItems);
             $cartItems = array_filter($cartItems, 'is_array');

@@ -57,12 +57,10 @@
                                 </div>
                             </div>
                             <form class="d-grid gap-2" action="<?= BASE_URL ?>/thanhtoan" method="post">
+                                <input type="hidden" name="source" value="detail">
                                 <input type="hidden" name="IDKhoaHoc" value="<?= $courses['IDKhoaHoc'] ?>">
                                 <button type="submit" class="btn btn-warning btn-lg p-3 fs-3">ĐĂNG KÝ NGAY</button>
                             </form>
-                            <!-- <a class="d-grid gap-2 text-decoration-none" href="<?= BASE_URL ?>/thanhtoan?IDKhoaHoc=<?= $courses['IDKhoaHoc'] ?>">
-                                <button class="btn btn-warning btn-lg p-3 fs-3" type="button"></button>
-                            </a> -->
                         </div>
                         <br>
                     </div>
