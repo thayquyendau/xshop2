@@ -21,12 +21,12 @@
                                 <div class="top-star d-flex align-items-start">
                                     <p><img class="icon" src="assets\image\icon\icon_zoom.svg" alt="">
                                     </p>
-                                    <p class="detail_pl">Thời lượng: 02 giờ 44 phút</p>
+                                    <p class="detail_pl">Thời lượng: <?= $courses['TimeKhoaHoc'] ?></p>
                                 </div>
                                 <div class="top-star d-flex align-items-start">
                                     <p><img class="icon" src="assets\image\icon\task-svgrepo-com.svg" alt="">
                                     </p>
-                                    <p class="detail_pl">Giáo Trình: 28 Bài giảng</p>
+                                    <p class="detail_pl">Giáo Trình: <?= $courses['GiaoTrinh'] ?></p>
                                 </div>
                                 <div class="top-star d-flex align-items-start">
                                     <p><img class="icon" src="assets\image\icon\icon_time.svg" alt="">
@@ -234,7 +234,7 @@
                                     <div class="rounded-circle overflow-hidden border" style="width: 150px; height: 150px;">
                                         <img src="assets\image\detailCourse\phan_quoc_viet.jpg" class="w-100 h-100" style="object-fit: cover;" alt="Circular Image">
                                     </div>
-                                    <p class="detail-name"><i>Phan Quốc Việt</i></p>
+                                    <p class="detail-name" style="margin-left: 10px;"><i><?= $courses['GiaoVien'] ?></i></p>
                                 </div>
                                 <div class="detail-course-main-body-right">
                                     <div class="category-content-wrapper">
