@@ -39,7 +39,7 @@
                                                         <div class="category-image">
                                                             <img style="width: 90%; height: 155px;" src="<?= $item['HinhAnh'] ?>" alt="">
                                                         </div>
-                                                        <div class="category-nd">
+                                                        <div class="">
                                                             <div class="price"><?= $item['TenKhoaHoc'] ?></div>
                                                             <div class="rating">Giáo viên: <i><?= $item['GiaoVien'] ?></i></div>
                                                             <div class="top-star">
@@ -87,7 +87,6 @@
                             </div>
                             <div class="d-grid gap-2 col-auto mx-auto">
                                 <a class="d-grid gap-2 text-decoration-none" href="<?= BASE_URL ?>/thanhtoan">
-                                    <input type="hidden" name="source" value="cart">
                                     <button class="btn btn-danger btn-lg p-3 fs-3  " type="submit">
                                         THANH TOÁN
                                     </button>

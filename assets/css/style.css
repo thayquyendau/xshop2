@@ -710,7 +710,7 @@ del {
 
 .category-main {
     display: flex;
-    padding-top: 10px;
+    /* width: 880px !important; */
 }
 
 .category-top-form {
@@ -721,7 +721,9 @@ del {
     font-size: 20px;
 }
 
-.category-top-form {}
+.category-top {
+    /* width: 270px!important; */
+}
 
 #toggleCheckbox,
 #radio {
@@ -791,9 +793,9 @@ label[for="radio"]::after {
 
 .category-content-left {
     display: flex;
-    /* align-items: center; */
     justify-content: center;
-    padding-right: 200px;
+    /* width: 720px !important; */
+    padding-right: 150px ;
 }
 
 .category-image {
@@ -807,16 +809,17 @@ label[for="radio"]::after {
 
 .category-nd {
     padding-left: 20px;
-    /* padding-bottom: 20px; */
 }
 .category-nd .title-product {
     padding-bottom: 5px;
 }
 .title-product{
-    padding-top: 10px;
+    /* padding-top: 10px; */
 }
 
-.category-content-right {}
+.category-content-right {
+    /* width: 120px !important; */
+}
 
 .category-form-space {
     padding-bottom: 20px;

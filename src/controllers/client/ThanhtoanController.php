@@ -23,8 +23,8 @@ class ThanhtoanController
         $this->modelCours = new Course();
     }
 
-    public function index()
-    {
+    public function index(){
+        
         if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             // Lấy giá trị từ POST
             $id = $_POST['IDKhoaHoc'];
@@ -47,7 +47,7 @@ class ThanhtoanController
     
             $error_message = "Vui lòng chọn ít nhất một khóa học để thanh toán.";
             $cartItems = $this->cartModel->getCartItems();
-            require_once './src/views/client/giohang/giohang.php';
+            header("location: $this->baseUrl/giohang");
             return;
         }
         echo "Không thể xử lý yêu cầu!";
