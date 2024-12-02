@@ -1,26 +1,41 @@
-// Slide sản phẩm
 let currentSlide = 0;
+let isTransitioning = false; // Kiểm tra trạng thái chuyển đổi
 
 function showSlide(index) {
   const slides = document.querySelectorAll(".slide");
+  const slidesContainer = document.querySelector(".slides");
+
   if (!slides || slides.length === 0) {
     console.error("Không tìm thấy phần tử '.slide'");
     return;
   }
 
-  if (index >= slides.length) {
+  const totalSlides = slides.length;
+
+  // Xử lý vòng lặp
+  if (index >= totalSlides) {
     currentSlide = 0;
   } else if (index < 0) {
-    currentSlide = slides.length - 1;
+    currentSlide = totalSlides - 1;
   } else {
     currentSlide = index;
   }
 
+  // Tính toán vị trí offset
   const offset = -currentSlide * 100;
-  document.querySelector(".slides").style.transform = `translateX(${offset}%)`;
+
+  // Áp dụng hiệu ứng chuyển đổi
+  slidesContainer.style.transition = isTransitioning ? "none" : "transform 0.5s ease-in-out";
+  slidesContainer.style.transform = `translateX(${offset}%)`;
+
+  // Reset trạng thái chuyển đổi sau khi kết thúc
+  setTimeout(() => {
+    isTransitioning = false;
+  }, 2000); // Thời gian khớp với hiệu ứng transition
 }
 
 function changeSlide(step) {
+  isTransitioning = true; // Đánh dấu trạng thái đang chuyển đổi
   showSlide(currentSlide + step);
 }
 
@@ -33,6 +48,7 @@ setInterval(() => {
 document.addEventListener("DOMContentLoaded", () => {
   showSlide(currentSlide);
 });
+
 
 // JS cua Quyen
 // Slide sản phẩm

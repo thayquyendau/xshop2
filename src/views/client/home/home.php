@@ -17,7 +17,7 @@
                 <?php foreach ($homes as $home): ?>
                 <div class="col xl-3 lg-3 md-6" style="margin-bottom: 20px;">
                  
-                    <a href="<?= BASE_URL ?>/detailCourse?IDKhoaHoc=<?= $home['IDKhoaHoc'] ?>"><img style="width: 100%; height: 175px" src="<?= $home['HinhAnh'] ?>" alt=""></a>
+                    <a href="<?= BASE_URL ?>/detailCourse?IDKhoaHoc=<?= $home['IDKhoaHoc'] ?>"><img style="width: 100%; height: 145px;" src="<?= $home['HinhAnh'] ?>" alt=""></a>
                     <p class="title-product"><?= $home['TenKhoaHoc'] ?></p>
                     <p class="rating"> <i><?= $home['GiaoVien'] ?></i></p>
                     <p>
@@ -25,7 +25,7 @@
                         <span class="stars">&#9733; &#9733; &#9733; &#9733; &#9733;</span>
                         <span class="count">(231)</span>
                     </p>
-                    <p style="font-size: 16px;margin-top:10px;"><?= $home['Gia'] ?><del style="font-size:12px;"><?= $home['Gia'] ?></del></p>
+                    <p style="font-size: 16px;margin-top:10px;"><?= $home['Gia'] ?> VND<del style="font-size:12px;"><?= $home['Gia'] ?>đ</del></p>
                 </div>
                 <?php endforeach; ?>
             </div>
@@ -34,7 +34,7 @@
             <?php foreach ($homes1 as $home1): ?>
                 <div class="col xl-3 lg-3 md-6" style="margin-bottom: 20px;">
                     <a href="<?= BASE_URL ?>/detailCourse?IDKhoaHoc=<?= $home1['IDKhoaHoc'] ?>">
-                    <img style="width: 100%; height: 175px" src="<?= $home1['HinhAnh'] ?>" alt=""></a>
+                    <img style="width: 100%; height: 145px;" src="<?= $home1['HinhAnh'] ?>" alt=""></a>
                     <p class="title-product"><?= $home1['TenKhoaHoc'] ?></p>
                     <p class="rating"> <i><?= $home1['GiaoVien'] ?></i></p>
                     <p>
@@ -42,7 +42,7 @@
                         <span class="stars">&#9733; &#9733; &#9733; &#9733; &#9733;</span>
                         <span class="count">(231)</span>
                     </p>
-                    <p style="font-size: 16px;margin-top:10px;"><?= $home1['Gia'] ?><del style="font-size:12px;"><?= $home1['Gia'] ?></del></p>
+                    <p style="font-size: 16px;margin-top:10px;"><?= $home1['Gia'] ?> VND<del style="font-size:12px;"><?= $home1['Gia'] ?>đ</del></p>
                 </div>
                 <?php endforeach; ?>
             </div>
@@ -50,7 +50,7 @@
             <div class="row product-list1">
             <?php foreach ($homes2 as $home2): ?>
                 <div class="col xl-3 lg-3 md-6" style="margin-bottom: 20px;">
-                    <a href="<?= BASE_URL ?>/detailCourse?IDKhoaHoc=<?= $home2['IDKhoaHoc'] ?>"><img style="width: 100%; height: 175px" src="<?= $home2['HinhAnh'] ?>" alt=""></a>
+                    <a href="<?= BASE_URL ?>/detailCourse?IDKhoaHoc=<?= $home2['IDKhoaHoc'] ?>"><img style="width: 100%; height: 145px;" src="<?= $home2['HinhAnh'] ?>" alt=""></a>
                     <p class="title-product"><?= $home2['TenKhoaHoc'] ?></p>
                     <p class="rating"> <i><?= $home2['GiaoVien'] ?></i></p>
                     <p>
@@ -58,12 +58,12 @@
                         <span class="stars">&#9733; &#9733; &#9733; &#9733; &#9733;</span>
                         <span class="count">(231)</span>
                     </p>
-                    <p style="font-size: 16px;margin-top:10px;"><?= $home2['Gia'] ?><del style="font-size:12px;"><?= $home2['Gia'] ?></del></p>
+                    <p style="font-size: 16px;margin-top:10px;"><?= $home2['Gia'] ?> VND<del style="font-size:12px;"><?= $home2['Gia'] ?>đ</del></p>
                 </div>
                 <?php endforeach; ?>
             </div>
             <h1 class="title1">Chủ đề có thể bạn quan tâm</h1>
-            <div class="chudeqqt">
+            <div class="chudeqt">
                 <div class="row product-list1">
                 <?php foreach($homes3 as $home3):?>
                 <div class="col xl-3 lg-3 md-6">
@@ -114,7 +114,7 @@
                     <div class="dkgiangvien">
                         <h2>Trở thành giảng viên QTPedu</h2>
                         <p>Giúp mọi người trở nên tốt hơn - bao gồm cả chính bạn</p>
-                        <button>Đăng ký ngay</button>
+                        <a href="<?= BASE_URL ?>/register"><button>Đăng ký ngay</button></a>
                     </div>
                 </div>
                 <div class="col xl-6 md-6">
@@ -190,6 +190,8 @@
     width: 100%;
     text-align: center;
 }
+
+
 .chu-de-qt-link {
     text-decoration: none; 
     display: inline-block;
@@ -198,14 +200,17 @@
 
 .chu-de-qt {
     border: 2px solid #000;
-    color: #333; 
+    color: #FF0004; 
     padding: 10px 20px; 
     border-radius: 10px; 
+    border: 2px solid #FF0004;
     width: 80%;
     text-align: center;
+    background-color: white;
 }
 
 .chu-de-qt:hover{
-    background-color: #f0f0f0;
+    background-color: #FF0004;
+    color: white;
 }
 </style>

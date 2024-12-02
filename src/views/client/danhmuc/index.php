@@ -9,7 +9,7 @@
             <?php foreach ($courses as $course): ?>
                 <div class="col-xl-3 col-lg-3 col-md-6">
                     <a href="<?= BASE_URL ?>/detailCourse?IDKhoaHoc=<?= $course['IDKhoaHoc'] ?>">
-                        <img style="width: 100%;" src="<?= $course['HinhAnh'] ?>" alt="">
+                        <img style="width: 100%; height: 145px;" src="<?= $course['HinhAnh'] ?>" alt="">
                     </a>
                     <p class="title-product"><?= $course['TenKhoaHoc'] ?></p>
                     <p class="rating"><i><?= $course['GiaoVien'] ?></i></p>
@@ -101,7 +101,7 @@
                         <div class="step-flex justify-content-between">
                             <div class="category-content-left">
                                 <div class="category-image">
-                                    <a href="<?= BASE_URL ?>/detailCourse?IDKhoaHoc=<?= $course['IDKhoaHoc'] ?>"><img src="<?= $course['HinhAnh'] ?>" alt=""></a>
+                                    <a href="<?= BASE_URL ?>/detailCourse?IDKhoaHoc=<?= $course['IDKhoaHoc'] ?>"><img style="width: 100%; height: 155px;" src="<?= $course['HinhAnh'] ?>" alt=""></a>
                                 </div>
                                 <div class="category-nd">
                                     <div class="title-product"><?= $course['TenKhoaHoc'] ?></div>

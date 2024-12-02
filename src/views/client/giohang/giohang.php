@@ -37,7 +37,7 @@
                                                 <div class="cart-flex-right">
                                                     <div class="category-content-main">
                                                         <div class="category-image">
-                                                            <img src="<?= $item['HinhAnh'] ?>" alt="">
+                                                            <img style="width: 90%; height: 155px;" src="<?= $item['HinhAnh'] ?>" alt="">
                                                         </div>
                                                         <div class="category-nd">
                                                             <div class="price"><?= $item['TenKhoaHoc'] ?></div>
