@@ -12,8 +12,9 @@
     $router->add("POST", "admin", "/adminHandle", "AdminController@updateMK");    
     //khóa học
     $router->add("GET", "admin", "/admin/Khoahoc", "KhoahocController@index");
-    $router->add("GET", "admin", "/admin/Khoahoc/create", "KhoahocController@create");
-    $router->add("POST", "admin", "/admin/Khoahoc/create", "KhoahocController@create");
+    $router->add("POST", "admin", "/admin/Khoahoc", "KhoahocController@updateCTKH");
+    $router->add("GET", "admin", "/admin/khoahoc/create", "KhoahocController@create");
+    $router->add("POST", "admin", "/admin/khoahoc/create", "KhoahocController@create");
     $router->add("GET", "admin", "/admin/Khoahoc/update", "KhoahocController@update");
     $router->add("POST", "admin", "/admin/Khoahoc/update", "KhoahocController@update");
     $router->add("GET", "admin", "/admin/Khoahoc/delete", "KhoahocController@delete");
@@ -37,13 +38,13 @@
     $router->add("POST", "admin", "/admin/user/update", "UserController@update");
     $router->add("GET", "admin", "/admin/user/delete", "UserController@delete");
 
-    //Binh luan
-    $router->add("GET", "admin", "/admin/comment", "CommentController@index");
-    $router->add("GET", "admin", "/admin/comment/create", "CommentController@create");
-    $router->add("POST", "admin", "/admin/comment/create", "CommentController@create");
-    $router->add("GET", "admin", "/admin/comment/update", "CommentController@update");
-    $router->add("POST", "admin", "/admin/comment/update", "CommentController@update");
-    $router->add("GET", "admin", "/admin/comment/delete", "CommentController@delete");
+    //Oder
+    $router->add("GET", "admin", "/admin/Oder", "OderController@index");
+    $router->add("GET", "admin", "/admin/Oder/create", "OderController@create");
+    $router->add("POST", "admin", "/admin/Oder/create", "OderController@create");
+    $router->add("GET", "admin", "/admin/Oder/update", "OderController@update");
+    $router->add("POST", "admin", "/admin/Oder/update", "OderController@update");
+    $router->add("GET", "admin", "/admin/Oder/delete", "OderController@delete");
 
 
     $router->solve("admin");
