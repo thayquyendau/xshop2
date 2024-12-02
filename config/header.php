@@ -7,8 +7,7 @@
         </li>
         <li class="search-container">
                 <input name="send" type="text" placeholder="Tìm kiếm khóa học">
-            
-            <button type="submit">&#128269;</button>
+            <button type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
         </li>
         <?php if(isset($_SESSION['UserName']) ): ?>
         
@@ -77,6 +76,16 @@
 </div>
 
 <style>
+.fa-sign-out{
+    color: #FF0004;
+
+}
+.material-icons{
+    color: #FF0004;
+}
+.fa-solid{
+    color: white;
+}
 .input-title {
     font-size: 15px;
     margin-top: 15px;
@@ -107,7 +116,7 @@ button {
 }
 
 button:hover {
-    background-color: darkred;
+    /* background-color: darkred; */
 }
 
 .modal-container {

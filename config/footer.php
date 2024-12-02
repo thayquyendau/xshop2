@@ -1,7 +1,7 @@
 <div class="container">
     <footer>
         <div class="footer-column">
-            <img class="footer-img" src="./assets/image/header/QTPedu.png" alt="QTPedu Logo">
+            <img class="footer-img" src="<?=BASE_URL?>/assets/image/img/logo_mau.png" alt="QTPedu Logo">
             <p class="footer-list">P. Đông Vệ, TP. Thanh Hóa, Thanh Hóa</p>
             <p class="footer-list">Hotline: 19008386</p>
             <p class="footer-list">Email: qtpedu@gmail.com</p>

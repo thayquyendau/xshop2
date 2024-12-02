@@ -28,31 +28,22 @@
         </thead>
 
         <?php foreach($Khoahocs as $Khoahoc): ?>
-        <tbody>
-        <tr>
-            <th scope="row"><?= $Khoahoc['IDKhoaHoc'] ?></th>
-            <td><?= $Khoahoc['TenKhoaHoc'] ?></td>
-            <td><?= $Khoahoc['Gia'] ?></td>
-            <td><?= $Khoahoc['GiaoVien'] ?></td>
-            <td><?= $Khoahoc['TenDanhMuc'] ?></td>
-            <td><?= $Khoahoc['TimeKhoaHoc'] ?></td>
-            <td><?= $Khoahoc['GiaoTrinh'] ?></td>
-            <td><img style="width: 50px;" src="<?= $Khoahoc['HinhAnh'] ?>" alt=""></td>
-            <td>
-                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#detailModal<?= $Khoahoc['IDKhoaHoc'] ?>">
-                    Chi tiết
-                </button>
-            </td>
-            <?php if ($_SESSION['LoaiTK'] == 1): ?>
-            <td>
-                <!-- Cập nhật form sửa -->
-                <form action="<?= BASE_URL ?>/admin/Khoahoc/update" method="post" id="editForm<?= $Khoahoc['IDKhoaHoc'] ?>">
-                    <input type="hidden" name="id" value="<?= $Khoahoc['IDKhoaHoc'] ?>">
-                    <button type="submit" class="btn btn-primary me-2">Sửa</button>
-                </form>
-            </td>
-            <?php endif; ?>
-        </tr>
+         <tbody>
+            <tr>
+                <th scope="row"><?= $Khoahoc['IDKhoaHoc'] ?></th>
+                <td><?= $Khoahoc['TenKhoaHoc'] ?></td>
+                <td><?= $Khoahoc['MoTa'] ?></td>
+                <td><?= $Khoahoc['Gia'] ?></td>
+                <td><?= $Khoahoc['GiaoVien'] ?></td>
+                <td><?= $Khoahoc['TenDanhMuc'] ?></td>
+                <td><img src="<?= $Khoahoc['HinhAnh']?>" alt=""></td>
+                <?php 
+                    if($_SESSION['LoaiTK']==1):
+                ?>
+                <td><a href="<?= BASE_URL ?>/admin/Khoahoc/update?id=<?= $Khoahoc['IDKhoaHoc'] ?>"><button type="button" class="btn btn-primary me-2 ">Sửa</button></a></td>
+                <td><a href="<?= BASE_URL ?>/admin/Khoahoc/delete?id=<?= $Khoahoc['IDKhoaHoc'] ?>"><button type="button" class="btn btn-primary me-2 ">Xóa</button></a></td>
+                <?php endif;?>
+            </tr>
         </tbody>
         <?php endforeach; ?>
     </table>
