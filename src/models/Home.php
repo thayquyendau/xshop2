@@ -37,12 +37,12 @@ use commons\baseModel;
         }
         public function getAllHome2()
         {
-            $sql = "SELECT * FROM khoahoc LIMIT 8 OFFSET 16";
+            $sql = "SELECT * FROM khoahoc LIMIT 8 OFFSET 25";
             return $this->pdoQueryAll($sql, []);
         }
         public function getAllHome3()
         {
-            $sql = "SELECT * FROM danhmuc LIMIT 8 OFFSET 5";
+            $sql = "SELECT * FROM danhmuc LIMIT 8 OFFSET 33";
             return $this->pdoQueryAll($sql, []);
         }
 

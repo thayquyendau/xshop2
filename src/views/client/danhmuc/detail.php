@@ -128,23 +128,7 @@
                         <div class="detail-course-main">
                             <h6 class="title-course">Giới thiệu khóa học</h6>
                             <div class="detail-content">
-                                <p>Bạn có biết:</p>
-                                <p>"<strong>Suy cho cùng, cuộc đời là một chuỗi liên tục những cuộc thuyết trình</strong>”.</p>
-                                <p>Từ việc giảng dạy, bán hàng, giao tiếp… đến việc nuôi con, tâm sự bạn bè; từ chính trị gia đến những người bán hàng chợ quê, từ diễn giả chuyên nghiệp đến học sinh tiểu học,…ai ai cũng cần kỹ năng thuyết trình như một kỹ năng không thể thiếu trong cả cuộc sống và công việc.</p>
-                                Thuyết trình được sử dụng: “Mọi lúc, mọi nơi, suốt đời, cho mọi người, cho chính mình”.  Và nếu cuộc đời bạn chưa được như những gì bạn mơ ước thì có thể một trong những lý do vô cùng lớn đó là bạn chưa có sự điêu luyện trong nghệ thuật thuyết trình.
-                                Nhận thức được vai trò đặc biệt quan trọng của kỹ năng nói chuyện - thuyết trình này Unica đã hợp tác cùng Diễn giả hàng đầu Việt Nam, TS  Phan Quốc Việt thực hiện khóa học "Nghệ thuật thuyết trình" để giúp bạn trở thành trở thành bậc thầy thuyết trình chỉ trong một thời gian ngắn.
-                                <p>
-                                    <strong>Về khóa học "Nghệ thuật thuyết trình" của giảng viên Phan Quốc Việt</strong>
-                                    Khóa học gồm có 27 bài giảng trực tuyến với thời gian học 2 giờ 44 phút có các nội dung nhỏ sau:
-                                </p>
-                                <p>Phần 1: Tầm quan trọng của Kỹ năng thuyết trình</p>
-                                <p>Phần 2: Thiết kế bài thuyết trình hoàn hảo</p>
-                                <p>Phần 3: Thuyết trình chuyên nghiệp</p>
-                                <p>Phần 4: Sử dụng cơ thể cuốn hút</p>
-                                <p>
-                                    Mỗi một bài giảng trong học phát triển bản thân gồm các phần học không chỉ có các nội dung lý thuyết mà còn có những phần học thuyết trình có thể ứng dụng thực hành và áp dụng ngay vào giao tiếp thuyết trình trong cuộc sống - công việc, từ cách gây ấn tượng khi mở đầu buổi thuyết trình, bí quyết để chuẩn bị cho bài thuyết trình thêm hiệu quả và thành công, cách để thuyết trình trước đám đông sao cho chuyên nghiệp không chỉ bằng lời nói, bí quyết để sử dụng ngôn ngữ cơ thể như một ngôn ngữ thứ 2 khi bạn thuyết trình...
-                                    Và còn rất rất nhiều nội dung cực hay mà bạn sẽ khám giá ra khi tham gia khóa học này! Còn chờ đợi gì nữa, tham gia khóa học "<strong>Nghệ thuật thuyết trình</strong>" ngay hôm nay thôi!
-                                </p>
+                            <?=  $detailCourse['Noidung'] ?>
                             </div>
                         </div>
                     </div>
