@@ -23,7 +23,6 @@ class Cart extends baseModel {
             // Nếu không có kết quả hợp lệ, trả về mảng rỗng
             return [];
         }
-        unset($_SESSION['cart']);
         // Kiểm tra nếu khóa học chưa có trong giỏ hàng
         if (!isset($_SESSION['cart'][$id])) {
             $_SESSION['cart'][$id] = [

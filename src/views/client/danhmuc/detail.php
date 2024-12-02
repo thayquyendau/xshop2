@@ -1,4 +1,4 @@
-    <div class="col xl-12">
+    <div class="col xl-12 ">
         <div class="detail-bgr">
             <div class="detail">
                 <div class="detailProduct">
@@ -39,8 +39,8 @@
                                     <p class="detail_pl">Cấp chứng nhận hoàn thành</p>
                                 </div>
                             </div>
-                            <div class="price">599.000đ
-                                <del>899.000đ</del>
+                            <div class="price"><?= $courses['Gia'] ?>
+                                <del><?= $courses['Gia'] ?></del>
                                 <span class="count ">Giảm 25%</span>
                             </div>
                         </div>
@@ -262,11 +262,11 @@
                         </div>
                         <div class="detail-course-main-body-right">
                             <div class="detail-content">
-                                <p><strong>Phan Quốc Việt</strong> :Người sáng lập, Chủ tịch HĐQT Tâm Việt Group.</p>
+                                <p><strong><?= $courses['GiaoVien'] ?></strong> :Người sáng lập, Chủ tịch HĐQT Tâm Việt Group.</p>
                                 <p>Tác giả - Diễn giả, MC truyền hình.</p>
                                 <p>Phó Chủ tịch thứ nhất Hiệp hội Phát triển Văn hóa Doanh nghiệp Việt Nam.</p>
                                 <p>Tiến sĩ Toán - Lý Đại học tổng hợp Lomonosov - Moscow.</p>
-                                <p><strong>Phan Quốc Việt</strong> từng đào tạo cho Đại học Sol Bridge tại Hàn Quốc về Tự lãnh đạo và tạo dựng Nhân Hiệu.</p>
+                                <p><strong><?= $courses['GiaoVien'] ?></strong> từng đào tạo cho Đại học Sol Bridge tại Hàn Quốc về Tự lãnh đạo và tạo dựng Nhân Hiệu.</p>
                                 <p>Đội trưởng đội bán hàng đầu tiên của FPT.</p>
                                 <p>Chánh văn phòng tổng công ty dầu khí Việt Nam (nay là tập đoàn dầu khí quốc gia Việt Nam).</p>
                                 <p>Giám đốc công ty Hà Nội Petro.</p>
