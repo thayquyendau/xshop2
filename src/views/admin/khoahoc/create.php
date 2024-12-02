@@ -1,21 +1,28 @@
 <div class="main-body p-3">
    
-    <h3 class="mb-5">Sửa thông tin Khoa học</h3>
+    <h3 class="mb-5">Thêm mới Khoa học</h3>
  
     <form class="row g-3" action="" method = "post" enctype="multipart/form-data">
     
         <div class="col-md-6">
             <label for="input" class="form-label">Tên Khóa học</label>
-            <input type="text" class="form-control" id="TenKhoaHoc" name="TenKhoaHoc" value="<?= $Khoahocs['TenKhoaHoc'] ?>">
+            <input type="text" class="form-control" id="TenKhoaHoc" name="TenKhoaHoc" value="">
         </div>
-
+        <div class="col-md-6">
+            <label for="input" class="form-label">Thời gian khóa học</label>
+            <input type="text" class="form-control" id="" name="TimeKhoaHoc" placeholder="Giờ: .....  Phút .....">
+        </div>
+        <div class="col-md-6">
+            <label for="input" class="form-label">Giáo trình</label>
+            <input type="text" class="form-control" id="" name="GiaoTrinh" value="">
+        </div>
         <div class="col-md-6">
             <label for="input" class="form-label">Giá</label>
-            <input type="text" class="form-control" id="Gia" name="Gia" value="<?= $Khoahocs['Gia'] ?>">
+            <input type="text" class="form-control" id="Gia" name="Gia" value="">
         </div>
         <div class="col-md-4">
             <label for="form" class="form-label">Hình ảnh</label>
-            <input class="form-control " id="HinhAnh" name="HinhAnh" type="file"  value="<?= $Khoahocs['HinhAnh'] ?>">
+            <input class="form-control " id="HinhAnh" name="HinhAnh" type="file"  value="">
          </div>
          <div class="col-md-4">
             <label for="input" class="form-label">Giáo viên</label>
@@ -37,7 +44,7 @@
             </select>
         </div>
         <div class="col-12">
-            <button type="submit" class="btn btn-primary">Sửa</button>
+            <button type="submit" class="btn btn-primary">Thêm</button>
         </div>
         
     </form>

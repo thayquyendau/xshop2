@@ -3,6 +3,7 @@
 namespace models;
 
 use commons\baseModel;
+use PDO;
 
 class Khoahoc extends baseModel
 {
@@ -13,11 +14,14 @@ class Khoahoc extends baseModel
         $sql2 = "SELECT 
                     chitietkh.IDChiTietKH,
                     chitietkh.MoTa,
+                    chitietkh.Noidung,
                     khoahoc.IDKhoaHoc,
                     khoahoc.TenKhoaHoc,
                     khoahoc.Gia,
                     khoahoc.GiaoVien,
                     khoahoc.HinhAnh,
+                    khoahoc.TimeKhoaHoc,
+                    khoahoc.GiaoTrinh,
                     danhmuc.IDCatagory,
                     danhmuc.TenDanhMuc
                 FROM 
@@ -59,7 +63,7 @@ class Khoahoc extends baseModel
             $columns[]  = ":$key";
         }
         $sql = "INSERT INTO `khoahoc` (". implode(",", array_keys($param)) .") VALUES (". implode(",", $columns) .")";
-        parent::pdoQuery($sql,$param);
+        parent::pdoQuery($sql, $param);
     }
 
     public function getProductById($id)
@@ -78,8 +82,7 @@ class Khoahoc extends baseModel
                     chitietkh
                 JOIN 
                     khoahoc ON chitietkh.IDKhoaHoc = khoahoc.IDKhoaHoc
-                WHERE khoahoc.IDKhoahoc = ?
-    ";
+                WHERE khoahoc.IDKhoahoc = ?";
         return $this->pdoQuery($sql2, [$id]);
     }
 
@@ -97,8 +100,7 @@ class Khoahoc extends baseModel
                 $columns[] = "$key = :$key";
             }
         }
-        $sql = "UPDATE khoahoc SET " . implode(", ", $columns) . " WHERE IDKhoahoc = $id     
-        ";
+        $sql = "UPDATE khoahoc SET " . implode(", ", $columns) . " WHERE IDKhoahoc = $id";
          parent::pdoUpdate($sql, $param);
     }
 
@@ -106,7 +108,47 @@ class Khoahoc extends baseModel
         $sql = "UPDATE chitietkh SET MoTa = '$mota'  WHERE IDKhoahoc = $id ";
         $stmt = $this->conn->prepare($sql);
         $stmt->execute();
-}
+    }
 
+
+    public function updateCT($param,$id){
+        $columns = [];
+        foreach ($param as $key => $value) {
+            if ($key != 'IDKhoahoc') {
+                $columns[] = "$key = :$key";
+            }
+        }
+        $sql = "UPDATE chitietkh SET " . implode(", ", $columns) . " WHERE IDKhoahoc = $id";
+         parent::pdoUpdate($sql, $param);
+    }
+
+    public function searchKhoahoc($name)
+    {
+        $sql = "SELECT 
+                    chitietkh.IDChiTietKH,
+                    chitietkh.MoTa,
+                    chitietkh.Noidung,
+                    khoahoc.IDKhoaHoc,
+                    khoahoc.TenKhoaHoc,
+                    khoahoc.Gia,
+                    khoahoc.GiaoVien,
+                    khoahoc.HinhAnh,
+                    khoahoc.TimeKhoaHoc,
+                    khoahoc.GiaoTrinh,
+                    danhmuc.IDCatagory,
+                    danhmuc.TenDanhMuc
+                FROM 
+                    chitietkh
+                JOIN 
+                    khoahoc ON chitietkh.IDKhoaHoc = khoahoc.IDKhoaHoc
+                JOIN 
+                    danhmuc ON khoahoc.IDCatagory = danhmuc.IDCatagory WHERE khoahoc.TenKhoaHoc LIKE :name 
+                    or khoahoc.GiaoVien like :name or khoahoc.Gia like :name  or danhmuc.TenDanhMuc LIKE :name";
+        $stmt = $this->conn->prepare($sql);
+        $stmt->bindValue(':name', "%$name%", PDO::PARAM_STR);
+        $stmt->execute();
+        return $stmt->fetchAll(PDO::FETCH_ASSOC); 
+    }
+
+   
 }
- 
