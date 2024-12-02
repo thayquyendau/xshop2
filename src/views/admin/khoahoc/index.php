@@ -23,7 +23,7 @@
                 <td><?= $Khoahoc['Gia'] ?></td>
                 <td><?= $Khoahoc['GiaoVien'] ?></td>
                 <td><?= $Khoahoc['TenDanhMuc'] ?></td>
-                <td><img src="<?= $Khoahoc['HinhAnh']?>" alt=""></td>
+                <td><img width="50px" src="<?= $Khoahoc['HinhAnh']?>" alt=""></td>
                 <?php 
                     if($_SESSION['LoaiTK']==1):
                 ?>
