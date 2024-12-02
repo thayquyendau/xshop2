@@ -1,10 +1,9 @@
-
 <div class="row m-0 main-button">
     <div class="col-4 btn-group me-2 h-50" role="group" aria-label="First group">
     </div>
     
     <form action="" method="post" class="col-2 input-group h-50 w-auto" id="searchForm">
-        <button type="button" class="btn btn-primary me-2 "><a style="color: white; text-decoration: none;" href="<?= BASE_URL ?>/admin/khoahoc/create">Thêm mới</a></button>
+    <button type="button" class="btn btn-primary me-2 "><a style="color: white; text-decoration: none;" href="<?= BASE_URL ?>/admin/khoahoc/create">Thêm mới</a></button>
         <button type="submit" class="btn btn-outline-danger"><img width="50%" src="./assets/img/search-svgrepo-com.svg" alt="">Tìm kiếm</button>
         <input type="text" class="form-control is-invalid" aria-label="Example text with button addon" aria-describedby="button-addon1" name="name">
     </form>
@@ -28,22 +27,31 @@
         </thead>
 
         <?php foreach($Khoahocs as $Khoahoc): ?>
-         <tbody>
-            <tr>
-                <th scope="row"><?= $Khoahoc['IDKhoaHoc'] ?></th>
-                <td><?= $Khoahoc['TenKhoaHoc'] ?></td>
-                <td><?= $Khoahoc['MoTa'] ?></td>
-                <td><?= $Khoahoc['Gia'] ?></td>
-                <td><?= $Khoahoc['GiaoVien'] ?></td>
-                <td><?= $Khoahoc['TenDanhMuc'] ?></td>
-                <td><img src="<?= $Khoahoc['HinhAnh']?>" alt=""></td>
-                <?php 
-                    if($_SESSION['LoaiTK']==1):
-                ?>
-                <td><a href="<?= BASE_URL ?>/admin/Khoahoc/update?id=<?= $Khoahoc['IDKhoaHoc'] ?>"><button type="button" class="btn btn-primary me-2 ">Sửa</button></a></td>
-                <td><a href="<?= BASE_URL ?>/admin/Khoahoc/delete?id=<?= $Khoahoc['IDKhoaHoc'] ?>"><button type="button" class="btn btn-primary me-2 ">Xóa</button></a></td>
-                <?php endif;?>
-            </tr>
+        <tbody>
+        <tr>
+            <th scope="row"><?= $Khoahoc['IDKhoaHoc'] ?></th>
+            <td><?= $Khoahoc['TenKhoaHoc'] ?></td>
+            <td><?= $Khoahoc['Gia'] ?></td>
+            <td><?= $Khoahoc['GiaoVien'] ?></td>
+            <td><?= $Khoahoc['TenDanhMuc'] ?></td>
+            <td><?= $Khoahoc['TimeKhoaHoc'] ?></td>
+            <td><?= $Khoahoc['GiaoTrinh'] ?></td>
+            <td><img style="width: 50px;" src="<?= $Khoahoc['HinhAnh'] ?>" alt=""></td>
+            <td>
+                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#detailModal<?= $Khoahoc['IDKhoaHoc'] ?>">
+                    Chi tiết
+                </button>
+            </td>
+            <?php if ($_SESSION['LoaiTK'] == 1): ?>
+            <td>
+                <!-- Cập nhật form sửa -->
+                <form action="<?= BASE_URL ?>/admin/Khoahoc/update" method="post" id="editForm<?= $Khoahoc['IDKhoaHoc'] ?>">
+                    <input type="hidden" name="id" value="<?= $Khoahoc['IDKhoaHoc'] ?>">
+                    <button type="submit" class="btn btn-primary me-2">Sửa</button>
+                </form>
+            </td>
+            <?php endif; ?>
+        </tr>
         </tbody>
         <?php endforeach; ?>
     </table>
@@ -85,9 +93,8 @@
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.min.js"></script>
 
-
 <script>
-// Đồng bộ nội dung từ contenteditable vào input ẩn trong modal
+    // Đồng bộ nội dung từ contenteditable vào input ẩn trong modal
 <?php foreach ($Khoahocs as $Khoahoc): ?>
     document.getElementById('detailForm<?= $Khoahoc['IDKhoaHoc'] ?>').addEventListener('submit', function(event) {
         event.preventDefault(); // Ngăn form gửi dữ liệu ngay lập tức
@@ -104,4 +111,5 @@
         this.submit();
     });
 <?php endforeach; ?>
+
 </script>

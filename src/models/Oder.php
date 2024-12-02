@@ -11,6 +11,12 @@ class Oder extends baseModel
         return $this->pdoQueryAll($sql, []);
     }
 
+    public function getOderItem()
+    {
+        $sql = "SELECT * FROM order_items ";
+        return $this->pdoQueryAll($sql, []);
+    }
+
     public function searchAllUser($name)
     {
         $sql = "SELECT * FROM user WHERE HoVaTen LIKE :name or UserName like :name or LoaiTK like :name";
@@ -31,9 +37,9 @@ class Oder extends baseModel
        
     }
 
-    public function getUserById($id)
+    public function getOderById($id)
     {
-        $sql = "SELECT * FROM user  WHERE UserID = ?";
+        $sql = "SELECT * FROM orders  WHERE id = ?";
         return $this->pdoQuery($sql, [$id]);
     }
 
@@ -43,21 +49,21 @@ class Oder extends baseModel
         return $this->pdoQueryAll($sql, [$id]);
     }
 
-    public function deleteUser($id)
+    public function deleteOder($id)
     {
-        $sql = "DELETE FROM user WHERE UserID = ?";
+        $sql = "DELETE FROM orders WHERE id = ?";
         $this->pdoQuery($sql, [$id]);
     }
 
-    public function updateUser($param, $id)
+    public function updateOder($param, $id)
     {
         $columns = [];
         foreach($param as $key => $value) {
-            if ($key != 'UserID') {
+            if ($key != 'id') {
                 $columns[] = "$key = :$key";
             }
         }
-        $sql = "UPDATE `user` SET " . implode(", ", $columns) . " WHERE UserID = $id";
+        $sql = "UPDATE `orders` SET " . implode(", ", $columns) . " WHERE id = $id";
         // debug($sql);
         parent::pdoUpdate($sql, $param);
        
