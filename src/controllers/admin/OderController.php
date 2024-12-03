@@ -16,18 +16,15 @@ class OderController
     {
        
         $oders = $this->modelObject->getAllOder();
-        $oders_items = $this -> modelObject -> getOderItem();
         require_once './src/views/admin/oder/index.php';
     }
     
 
-    public function indexRole()
-        {
-            // debug($_SESSION);
-        // $_SESSION['admin_ift'] = '1';
+    public function chitietOder()
+        { 
         $id = $_GET['id'];
-        $users = $this->modelObject->getUserByRole($id);
-        require_once './src/views/admin/user/user.php';
+        $oders = $this->modelObject->chitietOderbyID($id);
+        require_once './src/views/admin/Oder/chitiet.php';
         }
     
    
@@ -37,6 +34,12 @@ class OderController
         $this->modelObject->deleteOder($id);
         header("location: $this->base/admin/Oder");
         }
+
+    public function deleteChitiet(){
+            $id = $_GET['id'];
+            $this->modelObject->deleteOderChitiet($id);
+            header("location: $this->base/admin/Oder");
+            }   
 
     public function create()
         {
@@ -80,4 +83,6 @@ class OderController
             }
         }
     }
+
+    
 ?>

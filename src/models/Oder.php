@@ -37,10 +37,10 @@ class Oder extends baseModel
        
     }
 
-    public function getOderById($id)
+    public function chitietOderbyID($id)
     {
-        $sql = "SELECT * FROM orders  WHERE id = ?";
-        return $this->pdoQuery($sql, [$id]);
+        $sql = "SELECT * FROM order_items  WHERE order_id = ?";
+        return $this->pdoQueryAll($sql, [$id]);
     }
 
     public function getUserByRole($id)
@@ -52,6 +52,12 @@ class Oder extends baseModel
     public function deleteOder($id)
     {
         $sql = "DELETE FROM orders WHERE id = ?";
+        $this->pdoQuery($sql, [$id]);
+    }
+
+    public function deleteOderChitiet($id)
+    {
+        $sql = "DELETE FROM order_items WHERE id = ?";
         $this->pdoQuery($sql, [$id]);
     }
 

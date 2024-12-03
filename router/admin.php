@@ -41,6 +41,8 @@
     //Oder
     $router->add("GET", "admin", "/admin/Oder", "OderController@index");
     $router->add("POST", "admin", "/admin/Oder", "OderController@index");
+    $router->add("GET", "admin", "/admin/Oder/chitiet", "OderController@chitietOder");
+    $router->add("GET", "admin", "/admin/Oder/deleteChitiet", "OderController@deleteChitiet");
     $router->add("GET", "admin", "/admin/Oder/create", "OderController@create");
     $router->add("POST", "admin", "/admin/Oder/create", "OderController@create");
     $router->add("GET", "admin", "/admin/Oder/update", "OderController@update");

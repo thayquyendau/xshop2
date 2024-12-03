@@ -83,7 +83,9 @@
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Đóng</button>
+                <?php if($_SESSION['LoaiTK']==1):?>
                 <button type="submit" class="btn btn-primary" name="post1">Sửa</button>
+                <?php endif;?>
             </div>
             </form>
         </div>

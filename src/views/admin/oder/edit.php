@@ -6,12 +6,12 @@
     
         <div class="col-md-6">
             <label for="input" class="form-label">STT</label>
-            <input type="text" class="form-control" id="TenKhoaHoc"  value="<?= $oders['id'] ?>" >
+            <input type="text" class="form-control" id="TenKhoaHoc"  value="<?= $oders['id'] ?>"  readonly>
         </div>
 
         <div class="col-md-6">
             <label for="input" class="form-label">Giá</label>
-            <input type="text" class="form-control" id="Gia" name="total_price" value="<?= $oders['total_price'] ?>">
+            <input type="text" class="form-control" id="Gia" name="total_price" value="<?= $oders['total_price'] ?>" readonly>
         </div>
         <div class="col-md-4">
             <label for="form" class="form-label">Trạng thái</label>
