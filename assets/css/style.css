@@ -253,7 +253,7 @@ footer {
     display: flex;
     justify-content: space-between;
     padding: 20px 40px;
-    background-color: #FF0004;
+    background-color: #333;
     color: #ffffff;
     margin-top: 20px;
 }
@@ -264,8 +264,8 @@ footer {
 }
 
 .footer-img {
-    width: 195px;
-    height: 80px;
+    width: 210px;
+    height: 90px;
     margin-bottom: 10px;
 }
 
@@ -322,7 +322,7 @@ footer {
 }
 
 .footer-bottom {
-    background-color: #FF0004;
+    background-color: #333;
     color: #ececec;
     text-align: center;
     padding: 10px;
