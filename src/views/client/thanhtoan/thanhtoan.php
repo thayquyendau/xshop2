@@ -57,8 +57,8 @@
                                                 <div class="rating"><?= $item['TenKhoaHoc'] ?></div>
                                             </div>
                                             <div>
-                                                <p class="price"><?= number_format($item['Gia'], 0, ',', '.') ?>đ</p>
-                                                <span class="price"><del><?= number_format($item['Gia'], 0, ',', '.') ?>đ</del></span>
+                                                <p class="price"><?= number_format($item['Gia'] * (1 - 0.25), 0, '.', '.') ?>đ</p>
+                                                <span class="price"><del><?= number_format($item['Gia'], 0, '.', '.') ?>đ</del></span>
                                             </div>
                                         </div>
                                         <hr>
@@ -70,7 +70,8 @@
                                         <div class="price">Tổng cộng</div>
                                     </div>
                                     <p class="price text-danger">
-                                        <span class="total-allprice"><?= number_format(array_sum(array_column($cartItems, 'Gia')), 0, ',', '.') ?></span>đ
+                                        <span class="total-allprice">
+                                            <?= number_format(array_sum(array_column($cartItems, 'Gia')), 0, ',', '.') ?>đ</span>
                                     </p>
                                 </div>
                             </form>

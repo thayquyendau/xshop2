@@ -364,6 +364,7 @@ del {
     color: #00000061;
     text-decoration: line-through;
     font-size: 12px;
+        padding-right: 20px;
 }
 
 .list-product {
@@ -562,7 +563,7 @@ del {
     color: #00000061;
     text-decoration: line-through;
     font-size: 16px;
-    padding-left: 9px;
+    /* padding-left: 9px; */
 }
 
 /* Chi tiet san pham */
@@ -706,6 +707,11 @@ del {
     cursor: pointer;
     background-color: #ffffff;
     color: #000;
+}
+.category-button:hover{
+    background-color: #cc0004;
+    color: white;
+    border: none;
 }
 
 .category-main {
@@ -980,7 +986,6 @@ td {
     padding-left: 5px;
     font-size: 14px;
 }
-
 
 .main{
    width: 100%;
