@@ -103,7 +103,7 @@ class KhoahocController
             } else {
                 $Khoahocs = $this -> modelObject -> getProductById($id);
                 $users = $this -> modelObject -> getAllUser();
-                
+                $danhmucs = $this -> modelObject -> getAllDanhmuc();
                 require_once './src/views/admin/Khoahoc/edit.php';
             }
         }

@@ -37,7 +37,7 @@
             <td><?= $oder['status'] ?></td>
             <td><?= $oder['created_at'] ?></td>
             <td><a href="<?= BASE_URL ?>/admin/Oder/chitiet?id=<?= $oder['id'] ?>"><button type="button" class="btn btn-primary">Chi tiết</button></a></td>
-            <td><a href="<?= BASE_URL ?>/admin/Oder/update?id=<?= $oder['id'] ?>"><button type="button" class="btn btn-primary me-2">Sửa</button></a></td>
+            <td><a href="<?= BASE_URL ?>/admin/Oder/update?id=<?= $oder['id'] ?>"><button type="button" class="btn btn-primary me-2">Cập nhật trạng thái</button></a></td>
             <td><a href="<?= BASE_URL ?>/admin/Oder/delete?id=<?= $oder['id'] ?>"><button type="button" class="btn btn-danger me-2">Xóa</button></a></td>
             
         </tr>
