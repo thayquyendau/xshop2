@@ -49,9 +49,9 @@
                             <span class="count">(231)</span>
                         </p>
                         <p style="font-size: 16px;margin-top:10px;">
-                            <span><?= number_format($home['Gia'] * (1 - 0.25), 0, '.', '.') ?>đ</span>
+                            <span><?= number_format($home1['Gia'] * (1 - 0.25), 0, '.', '.') ?>đ</span>
                             <del style="font-size:12px;">
-                                <?= number_format($home['Gia'], 0, '.', '.') ?>đ
+                                <?= number_format($home1['Gia'], 0, '.', '.') ?>đ
                             </del>
                             <span class="count btn btn-danger">Giảm 25%</span>
                         </p>
@@ -71,9 +71,9 @@
                             <span class="count">(231)</span>
                         </p>
                         <p style="font-size: 16px;margin-top:10px;">
-                            <span><?= number_format($home['Gia'] * (1 - 0.25), 0, '.', '.') ?>đ</span>
+                            <span><?= number_format($home2['Gia'] * (1 - 0.25), 0, '.', '.') ?>đ</span>
                             <del style="font-size:12px;">
-                                <?= number_format($home['Gia'], 0, '.', '.') ?>đ
+                                <?= number_format($home2['Gia'], 0, '.', '.') ?>đ
                             </del>
                             <span class="count btn btn-danger">Giảm 25%</span>
                         </p>
@@ -221,10 +221,10 @@
 
     .chu-de-qt {
         border: 2px solid #000;
-        color: #FF0004;
+        color: #000;
         padding: 10px 20px;
         border-radius: 10px;
-        border: 2px solid #FF0004;
+        border: 3px solid #FF0004;
         width: 80%;
         text-align: center;
         background-color: white;

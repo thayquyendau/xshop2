@@ -11,6 +11,12 @@ class Oder extends baseModel
         return $this->pdoQueryAll($sql, []);
     }
 
+    public function getOderById($id)
+    {
+        $sql = "SELECT * FROM orders  WHERE id = ?";
+        return $this->pdoQuery($sql, [$id]);
+    }
+
     public function getOderItem()
     {
         $sql = "SELECT * FROM order_items ";
