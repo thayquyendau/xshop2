@@ -75,8 +75,9 @@ class OderController
             $this->modelObject->updateOder($_POST,$id);
             header("location: $this->base/admin/Oder");
             } else {
-            
+           
             $oders = $this->modelObject->getOderById($id);
+            // debug($oders);
             $datetimeInput = $oders['created_at']; // Định dạng: Y-m-dTH:i
             $Timeee = date('Y-m-d H:i:s', strtotime($datetimeInput));
             require_once './src/views/admin/oder/edit.php';

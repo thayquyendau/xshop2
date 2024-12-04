@@ -44,11 +44,7 @@
             </td>
             <?php if ($_SESSION['LoaiTK'] == 1): ?>
             <td>
-                <!-- Cập nhật form sửa -->
-                <form action="<?= BASE_URL ?>/admin/Khoahoc/update" method="post" id="editForm<?= $Khoahoc['IDKhoaHoc'] ?>">
-                    <input type="hidden" name="id" value="<?= $Khoahoc['IDKhoaHoc'] ?>">
-                    <button type="submit" class="btn btn-primary me-2">Sửa</button>
-                </form>
+            <a class="color:white;" href="<?= BASE_URL ?>/admin/Khoahoc/update?id=<?= $Khoahoc['IDKhoaHoc'] ?>"><button type="button" class="btn btn-primary">Sửa</button></a>
             </td>
             <?php endif; ?>
         </tr>

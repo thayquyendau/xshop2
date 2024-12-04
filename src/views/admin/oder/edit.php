@@ -19,11 +19,11 @@
          </div>
          <div class="col-md-4">
             <label for="form" class="form-label">Ngày tạo đơn</label>
-            <input type="datetime-local" class="form-control " id="created_at" name="created_at" type="text"  value="<?=$Timeee?>">
+            <input type="datetime-local" class="form-control " id="created_at" name="created_at" type="text"  value="<?=$Timeee?>" readonly>
          </div>
        
         <div class="col-12">
-            <button type="submit" class="btn btn-primary">Sửa</button>
+            <button type="submit" class="btn btn-primary">Cập nhật </button>
         </div>
         
     </form>
