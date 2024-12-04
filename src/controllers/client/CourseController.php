@@ -19,9 +19,7 @@
         public function detail() {
             $id = $_GET['IDKhoaHoc'] ;
             $detailCourse = $this->modelObject->getDetailCourseById($id);
-            // debug($detailCourse);
             $courses = $this->modelObjects->getdetailCourseById($id);
-            // debug($courses);
             require_once './src/views/client/danhmuc/detail.php';
         }
 

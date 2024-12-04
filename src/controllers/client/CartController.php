@@ -27,7 +27,10 @@ class CartController
             // Loại bỏ các biến ko phải mảng
             $cartItems = array_filter($cartItems, 'is_array');
             // debug($cartItems);
+            $_SESSION['message'] = 'Thêm giỏ hàng thành công!';
+            
             header("location: $this->baseUrl/detailCourse?IDKhoaHoc={$id}");
+            
         } else {
             // Ấn vào giỏ hàng
             $cartItems = $this->cartModel->getCartItems();

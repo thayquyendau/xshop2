@@ -15,67 +15,85 @@
             <h1 class="title1">Top Bán chạy</h1>
             <div class="row product-list1">
                 <?php foreach ($homes as $home): ?>
-                <div class="col xl-3 lg-3 md-6" style="margin-bottom: 20px;">
-                 
-                    <a href="<?= BASE_URL ?>/detailCourse?IDKhoaHoc=<?= $home['IDKhoaHoc'] ?>"><img style="width: 100%; height: 145px;" src="<?= $home['HinhAnh'] ?>" alt=""></a>
-                    <p class="title-product"><?= $home['TenKhoaHoc'] ?></p>
-                    <p class="rating"> <i><?= $home['GiaoVien'] ?></i></p>
-                    <p>
-                        <span class="rating">5.0</span>
-                        <span class="stars">&#9733; &#9733; &#9733; &#9733; &#9733;</span>
-                        <span class="count">(231)</span>
-                    </p>
-                    <p style="font-size: 16px;margin-top:10px;"><?= $home['Gia'] ?> VND<del style="font-size:12px;"><?= $home['Gia'] ?>đ</del></p>
-                </div>
+                    <div class="col xl-3 lg-3 md-6" style="margin-bottom: 20px;">
+
+                        <a href="<?= BASE_URL ?>/detailCourse?IDKhoaHoc=<?= $home['IDKhoaHoc'] ?>"><img style="width: 100%; height: 145px;" src="<?= $home['HinhAnh'] ?>" alt=""></a>
+                        <p class="title-product"><?= $home['TenKhoaHoc'] ?></p>
+                        <p class="rating"> <i><?= $home['GiaoVien'] ?></i></p>
+                        <p>
+                            <span class="rating">5.0</span>
+                            <span class="stars">&#9733; &#9733; &#9733; &#9733; &#9733;</span>
+                            <span class="count">(231)</span>
+                        </p>
+                        <p style="font-size: 16px;margin-top:10px;">
+                            <span><?= number_format($home['Gia'] * (1 - 0.25), 0, '.', '.') ?>đ</span>
+                            <del style="font-size:12px;">
+                                <?= number_format($home['Gia'], 0, '.', '.') ?>đ
+                            </del>
+                            <span class="count btn btn-danger">Giảm 25%</span>
+                        </p>
+                    </div>
                 <?php endforeach; ?>
             </div>
             <h1 class="title1">học viên đang theo dõi</h1>
             <div class="row product-list1">
-            <?php foreach ($homes1 as $home1): ?>
-                <div class="col xl-3 lg-3 md-6" style="margin-bottom: 20px;">
-                    <a href="<?= BASE_URL ?>/detailCourse?IDKhoaHoc=<?= $home1['IDKhoaHoc'] ?>">
-                    <img style="width: 100%; height: 145px;" src="<?= $home1['HinhAnh'] ?>" alt=""></a>
-                    <p class="title-product"><?= $home1['TenKhoaHoc'] ?></p>
-                    <p class="rating"> <i><?= $home1['GiaoVien'] ?></i></p>
-                    <p>
-                        <span class="rating">5.0</span>
-                        <span class="stars">&#9733; &#9733; &#9733; &#9733; &#9733;</span>
-                        <span class="count">(231)</span>
-                    </p>
-                    <p style="font-size: 16px;margin-top:10px;"><?= $home1['Gia'] ?> VND<del style="font-size:12px;"><?= $home1['Gia'] ?>đ</del></p>
-                </div>
+                <?php foreach ($homes1 as $home1): ?>
+                    <div class="col xl-3 lg-3 md-6" style="margin-bottom: 20px;">
+                        <a href="<?= BASE_URL ?>/detailCourse?IDKhoaHoc=<?= $home1['IDKhoaHoc'] ?>">
+                            <img style="width: 100%; height: 145px;" src="<?= $home1['HinhAnh'] ?>" alt=""></a>
+                        <p class="title-product"><?= $home1['TenKhoaHoc'] ?></p>
+                        <p class="rating"> <i><?= $home1['GiaoVien'] ?></i></p>
+                        <p>
+                            <span class="rating">5.0</span>
+                            <span class="stars">&#9733; &#9733; &#9733; &#9733; &#9733;</span>
+                            <span class="count">(231)</span>
+                        </p>
+                        <p style="font-size: 16px;margin-top:10px;">
+                            <span><?= number_format($home['Gia'] * (1 - 0.25), 0, '.', '.') ?>đ</span>
+                            <del style="font-size:12px;">
+                                <?= number_format($home['Gia'], 0, '.', '.') ?>đ
+                            </del>
+                            <span class="count btn btn-danger">Giảm 25%</span>
+                        </p>
+                    </div>
                 <?php endforeach; ?>
             </div>
             <h1 class="title1">Mới ra mắt</h1>
             <div class="row product-list1">
-            <?php foreach ($homes2 as $home2): ?>
-                <div class="col xl-3 lg-3 md-6" style="margin-bottom: 20px;">
-                    <a href="<?= BASE_URL ?>/detailCourse?IDKhoaHoc=<?= $home2['IDKhoaHoc'] ?>"><img style="width: 100%; height: 145px;" src="<?= $home2['HinhAnh'] ?>" alt=""></a>
-                    <p class="title-product"><?= $home2['TenKhoaHoc'] ?></p>
-                    <p class="rating"> <i><?= $home2['GiaoVien'] ?></i></p>
-                    <p>
-                        <span class="rating">5.0</span>
-                        <span class="stars">&#9733; &#9733; &#9733; &#9733; &#9733;</span>
-                        <span class="count">(231)</span>
-                    </p>
-                    <p style="font-size: 16px;margin-top:10px;"><?= $home2['Gia'] ?> VND<del style="font-size:12px;"><?= $home2['Gia'] ?>đ</del></p>
-                </div>
+                <?php foreach ($homes2 as $home2): ?>
+                    <div class="col xl-3 lg-3 md-6" style="margin-bottom: 20px;">
+                        <a href="<?= BASE_URL ?>/detailCourse?IDKhoaHoc=<?= $home2['IDKhoaHoc'] ?>"><img style="width: 100%; height: 145px;" src="<?= $home2['HinhAnh'] ?>" alt=""></a>
+                        <p class="title-product"><?= $home2['TenKhoaHoc'] ?></p>
+                        <p class="rating"> <i><?= $home2['GiaoVien'] ?></i></p>
+                        <p>
+                            <span class="rating">5.0</span>
+                            <span class="stars">&#9733; &#9733; &#9733; &#9733; &#9733;</span>
+                            <span class="count">(231)</span>
+                        </p>
+                        <p style="font-size: 16px;margin-top:10px;">
+                            <span><?= number_format($home['Gia'] * (1 - 0.25), 0, '.', '.') ?>đ</span>
+                            <del style="font-size:12px;">
+                                <?= number_format($home['Gia'], 0, '.', '.') ?>đ
+                            </del>
+                            <span class="count btn btn-danger">Giảm 25%</span>
+                        </p>
+                    </div>
                 <?php endforeach; ?>
             </div>
             <h1 class="title1">Chủ đề có thể bạn quan tâm</h1>
             <div class="chudeqt">
                 <div class="row product-list1">
-                <?php foreach($homes3 as $home3):?>
-                <div class="col xl-3 lg-3 md-6">
-                    <li class="danhmuc-item1">
-                        <a href="<?= BASE_URL ?>/danhmuc?IDCatagory=<?= $home3['IDCatagory'] ?>" class="chu-de-qt-link">
-                            <button class="chu-de-qt">
-                                <?= htmlspecialchars($home3['TenDanhMuc']) ?>
-                            </button>
-                        </a>
-                    </li>
-                </div>
-                <?php endforeach; ?>
+                    <?php foreach ($homes3 as $home3): ?>
+                        <div class="col xl-3 lg-3 md-6">
+                            <li class="danhmuc-item1">
+                                <a href="<?= BASE_URL ?>/danhmuc?IDCatagory=<?= $home3['IDCatagory'] ?>" class="chu-de-qt-link">
+                                    <button class="chu-de-qt">
+                                        <?= htmlspecialchars($home3['TenDanhMuc']) ?>
+                                    </button>
+                                </a>
+                            </li>
+                        </div>
+                    <?php endforeach; ?>
                 </div>
             </div>
             <h1 class="title1">Giảng viên tiêu biểu</h1>
@@ -170,47 +188,50 @@
         color: orangered;
     }
 
-    a{
+    a {
         color: #000;
         text-decoration: none;
     }
+
     .row.product-list1 {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    width: 1150px; 
-    max-width: 100%;
-    margin: 0 auto; 
-}
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        width: 1150px;
+        max-width: 100%;
+        margin: 0 auto;
+    }
+
     .col {
         box-sizing: border-box;
     }
+
     .danhmuc-item1 {
-    padding-bottom: 20px;
-    list-style-type: none; 
-    width: 100%;
-    text-align: center;
-}
+        padding-bottom: 20px;
+        list-style-type: none;
+        width: 100%;
+        text-align: center;
+    }
 
 
-.chu-de-qt-link {
-    text-decoration: none; 
-    display: inline-block;
-    width: 100%;
-}
+    .chu-de-qt-link {
+        text-decoration: none;
+        display: inline-block;
+        width: 100%;
+    }
 
-.chu-de-qt {
-    border: 2px solid #000;
-    color: #FF0004; 
-    padding: 10px 20px; 
-    border-radius: 10px; 
-    border: 2px solid #FF0004;
-    width: 80%;
-    text-align: center;
-    background-color: white;
-}
+    .chu-de-qt {
+        border: 2px solid #000;
+        color: #FF0004;
+        padding: 10px 20px;
+        border-radius: 10px;
+        border: 2px solid #FF0004;
+        width: 80%;
+        text-align: center;
+        background-color: white;
+    }
 
-.chu-de-qt:hover{
-    background-color: #FF0004;
-    color: white;
-}
+    .chu-de-qt:hover {
+        background-color: #FF0004;
+        color: white;
+    }
 </style>

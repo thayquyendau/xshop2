@@ -1,7 +1,6 @@
     <div class="col xl-12">
         <div class="detail-bgr">
-            <div class="detail-main">
-                <div class="title-category">Giỏ hàng</div>
+            <div class="detail-main pt-5">
                 <form class="" action="<?= BASE_URL ?>/thanhtoan" method="post">
                     <div class="detail-course-main-body">
                         <div class="form-cart-left">
@@ -58,8 +57,10 @@
                                                 <a href="<?= BASE_URL ?>/deleteCart?IDKhoaHoc=<?= $item['IDKhoaHoc'] ?>">Xóa</a>
                                             </div>
                                             <div>
-                                                <p class="price"><span class="price-value"><?= $item['Gia'] ?>đ</span></p>
-                                                <p><del><?= $item['Gia'] ?>đ</del></p>
+                                                <p class="price">
+                                                    <span class="price-value"><?= $item['Gia'] ?>đ</span>
+                                                </p>
+                                                <p class="pr-3"><del><?= number_format($item['Gia'] / (1 - 0.25), 0, '.', '.') ?>đ</del></p>
                                             </div>
                                         </div>
                                     </div>

@@ -345,6 +345,3 @@ document.querySelectorAll('.form-check').forEach(function(checkForm) {
       checkForm.querySelector('.check-radio').checked = true;
   });
 });
-
-
-

@@ -3,10 +3,21 @@
             <div class="detail">
                 <div class="detailProduct">
                     <div class="detailProduct-left">
-                        <div class="title-detail"><?= $courses['TenKhoaHoc'] ?></div>
-                        <br>
-                        <div class="count"><?= $detailCourse['MoTa'] ?></div>
-                        <br>
+                        <div class="container mt-3">
+                            <nav aria-label="breadcrumb">
+                                <ol class="breadcrumb">
+                                    <li class="breadcrumb-item count">
+                                        <span class="fas fa-home"></span>
+                                        <a class="text-white" href="<?= BASE_URL ?>/">Trang Chủ</a>
+                                    </li>
+                                    <li class="breadcrumb-item count">
+                                        <a class="text-white" href="<?= BASE_URL ?>/danhmuc?IDCatagory=<?= $courses['IDCatagory'] ?>">Danh Mục</a>
+                                    </li>
+                                </ol>
+                            </nav>
+                        </div>
+                        <div class="title-detail pb-5"><?= $courses['TenKhoaHoc'] ?></div>
+                        <div class="count pb-3"><?= $detailCourse['MoTa'] ?></div>
                         <p class="top-star">
                             <span class="count">4.5</span>
                             <span class="stars">&#9733; &#9733; &#9733; &#9733; &#9733;</span>
@@ -39,23 +50,26 @@
                                     <p class="detail_pl">Cấp chứng nhận hoàn thành</p>
                                 </div>
                             </div>
-                            <div class="price"><?= $courses['Gia'] ?>
-                                <del><?= $courses['Gia'] ?></del>
-                                <span class="count ">Giảm 25%</span>
+                            <div class="price">
+                                <span><?= number_format($courses['Gia'] * (1 - 0.25), 0, '.', '.') ?>đ</span>
+                                <del>
+                                    <?= number_format($courses['Gia'], 0, '.', '.') ?>đ
+                                </del>
+                                <span class="count">Giảm 25%</span>
                             </div>
                         </div>
                         <div class="d-grid gap-2">
-                            <div class="d-grid gap d-md-flex justify-content-start">
-                                <div class="d-grid gap-2">
-                                    <form class="form-detail" action="<?= BASE_URL ?>/giohang" method="post">
-                                        <input type="hidden" name="IDKhoaHoc" value="<?= $courses['IDKhoaHoc'] ?>">
-                                        <button class="btn btn-secondary btn-lg" type="submit">THÊM VÀO GIỎ HÀNG</button>
-                                    </form>
-                                </div>
-                                <div class="d-grid gap-2  mx-1 ">
-                                    <button class="btn btn-light btn-lg"><img src="assets\image\icon\icon_heart.svg" alt="" class="icon"></button>
-                                </div>
-                            </div>
+                            <?php if (isset($_SESSION['message'])) {
+                                echo '<button class="btn btn-success text-white rating">' . $_SESSION['message'] . '</button>';
+                                unset($_SESSION['message']); // Xóa thông báo sau khi đã hiển thị
+                            } ?>
+                            <form class=" d-grid " action="<?= BASE_URL ?>/giohang" method="post">
+                                <input type="hidden" name="IDKhoaHoc" value="<?= $courses['IDKhoaHoc'] ?>">
+                                <button class="btn btn-secondary btn-lg " type="submit">
+                                    THÊM VÀO GIỎ HÀNG
+                                </button>
+                            </form>
+
                             <form class="d-grid gap-2" action="<?= BASE_URL ?>/thanhtoan" method="post">
                                 <input type="hidden" name="source" value="detail">
                                 <input type="hidden" name="IDKhoaHoc" value="<?= $courses['IDKhoaHoc'] ?>">
@@ -72,7 +86,7 @@
                     <div class="detail-course">
                         <div class="detail-course-main">
                             <h6 class="title-course">Kiến thức nhận được</h6>
-                            <div class="detail-course-main-body">
+                            <div class="d-flex justify-content-between">
                                 <div class="detail-course-main-body-left">
                                     <div class="detail-boder">
                                         <span><img class="icon" src="assets\image\icon\icon_select.svg" alt="">
@@ -126,7 +140,7 @@
                         <div class="detail-course-main">
                             <h6 class="title-course">Giới thiệu khóa học</h6>
                             <div class="detail-content">
-                            <?=  $detailCourse['Noidung'] ?>
+                                <?= $detailCourse['Noidung'] ?>
                             </div>
                         </div>
                     </div>
@@ -134,16 +148,16 @@
                 <div class="detail_space">
                     <div class="title-category">Nội dung khóa học</div>
                     <div class="detail-course-main">
-                        <span class="count">5 phần - 28 bài giảng - 5 buổi</span>
+                        <span class="count">5 phần - <?= $courses['GiaoTrinh'] ?> - 5 buổi</span>
                     </div>
                     <div class="detail-course">
                         <div class="detail-boder-bottom">
-                            <div class="detail-course-main-body">
+                            <div class="d-flex justify-content-between">
                                 <div class="detail-course-main-body-left">
                                     <div class="detail-boder">
 
                                         </span>
-                                        <span class="count">Phần 1: Tầm quan trọng của Kỹ năng thuyết trình</span>
+                                        <span class="count">Phần 1: Tầm quan trọng của Kỹ năng giao tiếp trong ngoại ngữ trình</span>
                                     </div>
                                 </div>
                                 <div class="detail-course-main-body-right">
@@ -155,12 +169,12 @@
                             </div>
                         </div>
                         <div class="detail-boder-bottom">
-                            <div class="detail-course-main-body">
+                            <div class="d-flex justify-content-between">
                                 <div class="detail-course-main-body-left">
                                     <div class="detail-boder">
 
                                         </span>
-                                        <span class="count">Phần 2: Thiết kế bài thuyết trình hoàn hảo</span>
+                                        <span class="count">Phần 2: Thiết kế bài học ngoại ngữ hoàn hảo</span>
                                     </div>
                                 </div>
                                 <div class="detail-course-main-body-right">
@@ -172,12 +186,12 @@
                             </div>
                         </div>
                         <div class="detail-boder-bottom">
-                            <div class="detail-course-main-body">
+                            <div class="d-flex justify-content-between">
                                 <div class="detail-course-main-body-left">
                                     <div class="detail-boder">
 
                                         </span>
-                                        <span class="count">Phần 3: Thuyết trình chuyên nghiệp</span>
+                                        <span class="count">Phần 3: Kỹ năng giao tiếp và thuyết trình trong ngoại ngữ</span>
                                     </div>
                                 </div>
                                 <div class="detail-course-main-body-right">
@@ -189,12 +203,12 @@
                             </div>
                         </div>
                         <div class="detail-boder-bottom">
-                            <div class="detail-course-main-body">
+                            <div class="d-flex justify-content-between">
                                 <div class="detail-course-main-body-left">
                                     <div class="detail-boder">
 
                                         </span>
-                                        <span class="count">Phần 4: Sử dụng cơ thể cuốn hút</span>
+                                        <span class="count">Phần 4: Tăng cường khả năng nghe và phát âm</span>
                                     </div>
                                 </div>
                                 <div class="detail-course-main-body-right">
@@ -209,7 +223,7 @@
                             <div class="detail-course-main-body-left">
                                 <div class="detail-boder">
                                     </span>
-                                    <span class="count">Phần 5: Quản lý hội trường & khích lệ đám đông</span>
+                                    <span class="count">Phần 5: Quản lý môi trường học và tạo động lực học ngoại ngữ</span>
                                 </div>
                             </div>
                             <div class="detail-course-main-body-right">
@@ -230,7 +244,7 @@
                             <div class="detail-course-main-body">
                                 <div class="detail-course-main-body-left">
                                     <div class="rounded-circle overflow-hidden border" style="width: 150px; height: 150px;">
-                                        <img src="assets\image\detailCourse\phan_quoc_viet.jpg" class="w-100 h-100" style="object-fit: cover;" alt="Circular Image">
+                                        <img src="assets\image\account\anhphong.jpg" class="w-100 h-100" style="object-fit: cover;" alt="Circular Image">
                                     </div>
                                     <p class="detail-name" style="margin-left: 10px;"><i><?= $courses['GiaoVien'] ?></i></p>
                                 </div>
@@ -281,20 +295,21 @@
                             <img class="icon" src="assets\image\icon\icon_star_yellow.svg" alt="">
                         </div>
                         <div class="title-category">
-                            4.6 xếp hạng khóa học - 10 đánh giá
+                            4.6 xếp hạng khóa học - 4 đánh giá
                         </div>
                     </div>
                     <div class="detail-comment-top">
-                        <div class="detail-course-main-body">
-                            <div class="detail-course-left">
+                        <div class="d-flex justify-content-between">
+                            <!-- Phần bên trái -->
+                            <div class="detail-course-left flex-fill">
                                 <div class="category-content-main">
                                     <div class="detail-course-main-body-left">
                                         <div class="rounded-circle bg-dark" style="width: 50px; height: 50px; display: flex; justify-content: center; align-items: center;">
-                                            <img src="assets\image\icon\icon_user.svg" alt="User Avatar" class="rounded-circle" style="width: 40px; height: 40px;">
+                                            <img src="assets/image/icon/icon_user.svg" alt="User Avatar" class="rounded-circle" style="width: 40px; height: 40px;">
                                         </div>
                                     </div>
                                     <div class="detail-course-main-body-right">
-                                        <span class="count"> <i><strong>Lê Anh Phong</strong></i></span>
+                                        <span class="count"><i><strong>Tô Thị Hoài</strong></i></span>
                                         <p class="top-star">
                                             <span class="stars">&#9733; &#9733; &#9733; &#9733; &#9733;</span>
                                             <span class="count">3 tuần trước</span>
@@ -302,145 +317,79 @@
                                     </div>
                                 </div>
                                 <span class="count">
-                                    Cảm ơn thầy Phan Quốc Việt, đội phụng sự và PTQ edu đã đem đến cho tôi một khóa học hữu dụng! Chúc thầy và các bạn luôn mạnh khỏe, an vui!</span>
+                                    Thật tuyệt vời khi được học cùng thầy <?= $courses['GiaoVien'] ?>! Cảm ơn thầy và đội ngũ đã mang đến khóa học hữu ích. Chúc thầy và các bạn sức khỏe và hạnh phúc!
+                                </span>
                             </div>
-                            <div class="detail-course-main-body-right">
-                                <div class="category-content-main">
-                                    <div class="detail-course-main-body-left">
-                                        <div class="rounded-circle bg-dark" style="width: 50px; height: 50px; display: flex; justify-content: center; align-items: center;">
-                                            <img src="assets\image\icon\icon_user.svg" alt="User Avatar" class="rounded-circle" style="width: 40px; height: 40px;">
-                                        </div>
-                                    </div>
-                                    <div class="detail-course-main-body-right">
-                                        <span class="count"> <i><strong>Bùi Hoàng Anh</strong></i></span>
-                                        <p class="top-star">
-                                            <span class="stars">&#9733; &#9733; &#9733; &#9733; &#9733;</span>
-                                            <span class="count">3 tuần trước</span>
-                                        </p>
-                                    </div>
-                                </div>
-                                <span class="count">Cảm ơn thầy Phan Quốc Việt, đội phụng sự và PTQ edu đã đem đến cho tôi một khóa học hữu dụng! Chúc thầy và các bạn luôn mạnh khỏe, an vui!</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="detail-comment-top">
-                        <div class="detail-course-main-body">
-                            <div class="detail-course-left">
-                                <div class="category-content-main">
-                                    <div class="detail-course-main-body-left">
-                                        <div class="rounded-circle bg-dark" style="width: 50px; height: 50px; display: flex; justify-content: center; align-items: center;">
-                                            <img src="assets\image\icon\icon_user.svg" alt="User Avatar" class="rounded-circle" style="width: 40px; height: 40px;">
-                                        </div>
-                                    </div>
-                                    <div class="detail-course-main-body-right">
-                                        <span class="count"> <i><strong>Lê Anh Phong</strong></i></span>
-                                        <p class="top-star">
-                                            <span class="stars">&#9733; &#9733; &#9733; &#9733; &#9733;</span>
-                                            <span class="count">3 tuần trước</span>
-                                        </p>
-                                    </div>
-                                </div>
-                                <span class="count">
-                                    Cảm ơn thầy Phan Quốc Việt, đội phụng sự và PTQ edu đã đem đến cho tôi một khóa học hữu dụng! Chúc thầy và các bạn luôn mạnh khỏe, an vui!</span>
-                            </div>
-                            <div class="detail-course-main-body-right">
-                                <div class="category-content-main">
-                                    <div class="detail-course-main-body-left">
-                                        <div class="rounded-circle bg-dark" style="width: 50px; height: 50px; display: flex; justify-content: center; align-items: center;">
-                                            <img src="assets\image\icon\icon_user.svg" alt="User Avatar" class="rounded-circle" style="width: 40px; height: 40px;">
-                                        </div>
-                                    </div>
-                                    <div class="detail-course-main-body-right">
-                                        <span class="count"> <i><strong>Bùi Hoàng Anh</strong></i></span>
-                                        <p class="top-star">
-                                            <span class="stars">&#9733; &#9733; &#9733; &#9733; &#9733;</span>
-                                            <span class="count">3 tuần trước</span>
-                                        </p>
-                                    </div>
-                                </div>
-                                <span class="count">Cảm ơn thầy Phan Quốc Việt, đội phụng sự và PTQ edu đã đem đến cho tôi một khóa học hữu dụng! Chúc thầy và các bạn luôn mạnh khỏe, an vui!</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="detail-comment-top">
-                        <div class="detail-course-main-body">
-                            <div class="detail-course-left">
-                                <div class="category-content-main">
-                                    <div class="detail-course-main-body-left">
-                                        <div class="rounded-circle bg-dark" style="width: 50px; height: 50px; display: flex; justify-content: center; align-items: center;">
-                                            <img src="assets\image\icon\icon_user.svg" alt="User Avatar" class="rounded-circle" style="width: 40px; height: 40px;">
-                                        </div>
-                                    </div>
-                                    <div class="detail-course-main-body-right">
-                                        <span class="count"> <i><strong>Lê Anh Phong</strong></i></span>
-                                        <p class="top-star">
-                                            <span class="stars">&#9733; &#9733; &#9733; &#9733; &#9733;</span>
-                                            <span class="count">3 tuần trước</span>
-                                        </p>
-                                    </div>
-                                </div>
-                                <span class="count">
-                                    Cảm ơn thầy Phan Quốc Việt, đội phụng sự và PTQ edu đã đem đến cho tôi một khóa học hữu dụng! Chúc thầy và các bạn luôn mạnh khỏe, an vui!</span>
-                            </div>
-                            <div class="detail-course-main-body-right">
-                                <div class="category-content-main">
-                                    <div class="detail-course-main-body-left">
-                                        <div class="rounded-circle bg-dark" style="width: 50px; height: 50px; display: flex; justify-content: center; align-items: center;">
-                                            <img src="assets\image\icon\icon_user.svg" alt="User Avatar" class="rounded-circle" style="width: 40px; height: 40px;">
-                                        </div>
-                                    </div>
-                                    <div class="detail-course-main-body-right">
-                                        <span class="count"> <i><strong>Bùi Hoàng Anh</strong></i></span>
-                                        <p class="top-star">
-                                            <span class="stars">&#9733; &#9733; &#9733; &#9733; &#9733;</span>
-                                            <span class="count">3 tuần trước</span>
-                                        </p>
-                                    </div>
-                                </div>
-                                <span class="count">Cảm ơn thầy Phan Quốc Việt, đội phụng sự và PTQ edu đã đem đến cho tôi một khóa học hữu dụng! Chúc thầy và các bạn luôn mạnh khỏe, an vui!</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="detail-comment-top">
-                        <div class="detail-course-main-body">
-                            <div class="detail-course-left">
-                                <div class="category-content-main">
-                                    <div class="detail-course-main-body-left">
-                                        <div class="rounded-circle bg-dark" style="width: 50px; height: 50px; display: flex; justify-content: center; align-items: center;">
-                                            <img src="assets\image\icon\icon_user.svg" alt="User Avatar" class="rounded-circle" style="width: 40px; height: 40px;">
-                                        </div>
-                                    </div>
-                                    <div class="detail-course-main-body-right">
-                                        <span class="count"> <i><strong>Lê Anh Phong</strong></i></span>
-                                        <p class="top-star">
-                                            <span class="stars">&#9733; &#9733; &#9733; &#9733; &#9733;</span>
-                                            <span class="count">3 tuần trước</span>
-                                        </p>
-                                    </div>
-                                </div>
-                                <span class="count">
-                                    Cảm ơn thầy Phan Quốc Việt, đội phụng sự và PTQ edu đã đem đến cho tôi một khóa học hữu dụng! Chúc thầy và các bạn luôn mạnh khỏe, an vui!</span>
-                            </div>
-                            <div class="detail-course-main-body-right">
-                                <div class="category-content-main">
-                                    <div class="detail-course-main-body-left">
-                                        <div class="rounded-circle bg-dark" style="width: 50px; height: 50px; display: flex; justify-content: center; align-items: center;">
-                                            <img src="assets\image\icon\icon_user.svg" alt="User Avatar" class="rounded-circle" style="width: 40px; height: 40px;">
-                                        </div>
-                                    </div>
-                                    <div class="detail-course-main-body-right">
-                                        <span class="count"> <i><strong>Bùi Hoàng Anh</strong></i></span>
-                                        <p class="top-star">
-                                            <span class="stars">&#9733; &#9733; &#9733; &#9733; &#9733;</span>
-                                            <span class="count">3 tuần trước</span>
-                                        </p>
-                                    </div>
-                                </div>
-                                <span class="count">Cảm ơn thầy Phan Quốc Việt, đội phụng sự và PTQ edu đã đem đến cho tôi một khóa học hữu dụng! Chúc thầy và các bạn luôn mạnh khỏe, an vui!</span>
-                            </div>
-                        </div>
-                    </div>
 
+                            <!-- Phần bên phải -->
+                            <div class="detail-course-main-body-right flex-fill">
+                                <div class="category-content-main">
+                                    <div class="detail-course-main-body-left">
+                                        <div class="rounded-circle bg-dark" style="width: 50px; height: 50px; display: flex; justify-content: center; align-items: center;">
+                                            <img src="assets/image/icon/icon_user.svg" alt="User Avatar" class="rounded-circle" style="width: 40px; height: 40px;">
+                                        </div>
+                                    </div>
+                                    <div class="detail-course-main-body-right">
+                                        <span class="count"><i><strong>Lê Minh Thọ</strong></i></span>
+                                        <p class="top-star">
+                                            <span class="stars">&#9733; &#9733; &#9733; &#9733; &#9733;</span>
+                                            <span class="count">3 tuần trước</span>
+                                        </p>
+                                    </div>
+                                </div>
+                                <span class="count">
+                                    Một lần nữa cảm ơn thầy <?= $courses['GiaoVien'] ?> và đội ngũ PTQ edu đã tạo ra môi trường học tập tuyệt vời! Chúc thầy và các bạn luôn bình an, mạnh khỏe!
+                                </span>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="detail-comment-top">
+                        <div class="d-flex justify-content-between">
+                            <!-- Phần bên trái -->
+                            <div class="detail-course-left flex-fill">
+                                <div class="category-content-main">
+                                    <div class="detail-course-main-body-left">
+                                        <div class="rounded-circle bg-dark" style="width: 50px; height: 50px; display: flex; justify-content: center; align-items: center;">
+                                            <img src="assets/image/icon/icon_user.svg" alt="User Avatar" class="rounded-circle" style="width: 40px; height: 40px;">
+                                        </div>
+                                    </div>
+                                    <div class="detail-course-main-body-right">
+                                        <span class="count"><i><strong>Nguyễn Việt Hoàng</strong></i></span>
+                                        <p class="top-star">
+                                            <span class="stars">&#9733; &#9733; &#9733; &#9733; &#9733;</span>
+                                            <span class="count">3 tuần trước</span>
+                                        </p>
+                                    </div>
+                                </div>
+                                <span class="count">
+                                    Xin chân thành cảm ơn thầy <?= $courses['GiaoVien'] ?> và đội ngũ PTQ edu đã giúp tôi nâng cao kiến thức trong khóa học này. Chúc thầy luôn khỏe mạnh và hạnh phúc!
+                                </span>
+                            </div>
+
+                            <!-- Phần bên phải -->
+                            <div class="detail-course-main-body-right flex-fill">
+                                <div class="category-content-main">
+                                    <div class="detail-course-main-body-left">
+                                        <div class="rounded-circle bg-dark" style="width: 50px; height: 50px; display: flex; justify-content: center; align-items: center;">
+                                            <img src="assets/image/icon/icon_user.svg" alt="User Avatar" class="rounded-circle" style="width: 40px; height: 40px;">
+                                        </div>
+                                    </div>
+                                    <div class="detail-course-main-body-right">
+                                        <span class="count"><i><strong>Bùi Hoàng Anh</strong></i></span>
+                                        <p class="top-star">
+                                            <span class="stars">&#9733; &#9733; &#9733; &#9733; &#9733;</span>
+                                            <span class="count">3 tuần trước</span>
+                                        </p>
+                                    </div>
+                                </div>
+                                <span class="count">
+                                    Cảm ơn thầy <?= $courses['GiaoVien'] ?> và PTQ edu đã tổ chức khóa học chất lượng. Chúc thầy và các bạn mạnh khỏe và thành công trên con đường học tập!
+                                </span>
+                            </div>
+                        </div>
+
+                    </div>
                 </div>
             </div>
         </div>

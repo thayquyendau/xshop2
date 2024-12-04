@@ -20,7 +20,13 @@
                                 <span class="stars">&#9733; &#9733; &#9733; &#9733; &#9733;</span>
                                 <span class="count">(231)</span>
                             </p>
-                            <p class="price"><?= $course['Gia'] ?><del><?= $course['Gia'] ?></del></p>
+                            <p class="price">
+                                <span><?= number_format($course['Gia'] * (1 - 0.25), 0, '.', '.') ?>đ</span>
+                                <del style="font-size:12px;">
+                                    <?= number_format($course['Gia'], 0, '.', '.') ?>đ
+                                </del>
+                                <span class="count btn btn-danger">Giảm 25%</span>
+                            </p>
                         </div>
                     <?php endforeach; ?>
                 </div>
@@ -33,7 +39,7 @@
                 <h6 class="title-category">Tất cả khóa học</h6>
                 <div class="button-group">
                     <button id="filterButton" class="category-button">Bộ lọc
-                        <img class="detail_pl" width="20px" height="20px" src="assets\image\icon\logo_filter.svg" alt="">
+                        <img class="detail_pl " width="20px" height="20px" src="assets\image\icon\logo_filter.svg" alt="">
                     </button>
                     <button class="category-button d-flex align-items-center">Sắp xếp theo
                         <img class="detail_pl" width="20px" height="20px" src="assets\image\icon\icon-checklists.svg" alt="">
@@ -114,8 +120,12 @@
                                         </div>
                                     </div>
                                     <div class="category-content-right">
-                                        <div class="price"><?= $course['Gia'] ?>đ</div>
-                                        <div><del><?= $course['Gia'] ?>đ</del></div>
+                                        <div class="price"><?= number_format($course['Gia'] * (1 - 0.25), 0, '.', '.') ?>đ</div>
+                                        <div>
+                                            <del>
+                                                <?= number_format($course['Gia'], 0, '.', '.') ?>đ
+                                            </del>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
