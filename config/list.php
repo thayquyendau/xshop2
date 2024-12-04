@@ -55,11 +55,11 @@
                     </a>
                 </div>
                 <div class="row m-0 mb-4">
-                    <a class="row" style="text-decoration: none;" href="<?=BASE_URL?>/admin/Khoahoc">
-                        <img class="col-3 p-1" src="<?=BASE_URL?>/assets/image/img/book-open-svgrepo-com.svg" alt="">
-                        <h5 class="col-9 m-0 d-flex justify-content-center align-items-center list-text ">Khóa học</h5>
+                    <a class="row" style="text-decoration: none;" href="<?=BASE_URL?>/admin/Oder">
+                        <img class="col-3 p-1" src="<?=BASE_URL?>/assets/image/img/cart-check-svgrepo-com.svg" alt="">
+                        <h5 class="col-9 m-0 d-flex justify-content-center align-items-center list-text ">Đơn hàng</h5>
                     </a>
-                </div>         
+                </div>          
                 <div class="row m-0 mb-4 mt-auto">
                     <a class="row" style="text-decoration: none;" href="<?= BASE_URL . '/logout' ?>">
                         <img class="col-3 p-1" src="<?=BASE_URL?>/assets/image/img/log-out-outlined-svgrepo-com.svg" alt="">

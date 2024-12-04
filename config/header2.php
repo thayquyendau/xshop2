@@ -9,9 +9,9 @@
                        <?php if($_SESSION['LoaiTK']==1):?>
                             <p style="margin: 0px;">Admin</p>
                         <?php elseif($_SESSION['LoaiTK']==2):?>
-                            <p style="margin: 0px;">Giáo viên</p>
-                        <?php elseif($_SESSION['LoaiTK']==3):?>
                             <p style="margin: 0px;">Học sinh</p>
+                        <?php elseif($_SESSION['LoaiTK']==3):?>
+                            <p style="margin: 0px;">Giáo viên</p>
                         <?php endif;?>
                     </div>
                     <div class="col-8"></div>
