@@ -1,9 +1,6 @@
 <?php
 namespace controllers\admin;
-
 use models\Khoahoc;
-
-
 class KhoahocController
     {
     public $modelObject;
