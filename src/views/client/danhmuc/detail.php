@@ -59,10 +59,12 @@
                             </div>
                         </div>
                         <div class="d-grid gap-2">
-                            <?php if (isset($_SESSION['message'])) {
-                                echo '<button class="btn btn-success text-white rating">' . $_SESSION['message'] . '</button>';
-                                unset($_SESSION['message']); // Xóa thông báo sau khi đã hiển thị
-                            } ?>
+                            <a class="d-grid gap-2" href="<?= BASE_URL ?>/giohang">
+                                <?php if (isset($_SESSION['message'])) {
+                                    echo '<button class="btn btn-success text-white rating ">' . $_SESSION['message'] . '</button>';
+                                    unset($_SESSION['message']); // Xóa thông báo sau khi đã hiển thị
+                                } ?>
+                            </a>
                             <form class=" d-grid " action="<?= BASE_URL ?>/giohang" method="post">
                                 <input type="hidden" name="IDKhoaHoc" value="<?= $courses['IDKhoaHoc'] ?>">
                                 <button class="btn btn-secondary btn-lg " type="submit">
