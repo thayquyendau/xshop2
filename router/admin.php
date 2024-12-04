@@ -27,7 +27,7 @@
     $router->add("POST", "admin", "/admin/danhmuc/update", "CategoryController@update");
     $router->add("GET", "admin", "/admin/danhmuc/delete", "CategoryController@delete");
 
-    //Khach hang
+    //Nguoi dùng
     $router->add("GET", "admin", "/admin/user", "UserController@index");
     $router->add("POST", "admin", "/admin/user", "UserController@index");
     $router->add("POST", "admin", "/admin/user/search", "UserController@search");

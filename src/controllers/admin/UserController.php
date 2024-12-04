@@ -24,7 +24,6 @@ class UserController
       
     }
     
-
     public function indexRole()
         {
             // debug($_SESSION);

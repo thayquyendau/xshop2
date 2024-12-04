@@ -82,18 +82,24 @@ class Cart extends baseModel {
 
     //Thêm đơn hàng
     public function insertOrder($orderData) {
-        $columns = implode(",", array_keys($orderData));
+        //Tạo mảng các cột trong bảng order
+        // Sử dụng implode và ngăn cách cột
+        $columns = implode(",", array_keys($orderData)); 
+        // dùng $placeholder để truyền giá trị vào
         $placeholders = ":" . implode(", :", array_keys($orderData));
-        
+        //Câu lệnh SQL để thêm đơn hàng
         $sql = "INSERT INTO orders ($columns) VALUES ($placeholders)";
         $this->pdoQuery($sql, $orderData); 
         return $this->conn->lastInsertId(); // Lấy ID đơn hàng vừa tạo
     }
     
     public function insertOrderItem($orderItemData) {
+         //Tạo mảng các cột trong bảng order_items
+        // Sử dụng implode và ngăn cách cột
         $columns = implode(",", array_keys($orderItemData));
         $placeholders = ":" . implode(", :", array_keys($orderItemData));
-    
+        
+        //Câu lệnh SQL để thêm chi tiết đơn hàng
         $sql = "INSERT INTO order_items ($columns) VALUES ($placeholders)";
         $this->pdoQuery($sql, $orderItemData); // Gọi đúng kiểu tham số
     }

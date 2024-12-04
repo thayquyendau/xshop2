@@ -42,8 +42,6 @@ class CartController
 
     // Xóa một sản phẩm khỏi giỏ hàng
     public function delete(): never{
-        ini_set('display_errors', 1);
-        ini_set('display_startup_errors', 1);
         $id = $_GET['IDKhoaHoc']?? null;
         if ($id) {
             $this->cartModel->removeFromCart($id);
@@ -52,11 +50,8 @@ class CartController
         exit;
     }
 
-
     // Xóa toàn bộ giỏ hàng
     public function deleteAll(): never{
-        ini_set('display_errors', 1);
-        ini_set('display_startup_errors', 1);
         $this->cartModel->clearCart();
         header("Location: $this->baseUrl/giohang");
         exit;
